@@ -173,7 +173,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Animations FadeIn sur toutes les sections
 - [x] Responsive mobile (hero single column, bento stack, projets simplifié)
 - [x] Mettre à jour les fichiers de traduction FR/EN/ES
-- [ ] SEO metadata par page et par langue
+- [x] SEO metadata par page et par langue
 - [ ] Sitemap multilingue + robots.txt
 - [ ] OpenGraph images
 - [ ] Performance : fonts display swap, LazyMotion, image optimization

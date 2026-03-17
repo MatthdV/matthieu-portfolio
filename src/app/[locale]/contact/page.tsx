@@ -1,7 +1,25 @@
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "Metadata" });
+  return {
+    title: t("contactTitle"),
+    description: t("contactDescription"),
+    openGraph: {
+      title: t("contactTitle"),
+      description: t("contactDescription"),
+    },
+  };
+}
 
 const CONTACT_LINKS = [
   {

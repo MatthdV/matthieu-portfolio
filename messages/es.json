@@ -1,4 +1,17 @@
 {
+  "Metadata": {
+    "siteName": "Matthieu de Villele — Automation & AI Engineer",
+    "homeTitle": "Matthieu de Villele — Automation & AI Engineer | Workflows, Agentes IA, Integraciones",
+    "homeDescription": "Senior Automation & AI Engineer. Diseño workflows, agentes IA e integraciones que eliminan el trabajo manual y aceleran tus equipos. 40+ workflows entregados, 150+ empleados impactados.",
+    "projetsTitle": "Proyectos — Matthieu de Villele | 7 proyectos automation & IA en producción",
+    "projetsDescription": "Descubre 7 proyectos entregados en producción: agentes IA, workflows n8n, automatizaciones Jira e integraciones enterprise. Resultados medibles y stack técnico detallado.",
+    "servicesTitle": "Servicios — Matthieu de Villele | Agentes IA, Automatización, Auditoría gratuita",
+    "servicesDescription": "Agentes IA a medida, automatización de procesos, auditoría IA gratuita y retainer mensual. Ofertas claras para cada etapa de tu transformación automation & IA.",
+    "blogTitle": "Blog — Matthieu de Villele | Novedades Automation & IA",
+    "blogDescription": "Casos de estudio, guías prácticas y novedades sobre automatización e IA. Comparativas de herramientas, tutoriales Jira, n8n, RAG y buenas prácticas.",
+    "contactTitle": "Contacto — Matthieu de Villele | Reserva una auditoría IA gratuita",
+    "contactDescription": "¿Tienes un proyecto en mente? Envíame un mensaje o reserva directamente una cita para una auditoría IA gratuita de 30 minutos."
+  },
   "Nav": {
     "home": "Inicio",
     "projects": "Proyectos",

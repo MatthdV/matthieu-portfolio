@@ -1,7 +1,25 @@
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import { getLocalizedPosts } from "@/data/posts";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import FadeIn from "@/components/FadeIn";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "Metadata" });
+  return {
+    title: t("blogTitle"),
+    description: t("blogDescription"),
+    openGraph: {
+      title: t("blogTitle"),
+      description: t("blogDescription"),
+    },
+  };
+}
 
 export default function BlogPage() {
   const t = useTranslations("BlogPage");
