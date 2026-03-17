@@ -152,7 +152,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Configurer les fonts Space Grotesk + JetBrains Mono
 - [x] Mettre à jour les couleurs Tailwind (palette marker)
 - [x] Ajouter le grain overlay CSS sur le body
-- [ ] Créer le composant Navbar v2 (logo, nav mono, sélecteur langue)
+- [x] Créer le composant Navbar v2 (logo, nav mono, sélecteur langue)
 - [ ] Créer le composant Footer v2 (minimal)
 
 ### Phase 2 : Page d'accueil
