@@ -164,7 +164,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Section newsletter avec formulaire inline
 
 ### Phase 3 : Pages secondaires
-- [ ] Page /projets avec détails de chaque projet
+- [x] Page /projets avec détails de chaque projet
 - [ ] Page /services avec cartes et pricing
 - [ ] Page /blog avec liste articles
 - [ ] Page /contact avec formulaire + liens
