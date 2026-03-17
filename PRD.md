@@ -158,8 +158,8 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 ### Phase 2 : Page d'accueil
 - [x] Hero section asymétrique avec stats et CTAs
 - [x] Intégrer hero-illustration.png (ou placeholder si absent)
-- [ ] Créer les composants marker-underline et marker-circle
-- [ ] Section services en bento grid avec illustrations marker
+- [x] Créer les composants marker-underline et marker-circle
+- [x] Section services en bento grid avec illustrations marker
 - [ ] Section projets en liste horizontale style terminal
 - [ ] Section newsletter avec formulaire inline
 
