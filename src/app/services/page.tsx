@@ -81,7 +81,7 @@ export default function ServicesPage() {
     <main className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Services
           </h1>
           <p className="mt-4 text-lg text-foreground/60">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           {services.map((service) => (
             <div
               key={service.name}

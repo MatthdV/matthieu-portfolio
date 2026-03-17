@@ -18,7 +18,7 @@ export default function ProjetsPage() {
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Projets
         </h1>
         <p className="mt-4 text-lg text-foreground/60">
@@ -26,7 +26,7 @@ export default function ProjetsPage() {
           enterprise.
         </p>
 
-        <div className="mt-16 space-y-20">
+        <div className="mt-16 space-y-12 sm:space-y-20">
           {projects.map((project) => (
             <article
               key={project.slug}
@@ -65,7 +65,7 @@ export default function ProjetsPage() {
                 ))}
               </div>
 
-              <div className="mt-6 grid gap-6 sm:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-3">
                 {/* Problème */}
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.03] p-5">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/40">

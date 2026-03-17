@@ -71,7 +71,7 @@ export default function ContactPage() {
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Contact
         </h1>
         <p className="mt-4 text-lg text-foreground/60">
@@ -79,7 +79,7 @@ export default function ContactPage() {
           créneau.
         </p>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-5">
+        <div className="mt-16 grid gap-8 sm:gap-12 lg:grid-cols-5">
           {/* Form */}
           <div className="lg:col-span-3">
             <ContactForm />

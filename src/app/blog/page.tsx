@@ -28,7 +28,7 @@ export default function BlogPage() {
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Blog</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Blog</h1>
         <p className="mt-4 text-lg text-foreground/60">
           Retours d&apos;expérience, guides pratiques et veille automation &amp;
           IA.

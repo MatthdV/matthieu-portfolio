@@ -42,14 +42,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-1 flex-col items-center justify-center px-6 py-24">
         <FadeIn className="max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Automatisez vos process.{" "}
             <span className="text-accent">Accélérez avec l&apos;IA.</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-foreground/60">
             Senior Automation &amp; AI Engineer — 40+ workflows en production
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-6">
             <a
               href="https://calendly.com"
               className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover transition-colors"
@@ -127,7 +127,7 @@ export default function Home() {
               Retours de clients et collaborateurs sur nos projets ensemble.
             </p>
           </FadeIn>
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 quote:

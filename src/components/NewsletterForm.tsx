@@ -3,7 +3,7 @@
 export default function NewsletterForm() {
   return (
     <form
-      className="mx-auto mt-6 flex max-w-sm gap-3"
+      className="mx-auto mt-6 flex max-w-sm flex-col gap-3 sm:flex-row"
       onSubmit={(e) => e.preventDefault()}
     >
       <input
