@@ -12,7 +12,7 @@
 - [x] Implémenter les animations scroll (framer-motion)
 - [x] Configurer SEO metadata pour chaque page
 - [x] Ajouter sitemap.xml et robots.txt
-- [ ] Configurer OpenGraph et Twitter cards
+- [x] Configurer OpenGraph et Twitter cards
 - [ ] Ajouter la section témoignages (placeholder)
 - [ ] Ajouter la section newsletter avec formulaire email
 - [ ] Responsive : tester et ajuster mobile/tablet
