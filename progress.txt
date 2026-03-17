@@ -5,7 +5,7 @@
 - [x] Créer le composant Card projet et la section Projets en grille
 - [x] Ajouter les données des 7 projets GitHub
 - [x] Créer la page /projets avec liste détaillée
-- [ ] Créer la page /services avec 4 offres et pricing
+- [x] Créer la page /services avec 4 offres et pricing
 - [ ] Créer la page /blog avec layout article list
 - [ ] Créer la page /contact avec formulaire
 - [ ] Ajouter le dark mode toggle
