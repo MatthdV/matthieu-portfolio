@@ -6,7 +6,7 @@
 - [x] Ajouter les données des 7 projets GitHub
 - [x] Créer la page /projets avec liste détaillée
 - [x] Créer la page /services avec 4 offres et pricing
-- [ ] Créer la page /blog avec layout article list
+- [x] Créer la page /blog avec layout article list
 - [ ] Créer la page /contact avec formulaire
 - [ ] Ajouter le dark mode toggle
 - [ ] Implémenter les animations scroll (framer-motion)
