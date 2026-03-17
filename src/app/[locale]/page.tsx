@@ -109,42 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <FadeIn>
-            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-              {t("testimonialsTitle")}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
-              {t("testimonialsDescription")}
-            </p>
-          </FadeIn>
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {([1, 2, 3] as const).map((i) => (
-              <FadeIn key={i} delay={(i - 1) * 0.1}>
-                <blockquote className="flex h-full flex-col rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8">
-                  <svg
-                    className="mb-4 h-8 w-8 text-accent/30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
-                  </svg>
-                  <p className="flex-1 text-sm leading-relaxed text-foreground/70">
-                    {t(`testimonial${i}Quote`)}
-                  </p>
-                  <div className="mt-6 border-t border-foreground/10 pt-4">
-                    <p className="text-sm font-semibold">{t(`testimonial${i}Name`)}</p>
-                    <p className="text-xs text-foreground/50">{t(`testimonial${i}Role`)}</p>
-                  </div>
-                </blockquote>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Newsletter */}
       <section className="px-6 py-24">
         <FadeIn className="mx-auto max-w-2xl rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8 text-center sm:p-12">
