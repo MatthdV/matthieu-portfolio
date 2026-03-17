@@ -6,20 +6,27 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0a0a0a",
+        foreground: "#f5f5f0",
         accent: {
-          DEFAULT: "#3b82f6",
-          hover: "#2563eb",
+          DEFAULT: "#1A65FF",
+          hover: "#1A65FF",
+        },
+        marker: {
+          blue: "#1A65FF",
+          yellow: "#FFCD2E",
+          red: "#FE342C",
+        },
+        gray: {
+          muted: "#888888",
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-space-grotesk)"],
+        mono: ["var(--font-jetbrains-mono)"],
       },
     },
   },

@@ -148,7 +148,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 ## Tâches (ordre de priorité)
 
 ### Phase 1 : Reset et fondations
-- [ ] Supprimer l'ancien design (garder la structure i18n et les fichiers de traduction)
+- [x] Supprimer l'ancien design (garder la structure i18n et les fichiers de traduction)
 - [ ] Configurer les fonts Space Grotesk + JetBrains Mono
 - [ ] Mettre à jour les couleurs Tailwind (palette marker)
 - [ ] Ajouter le grain overlay CSS sur le body

@@ -1,4 +1,13 @@
-import type { Project } from "@/components/ProjectCard";
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  slug: string;
+  problem?: string;
+  stack?: string[];
+  results?: string[];
+}
 
 interface ProjectBase {
   slug: string;
