@@ -14,7 +14,7 @@
 - [x] Ajouter sitemap.xml et robots.txt
 - [x] Configurer OpenGraph et Twitter cards
 - [x] Ajouter la section témoignages (placeholder)
-- [ ] Ajouter la section newsletter avec formulaire email
+- [x] Ajouter la section newsletter avec formulaire email
 - [ ] Responsive : tester et ajuster mobile/tablet
 - [ ] Performance : optimiser images, lazy loading, Core Web Vitals
 - [ ] Préparer le déploiement Vercel
