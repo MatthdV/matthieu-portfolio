@@ -89,7 +89,7 @@ export default function ContactPage() {
 
       {/* 2-column: Form + Sidebar */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_380px]">
+        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_320px] lg:grid-cols-[1fr_380px]">
           {/* Left: Form */}
           <FadeIn delay={0.1}>
           <ContactForm

@@ -79,7 +79,7 @@ export default function ProjetsPage() {
               </p>
 
               {/* Problem / Stack / Results grid */}
-              <div className="grid gap-8 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
                 {/* Problem */}
                 {project.problem && (
                   <div>

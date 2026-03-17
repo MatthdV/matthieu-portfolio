@@ -79,7 +79,7 @@ export default function NewsletterSection({
                 </span>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex max-w-md">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row max-w-md">
                 <input
                   type="email"
                   value={email}
@@ -90,7 +90,7 @@ export default function NewsletterSection({
                 />
                 <button
                   type="submit"
-                  className="border border-l-0 border-marker-blue bg-marker-blue px-6 py-3 font-mono text-sm font-bold text-background transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--marker-yellow)]"
+                  className="border border-marker-blue bg-marker-blue px-6 py-3 font-mono text-sm font-bold text-background transition-all duration-200 sm:border-l-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--marker-yellow)]"
                 >
                   {subscribe}
                 </button>

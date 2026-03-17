@@ -23,8 +23,8 @@ export default function HeroSection({
   ctaSecondary,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+    <section className="relative min-h-0 lg:min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 py-12 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* Left column */}
         <div className="relative z-10">
           {/* Availability tag */}
@@ -57,13 +57,13 @@ export default function HeroSection({
 
           {/* Stats */}
           <FadeIn delay={0.3}>
-            <div className="flex gap-10 mb-10">
+            <div className="flex gap-6 sm:gap-10 mb-10">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col">
-                  <span className="font-mono text-3xl font-bold text-foreground">
+                  <span className="font-mono text-2xl sm:text-3xl font-bold text-foreground">
                     {stat.value}
                   </span>
-                  <span className="font-mono text-xs text-muted uppercase tracking-wider mt-1">
+                  <span className="font-mono text-[10px] sm:text-xs text-muted uppercase tracking-wider mt-1">
                     {stat.label}
                   </span>
                 </div>
@@ -73,16 +73,16 @@ export default function HeroSection({
 
           {/* CTAs */}
           <FadeIn delay={0.4}>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-block px-8 py-4 bg-marker-blue text-white font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-marker-yellow)]"
+                className="inline-block px-8 py-4 bg-marker-blue text-white font-mono text-sm uppercase tracking-wider text-center transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-marker-yellow)]"
               >
                 {ctaPrimary}
               </Link>
               <Link
                 href="/projets"
-                className="inline-block px-8 py-4 border border-[var(--color-border)] text-foreground font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:border-foreground hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-border)]"
+                className="inline-block px-8 py-4 border border-[var(--color-border)] text-foreground font-mono text-sm uppercase tracking-wider text-center transition-all duration-200 hover:border-foreground hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-border)]"
               >
                 {ctaSecondary}
               </Link>
@@ -107,7 +107,7 @@ export default function HeroSection({
           />
 
           {/* Hero illustration */}
-          <div className="relative w-full max-w-[520px] aspect-square">
+          <div className="relative w-full max-w-[320px] sm:max-w-[520px] mx-auto aspect-square">
             <Image
               src="/images/hero-illustration.png"
               alt="Illustration marker — homme, robot et laptop"

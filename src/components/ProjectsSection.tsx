@@ -55,7 +55,7 @@ export default function ProjectsSection({
             <FadeIn key={project.number} delay={0.1 + index * 0.05}>
             <Link
               href="/projets"
-              className="group grid grid-cols-[3rem_1fr_auto_2rem] items-center gap-4 border-b border-border py-5 transition-all duration-200 hover:bg-marker-blue/5 hover:pl-2 md:grid-cols-[3rem_1fr_1fr_2rem]"
+              className="group flex items-center gap-3 border-b border-border py-5 transition-all duration-200 hover:bg-marker-blue/5 hover:pl-2 md:grid md:grid-cols-[3rem_1fr_1fr_2rem] md:gap-4"
             >
               {/* Number */}
               <span className="font-mono text-sm text-muted">
@@ -63,7 +63,7 @@ export default function ProjectsSection({
               </span>
 
               {/* Title */}
-              <span className="font-sans text-base font-bold tracking-tight text-foreground md:text-lg">
+              <span className="font-sans text-sm font-bold tracking-tight text-foreground min-w-0 truncate md:text-lg md:truncate-none">
                 {project.title}
               </span>
 
@@ -80,7 +80,7 @@ export default function ProjectsSection({
               </span>
 
               {/* Arrow */}
-              <span className="font-mono text-muted transition-all duration-200 group-hover:translate-x-1 group-hover:text-marker-blue">
+              <span className="ml-auto font-mono text-muted transition-all duration-200 group-hover:translate-x-1 group-hover:text-marker-blue shrink-0">
                 &rarr;
               </span>
             </Link>
