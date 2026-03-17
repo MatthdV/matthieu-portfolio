@@ -114,6 +114,61 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Témoignages */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <FadeIn>
+            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
+              Ce qu&apos;ils en disent
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
+              Retours de clients et collaborateurs sur nos projets ensemble.
+            </p>
+          </FadeIn>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                quote:
+                  "Matthieu a transformé notre process de revue de performance. Ce qui prenait 3 semaines se fait maintenant en 3 jours avec une qualité bien supérieure.",
+                name: "Sophie L.",
+                role: "VP People, Scale-up SaaS",
+              },
+              {
+                quote:
+                  "Les 18 workflows n8n qu'il a mis en place nous font gagner plus de 200 heures par mois. Le ROI a été immédiat.",
+                name: "Thomas R.",
+                role: "Head of Ops, Fintech",
+              },
+              {
+                quote:
+                  "Un vrai expert qui comprend les enjeux business, pas juste la technique. Son audit IA nous a permis de prioriser les bons chantiers.",
+                name: "Marie D.",
+                role: "COO, Agence digitale",
+              },
+            ].map((testimonial, i) => (
+              <FadeIn key={testimonial.name} delay={i * 0.1}>
+                <blockquote className="flex h-full flex-col rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8">
+                  <svg
+                    className="mb-4 h-8 w-8 text-accent/30"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+                  </svg>
+                  <p className="flex-1 text-sm leading-relaxed text-foreground/70">
+                    {testimonial.quote}
+                  </p>
+                  <div className="mt-6 border-t border-foreground/10 pt-4">
+                    <p className="text-sm font-semibold">{testimonial.name}</p>
+                    <p className="text-xs text-foreground/50">{testimonial.role}</p>
+                  </div>
+                </blockquote>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
