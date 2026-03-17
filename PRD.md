@@ -166,8 +166,8 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 ### Phase 3 : Pages secondaires
 - [x] Page /projets avec détails de chaque projet
 - [x] Page /services avec cartes et pricing
-- [ ] Page /blog avec liste articles
-- [ ] Page /contact avec formulaire + liens
+- [x] Page /blog avec liste articles
+- [x] Page /contact avec formulaire + liens
 
 ### Phase 4 : Polish
 - [ ] Animations FadeIn sur toutes les sections
