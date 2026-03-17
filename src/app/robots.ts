@@ -1,8 +1,17 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://matthieudevillele.com";
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://matthieudevillele.com/sitemap.xml",
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+    ],
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

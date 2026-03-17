@@ -15,12 +15,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const page of pages) {
+    const languages: Record<string, string> = {};
+    for (const locale of routing.locales) {
+      languages[locale] = `${siteUrl}/${locale}${page.path}`;
+    }
+
     for (const locale of routing.locales) {
       entries.push({
         url: `${siteUrl}/${locale}${page.path}`,
         lastModified: new Date(),
         changeFrequency: page.changeFrequency,
         priority: page.priority,
+        alternates: {
+          languages,
+        },
       });
     }
   }
