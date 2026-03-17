@@ -1,7 +1,7 @@
 - [x] Initialiser le projet Next.js avec Tailwind CSS
 - [x] Configurer la structure de base (layout, navbar, footer)
-- [ ] Créer la page d'accueil avec hero section et CTA
-- [ ] Ajouter la section "Ce que je fais" (3 cartes de services)
+- [x] Créer la page d'accueil avec hero section et CTA
+- [x] Ajouter la section "Ce que je fais" (3 cartes de services)
 - [ ] Créer le composant Card projet et la section Projets en grille
 - [ ] Ajouter les données des 7 projets GitHub
 - [ ] Créer la page /projets avec liste détaillée
