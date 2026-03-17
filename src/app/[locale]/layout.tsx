@@ -3,6 +3,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "@/app/globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -36,6 +37,8 @@ export default async function LocaleLayout({
   const t = await getTranslations("Nav");
   const tLang = await getTranslations("LanguageSwitcher");
 
+  const tFooter = await getTranslations("Footer");
+
   const navLinks = [
     { href: "/", label: t("home") },
     { href: "/projets", label: t("projects") },
@@ -58,6 +61,11 @@ export default async function LocaleLayout({
           <div className="pt-16">
             {children}
           </div>
+          <Footer
+            tagline={tFooter("tagline")}
+            copyright={tFooter("copyright")}
+            navLinks={navLinks}
+          />
         </NextIntlClientProvider>
       </body>
     </html>

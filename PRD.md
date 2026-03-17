@@ -153,7 +153,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Mettre à jour les couleurs Tailwind (palette marker)
 - [x] Ajouter le grain overlay CSS sur le body
 - [x] Créer le composant Navbar v2 (logo, nav mono, sélecteur langue)
-- [ ] Créer le composant Footer v2 (minimal)
+- [x] Créer le composant Footer v2 (minimal)
 
 ### Phase 2 : Page d'accueil
 - [ ] Hero section asymétrique avec stats et CTAs
