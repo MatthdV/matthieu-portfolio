@@ -9,19 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0a",
-        foreground: "#f5f5f0",
-        accent: {
-          DEFAULT: "#1A65FF",
-          hover: "#1A65FF",
-        },
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
+        muted: "var(--color-muted)",
+        border: "var(--color-border)",
         marker: {
-          blue: "#1A65FF",
-          yellow: "#FFCD2E",
-          red: "#FE342C",
-        },
-        gray: {
-          muted: "#888888",
+          blue: "var(--color-marker-blue)",
+          yellow: "var(--color-marker-yellow)",
+          red: "var(--color-marker-red)",
         },
       },
       fontFamily: {

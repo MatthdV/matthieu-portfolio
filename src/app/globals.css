@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f0;
+  --color-muted: #888888;
+  --color-border: #222222;
+  --color-marker-blue: #1A65FF;
+  --color-marker-yellow: #FFCD2E;
+  --color-marker-red: #FE342C;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: #f5f5f0;
-  background: #0a0a0a;
+  color: var(--color-foreground);
+  background: var(--color-background);
 }
