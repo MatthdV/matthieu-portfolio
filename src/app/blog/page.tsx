@@ -4,9 +4,16 @@ import { posts } from "@/data/posts";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Blog — Matthieu de Villele",
+  title: "Blog",
   description:
     "Articles sur l'automation, l'IA, n8n, Jira et Google Apps Script. Retours d'expérience, guides pratiques et comparatifs.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog — Matthieu de Villele",
+    description:
+      "Retours d'expérience, guides pratiques et veille automation & IA.",
+    url: "/blog",
+  },
 };
 
 function formatDate(dateStr: string) {

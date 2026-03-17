@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projets — Matthieu de Villele",
+  title: "Projets",
   description:
     "Portfolio de projets : agents IA, automation n8n, intégrations Jira, Apps Script. Découvrez les résultats concrets livrés en production.",
+  alternates: { canonical: "/projets" },
+  openGraph: {
+    title: "Projets — Matthieu de Villele",
+    description:
+      "7 projets livrés en production — automation, IA et intégrations enterprise.",
+    url: "/projets",
+  },
 };
 
 export default function ProjetsPage() {

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services — Matthieu de Villele",
+  title: "Services",
   description:
     "Audit IA gratuit, implémentation automation, agents IA custom et retainer mensuel. Découvrez mes offres pour automatiser et accélérer votre business.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Services — Matthieu de Villele",
+    description:
+      "Audit IA gratuit, automation sur-mesure, agents IA custom et retainer mensuel.",
+    url: "/services",
+  },
 };
 
 const services = [

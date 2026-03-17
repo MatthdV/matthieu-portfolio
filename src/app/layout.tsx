@@ -15,8 +15,14 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://matthieudevillele.com";
+
 export const metadata: Metadata = {
-  title: "Matthieu de Villele — Automation & AI Engineer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Matthieu de Villele — Automation & AI Engineer",
+    template: "%s | Matthieu de Villele",
+  },
   description:
     "Senior Automation & AI Engineer freelance. Agents IA sur-mesure, automation de process (n8n, Apps Script), audit & conseil IA. 40+ workflows en production.",
   keywords: [
@@ -28,6 +34,30 @@ export const metadata: Metadata = {
     "Apps Script",
     "agents IA",
   ],
+  authors: [{ name: "Matthieu de Villele" }],
+  creator: "Matthieu de Villele",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: siteUrl,
+    siteName: "Matthieu de Villele",
+    title: "Matthieu de Villele — Automation & AI Engineer",
+    description:
+      "Senior Automation & AI Engineer freelance. Agents IA sur-mesure, automation de process, audit & conseil IA.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matthieu de Villele — Automation & AI Engineer",
+    description:
+      "Senior Automation & AI Engineer freelance. Agents IA sur-mesure, automation de process, audit & conseil IA.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +71,29 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"){document.documentElement.classList.remove("dark")}else{document.documentElement.classList.add("dark")}}catch(e){}})();`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Matthieu de Villele",
+              url: siteUrl,
+              jobTitle: "Senior Automation & AI Engineer",
+              sameAs: [
+                "https://linkedin.com/in/matthieu-de-villele",
+                "https://github.com/matthieu-de-villele",
+              ],
+              knowsAbout: [
+                "Artificial Intelligence",
+                "Process Automation",
+                "n8n",
+                "Google Apps Script",
+                "Jira Automation",
+              ],
+            }),
           }}
         />
       </head>

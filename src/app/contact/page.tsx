@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Matthieu de Villele",
+  title: "Contact",
   description:
     "Contactez Matthieu de Villele pour discuter de votre projet automation ou IA. Audit gratuit, devis personnalisé et réponse sous 24h.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — Matthieu de Villele",
+    description:
+      "Discutons de votre projet automation ou IA. Réponse sous 24h.",
+    url: "/contact",
+  },
 };
 
 const contactInfo = [
