@@ -150,8 +150,8 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 ### Phase 1 : Reset et fondations
 - [x] Supprimer l'ancien design (garder la structure i18n et les fichiers de traduction)
 - [x] Configurer les fonts Space Grotesk + JetBrains Mono
-- [ ] Mettre à jour les couleurs Tailwind (palette marker)
-- [ ] Ajouter le grain overlay CSS sur le body
+- [x] Mettre à jour les couleurs Tailwind (palette marker)
+- [x] Ajouter le grain overlay CSS sur le body
 - [ ] Créer le composant Navbar v2 (logo, nav mono, sélecteur langue)
 - [ ] Créer le composant Footer v2 (minimal)
 
