@@ -6,6 +6,9 @@ export interface Project {
   tags: string[];
   github?: string;
   slug: string;
+  problem?: string;
+  stack?: string[];
+  results?: string[];
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
