@@ -1,3 +1,6 @@
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
+
 const services = [
   {
     icon: (
@@ -84,6 +87,23 @@ export default function Home() {
                   {service.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projets */}
+      <section id="projets" className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
+            Projets
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
+            Une sélection de projets livrés en production — automation, IA et intégrations.
+          </p>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </div>
