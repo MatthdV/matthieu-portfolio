@@ -1,6 +1,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import FadeIn from "@/components/FadeIn";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const services = [
   {
@@ -168,6 +169,18 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="px-6 py-24">
+        <FadeIn className="mx-auto max-w-2xl rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8 text-center sm:p-12">
+          <h2 className="text-2xl font-bold">Newsletter IA &amp; Automation</h2>
+          <p className="mx-auto mt-3 max-w-md text-sm text-foreground/60">
+            Un email par semaine avec les meilleures ressources, outils et
+            retours d&apos;expérience sur l&apos;automation et l&apos;IA.
+          </p>
+          <NewsletterForm />
+        </FadeIn>
       </section>
     </main>
   );
