@@ -10,7 +10,7 @@
 - [x] Créer la page /contact avec formulaire
 - [x] Ajouter le dark mode toggle
 - [x] Implémenter les animations scroll (framer-motion)
-- [ ] Configurer SEO metadata pour chaque page
+- [x] Configurer SEO metadata pour chaque page
 - [ ] Ajouter sitemap.xml et robots.txt
 - [ ] Configurer OpenGraph et Twitter cards
 - [ ] Ajouter la section témoignages (placeholder)
