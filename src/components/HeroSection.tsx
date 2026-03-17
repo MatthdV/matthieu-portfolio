@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import MarkerUnderline from "./MarkerUnderline";
 
 type HeroSectionProps = {
   tag: string;
@@ -39,14 +40,7 @@ export default function HeroSection({
             style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}
           >
             <span className="block">{title}</span>
-            <span className="relative inline-block">
-              {titleAccent}
-              {/* Marker yellow underline */}
-              <span
-                className="absolute left-0 bottom-[0.08em] w-full h-[0.18em] bg-marker-yellow -z-10"
-                style={{ transform: "skewX(-6deg)" }}
-              />
-            </span>
+            <MarkerUnderline color="yellow">{titleAccent}</MarkerUnderline>
           </h1>
 
           {/* Description */}
