@@ -16,5 +16,5 @@
 - [x] Ajouter la section témoignages (placeholder)
 - [x] Ajouter la section newsletter avec formulaire email
 - [x] Responsive : tester et ajuster mobile/tablet
-- [ ] Performance : optimiser images, lazy loading, Core Web Vitals
+- [x] Performance : optimiser images, lazy loading, Core Web Vitals
 - [ ] Préparer le déploiement Vercel
