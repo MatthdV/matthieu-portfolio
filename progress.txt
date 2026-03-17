@@ -15,6 +15,6 @@
 - [x] Configurer OpenGraph et Twitter cards
 - [x] Ajouter la section témoignages (placeholder)
 - [x] Ajouter la section newsletter avec formulaire email
-- [ ] Responsive : tester et ajuster mobile/tablet
+- [x] Responsive : tester et ajuster mobile/tablet
 - [ ] Performance : optimiser images, lazy loading, Core Web Vitals
 - [ ] Préparer le déploiement Vercel
