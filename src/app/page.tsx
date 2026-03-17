@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
@@ -39,7 +40,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
       <section className="flex flex-1 flex-col items-center justify-center px-6 py-24">
-        <div className="max-w-2xl text-center">
+        <FadeIn className="max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Automatisez vos process.{" "}
             <span className="text-accent">Accélérez avec l&apos;IA.</span>
@@ -61,32 +62,33 @@ export default function Home() {
               Voir mes projets <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* Ce que je fais */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-            Ce que je fais
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
-            Des solutions concrètes pour automatiser et accélérer votre business avec l&apos;IA.
-          </p>
+          <FadeIn>
+            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
+              Ce que je fais
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
+              Des solutions concrètes pour automatiser et accélérer votre business avec l&apos;IA.
+            </p>
+          </FadeIn>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8 transition-colors hover:border-accent/30 hover:bg-accent/[0.05]"
-              >
-                <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3 text-accent">
-                  {service.icon}
+            {services.map((service, i) => (
+              <FadeIn key={service.title} delay={i * 0.1}>
+                <div className="group rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8 transition-colors hover:border-accent/30 hover:bg-accent/[0.05]">
+                  <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3 text-accent">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/60">
-                  {service.description}
-                </p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -95,15 +97,19 @@ export default function Home() {
       {/* Projets */}
       <section id="projets" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
-            Projets
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
-            Une sélection de projets livrés en production — automation, IA et intégrations.
-          </p>
+          <FadeIn>
+            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
+              Projets
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-foreground/60">
+              Une sélection de projets livrés en production — automation, IA et intégrations.
+            </p>
+          </FadeIn>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+            {projects.map((project, i) => (
+              <FadeIn key={project.slug} delay={i * 0.08}>
+                <ProjectCard project={project} />
+              </FadeIn>
             ))}
           </div>
         </div>
