@@ -2,8 +2,8 @@
 - [x] Configurer la structure de base (layout, navbar, footer)
 - [x] Créer la page d'accueil avec hero section et CTA
 - [x] Ajouter la section "Ce que je fais" (3 cartes de services)
-- [ ] Créer le composant Card projet et la section Projets en grille
-- [ ] Ajouter les données des 7 projets GitHub
+- [x] Créer le composant Card projet et la section Projets en grille
+- [x] Ajouter les données des 7 projets GitHub
 - [ ] Créer la page /projets avec liste détaillée
 - [ ] Créer la page /services avec 4 offres et pricing
 - [ ] Créer la page /blog avec layout article list
