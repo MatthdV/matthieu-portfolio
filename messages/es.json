@@ -23,11 +23,9 @@
     "stat3Label": "países",
     "ctaPrimary": "Reservar una auditoría IA gratuita",
     "ctaSecondary": "Ver mis proyectos",
-    "servicesSectionLabel": "01 — Services",
+    "servicesSectionLabel": "01 — Servicios",
     "servicesBentoTitle": "Lo que hago por tu",
     "servicesBentoTitleAccent": "negocio",
-    "servicesTitle": "Lo que hago",
-    "servicesDescription": "Soluciones concretas para automatizar y acelerar tu negocio con IA.",
     "service1Title": "Agentes IA a medida",
     "service1Desc": "Diseño y despliegue de agentes IA adaptados a tus necesidades: chatbots, asistentes internos, pipelines RAG, automatización inteligente.",
     "service1Price": "Desde 5k€",
@@ -44,7 +42,6 @@
     "projectsTitle": "No son POC. Son",
     "projectsTitleAccent": "producción.",
     "projectsViewAll": "Ver todo en GitHub",
-    "projectsDescription": "Una selección de proyectos entregados en producción — automatización, IA e integraciones.",
     "newsletterSectionLabel": "03 — Newsletter",
     "newsletterTitle": "Resumen IA semanal.",
     "newsletterTitleAccent": "Sin rodeos.",
@@ -138,9 +135,6 @@
   "NewsletterForm": {
     "placeholder": "tu@email.com",
     "subscribe": "Suscribirse"
-  },
-  "ProjectCard": {
-    "learnMore": "Saber más"
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",

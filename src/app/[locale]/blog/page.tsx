@@ -17,7 +17,7 @@ export default function BlogPage() {
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-marker-blue" />
               <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-                Blog
+                {t("title")}
               </span>
             </div>
           </FadeIn>

@@ -26,8 +26,6 @@
     "servicesSectionLabel": "01 — Services",
     "servicesBentoTitle": "What I do for your",
     "servicesBentoTitleAccent": "business",
-    "servicesTitle": "What I do",
-    "servicesDescription": "Concrete solutions to automate and accelerate your business with AI.",
     "service1Title": "Custom AI Agents",
     "service1Desc": "Design and deployment of AI agents tailored to your needs: chatbots, internal assistants, RAG pipelines, intelligent automation.",
     "service1Price": "From 5k€",
@@ -44,7 +42,6 @@
     "projectsTitle": "Not POCs.",
     "projectsTitleAccent": "Production.",
     "projectsViewAll": "View all on GitHub",
-    "projectsDescription": "A selection of projects delivered to production — automation, AI, and integrations.",
     "newsletterSectionLabel": "03 — Newsletter",
     "newsletterTitle": "Weekly AI digest.",
     "newsletterTitleAccent": "Zero bullshit.",
@@ -138,9 +135,6 @@
   "NewsletterForm": {
     "placeholder": "your@email.com",
     "subscribe": "Subscribe"
-  },
-  "ProjectCard": {
-    "learnMore": "Learn more"
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",

@@ -172,7 +172,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 ### Phase 4 : Polish
 - [x] Animations FadeIn sur toutes les sections
 - [x] Responsive mobile (hero single column, bento stack, projets simplifié)
-- [ ] Mettre à jour les fichiers de traduction FR/EN/ES
+- [x] Mettre à jour les fichiers de traduction FR/EN/ES
 - [ ] SEO metadata par page et par langue
 - [ ] Sitemap multilingue + robots.txt
 - [ ] OpenGraph images

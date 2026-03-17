@@ -26,8 +26,6 @@
     "servicesSectionLabel": "01 — Services",
     "servicesBentoTitle": "Ce que je fais pour votre",
     "servicesBentoTitleAccent": "business",
-    "servicesTitle": "Ce que je fais",
-    "servicesDescription": "Des solutions concrètes pour automatiser et accélérer votre business avec l'IA.",
     "service1Title": "Agents IA sur-mesure",
     "service1Desc": "Conception et déploiement d'agents IA adaptés à vos besoins : chatbots, assistants internes, pipelines RAG, automatisation intelligente.",
     "service1Price": "À partir de 5k€",
@@ -44,7 +42,6 @@
     "projectsTitle": "Pas des POC. Du",
     "projectsTitleAccent": "prod.",
     "projectsViewAll": "Voir tout sur GitHub",
-    "projectsDescription": "Une sélection de projets livrés en production — automation, IA et intégrations.",
     "newsletterSectionLabel": "03 — Newsletter",
     "newsletterTitle": "Veille IA hebdo.",
     "newsletterTitleAccent": "Zéro bullshit.",
@@ -138,9 +135,6 @@
   "NewsletterForm": {
     "placeholder": "votre@email.com",
     "subscribe": "S'inscrire"
-  },
-  "ProjectCard": {
-    "learnMore": "En savoir plus"
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",
