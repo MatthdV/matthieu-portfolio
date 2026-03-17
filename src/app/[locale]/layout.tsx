@@ -1,5 +1,5 @@
-import { useTranslations, useLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
@@ -18,11 +18,12 @@ export default function LocaleLayout({
   params: { locale: string };
 }) {
   setRequestLocale(params.locale);
+  const locale = params.locale;
 
-  const tNav = useTranslations("Nav");
-  const tLang = useTranslations("LanguageSwitcher");
-  const tFooter = useTranslations("Footer");
-  const locale = useLocale();
+  const messages = await getMessages();
+  const tNav = await getTranslations("Nav");
+  const tLang = await getTranslations("LanguageSwitcher");
+  const tFooter = await getTranslations("Footer");
 
   const navLinks = [
     { href: "/" as const, label: tNav("home") },
@@ -47,13 +48,15 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className="dark">
       <body className="bg-background text-foreground antialiased">
-        <ThemeProvider>
-          <Navbar navLinks={navLinks} languageLabels={languageLabels} locale={locale} />
-          <div className="pt-16">
-            {children}
-          </div>
-          <Footer tagline={tFooter("tagline")} copyright={tFooter("copyright")} links={footerLinks} />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <Navbar navLinks={navLinks} languageLabels={languageLabels} locale={locale} />
+            <div className="pt-16">
+              {children}
+            </div>
+            <Footer tagline={tFooter("tagline")} copyright={tFooter("copyright")} links={footerLinks} />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
