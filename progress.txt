@@ -8,7 +8,7 @@
 - [x] Créer la page /services avec 4 offres et pricing
 - [x] Créer la page /blog avec layout article list
 - [x] Créer la page /contact avec formulaire
-- [ ] Ajouter le dark mode toggle
+- [x] Ajouter le dark mode toggle
 - [ ] Implémenter les animations scroll (framer-motion)
 - [ ] Configurer SEO metadata pour chaque page
 - [ ] Ajouter sitemap.xml et robots.txt
