@@ -45,7 +45,9 @@
     "projectsTitleAccent": "Production.",
     "projectsViewAll": "View all on GitHub",
     "projectsDescription": "A selection of projects delivered to production — automation, AI, and integrations.",
-    "newsletterTitle": "AI & Automation Newsletter",
+    "newsletterSectionLabel": "03 — Newsletter",
+    "newsletterTitle": "Weekly AI digest.",
+    "newsletterTitleAccent": "Zero bullshit.",
     "newsletterDescription": "One email per week with the best resources, tools, and insights on automation and AI."
   },
   "ServicesPage": {

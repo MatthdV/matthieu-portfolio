@@ -161,7 +161,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Créer les composants marker-underline et marker-circle
 - [x] Section services en bento grid avec illustrations marker
 - [x] Section projets en liste horizontale style terminal
-- [ ] Section newsletter avec formulaire inline
+- [x] Section newsletter avec formulaire inline
 
 ### Phase 3 : Pages secondaires
 - [ ] Page /projets avec détails de chaque projet

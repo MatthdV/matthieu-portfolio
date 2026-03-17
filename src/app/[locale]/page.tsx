@@ -2,10 +2,12 @@ import { useTranslations } from "next-intl";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import NewsletterSection from "@/components/NewsletterSection";
 
 export default function Home() {
   const t = useTranslations("HomePage");
   const tProjects = useTranslations("Projects");
+  const tNewsletter = useTranslations("NewsletterForm");
 
   const stats = [
     { value: t("stat1Value"), label: t("stat1Label") },
@@ -76,6 +78,14 @@ export default function Home() {
         projects={projects}
         viewAllLabel={t("projectsViewAll")}
         viewAllHref="https://github.com/matthieu-de-villele"
+      />
+      <NewsletterSection
+        sectionLabel={t("newsletterSectionLabel")}
+        title={t("newsletterTitle")}
+        titleAccent={t("newsletterTitleAccent")}
+        description={t("newsletterDescription")}
+        placeholder={tNewsletter("placeholder")}
+        subscribe={tNewsletter("subscribe")}
       />
     </main>
   );

@@ -45,7 +45,9 @@
     "projectsTitleAccent": "prod.",
     "projectsViewAll": "Voir tout sur GitHub",
     "projectsDescription": "Une sélection de projets livrés en production — automation, IA et intégrations.",
-    "newsletterTitle": "Newsletter IA & Automation",
+    "newsletterSectionLabel": "03 — Newsletter",
+    "newsletterTitle": "Veille IA hebdo.",
+    "newsletterTitleAccent": "Zéro bullshit.",
     "newsletterDescription": "Un email par semaine avec les meilleures ressources, outils et retours d'expérience sur l'automation et l'IA."
   },
   "ServicesPage": {
