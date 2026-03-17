@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import ContactForm from "@/components/ContactForm";
+import FadeIn from "@/components/FadeIn";
 
 const CONTACT_LINKS = [
   {
@@ -62,21 +63,27 @@ export default function ContactPage() {
       {/* Header */}
       <section className="px-6 py-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
-            <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-              Contact
-            </span>
-          </div>
-          <h1
-            className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-          >
-            <MarkerUnderline color="blue">{t("title")}</MarkerUnderline>
-          </h1>
-          <p className="max-w-2xl font-sans text-lg text-muted">
-            {t("description")}
-          </p>
+          <FadeIn>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-marker-blue" />
+              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+                Contact
+              </span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h1
+              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+            >
+              <MarkerUnderline color="blue">{t("title")}</MarkerUnderline>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p className="max-w-2xl font-sans text-lg text-muted">
+              {t("description")}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -84,6 +91,7 @@ export default function ContactPage() {
       <section className="px-6 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_380px]">
           {/* Left: Form */}
+          <FadeIn delay={0.1}>
           <ContactForm
             nameLabel={tf("nameLabel")}
             namePlaceholder={tf("namePlaceholder")}
@@ -98,8 +106,10 @@ export default function ContactPage() {
             successTitle={tf("successTitle")}
             successMessage={tf("successMessage")}
           />
+          </FadeIn>
 
           {/* Right: Contact links */}
+          <FadeIn delay={0.2}>
           <div className="flex flex-col gap-8">
             <h2 className="font-sans text-xl font-bold tracking-tight text-foreground">
               {t("sidebarTitle")}
@@ -162,6 +172,7 @@ export default function ContactPage() {
               {t("sidebarNote")}
             </p>
           </div>
+          </FadeIn>
         </div>
       </section>
     </main>

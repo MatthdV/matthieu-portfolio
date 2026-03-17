@@ -3,6 +3,7 @@ import { getLocalizedProjects } from "@/data/projects";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import MarkerCircle from "@/components/MarkerCircle";
 import { Link } from "@/i18n/navigation";
+import FadeIn from "@/components/FadeIn";
 
 export default function ProjetsPage() {
   const t = useTranslations("ProjectsPage");
@@ -14,21 +15,27 @@ export default function ProjetsPage() {
       {/* Header */}
       <section className="px-6 py-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
-            <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+          <FadeIn>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-marker-blue" />
+              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+                {t("title")}
+              </span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h1
+              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+            >
               {t("title")}
-            </span>
-          </div>
-          <h1
-            className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-          >
-            {t("title")}
-          </h1>
-          <p className="max-w-2xl font-sans text-lg text-muted">
-            {t("description")}
-          </p>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p className="max-w-2xl font-sans text-lg text-muted">
+              {t("description")}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -36,8 +43,8 @@ export default function ProjetsPage() {
       <section className="px-6 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto flex max-w-6xl flex-col gap-8">
           {projects.map((project, index) => (
+            <FadeIn key={project.slug} delay={index * 0.1}>
             <article
-              key={project.slug}
               className="group rounded-none border border-border bg-background p-8 transition-all duration-200 hover:border-marker-blue hover:-translate-y-1 md:p-10"
             >
               {/* Top row: number + title + tags */}
@@ -142,12 +149,14 @@ export default function ProjetsPage() {
                 </div>
               )}
             </article>
+            </FadeIn>
           ))}
         </div>
       </section>
 
       {/* Bottom CTA */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
+        <FadeIn>
         <div className="mx-auto max-w-6xl border border-border p-8 text-center md:p-12">
           <p className="mb-6 font-sans text-xl font-bold tracking-tight text-foreground md:text-2xl">
             {t("ctaText")}
@@ -159,6 +168,7 @@ export default function ProjetsPage() {
             {t("ctaButton")}
           </Link>
         </div>
+        </FadeIn>
       </section>
     </main>
   );

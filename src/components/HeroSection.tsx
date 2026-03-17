@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import MarkerUnderline from "./MarkerUnderline";
+import FadeIn from "./FadeIn";
 
 type HeroSectionProps = {
   tag: string;
@@ -27,59 +28,70 @@ export default function HeroSection({
         {/* Left column */}
         <div className="relative z-10">
           {/* Availability tag */}
-          <div className="flex items-center gap-3 mb-8">
-            <span className="w-8 h-[2px] bg-marker-blue" />
-            <span className="font-mono text-sm text-marker-blue tracking-wide">
-              {tag}
-            </span>
-          </div>
+          <FadeIn>
+            <div className="flex items-center gap-3 mb-8">
+              <span className="w-8 h-[2px] bg-marker-blue" />
+              <span className="font-mono text-sm text-marker-blue tracking-wide">
+                {tag}
+              </span>
+            </div>
+          </FadeIn>
 
           {/* H1 */}
-          <h1
-            className="font-bold leading-[1.05] tracking-[-0.04em] mb-6"
-            style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}
-          >
-            <span className="block">{title}</span>
-            <MarkerUnderline color="yellow">{titleAccent}</MarkerUnderline>
-          </h1>
+          <FadeIn delay={0.1}>
+            <h1
+              className="font-bold leading-[1.05] tracking-[-0.04em] mb-6"
+              style={{ fontSize: "clamp(3rem, 6vw, 5.5rem)" }}
+            >
+              <span className="block">{title}</span>
+              <MarkerUnderline color="yellow">{titleAccent}</MarkerUnderline>
+            </h1>
+          </FadeIn>
 
           {/* Description */}
-          <p className="text-muted text-lg max-w-[500px] leading-relaxed mb-10">
-            {description}
-          </p>
+          <FadeIn delay={0.2}>
+            <p className="text-muted text-lg max-w-[500px] leading-relaxed mb-10">
+              {description}
+            </p>
+          </FadeIn>
 
           {/* Stats */}
-          <div className="flex gap-10 mb-10">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col">
-                <span className="font-mono text-3xl font-bold text-foreground">
-                  {stat.value}
-                </span>
-                <span className="font-mono text-xs text-muted uppercase tracking-wider mt-1">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
+          <FadeIn delay={0.3}>
+            <div className="flex gap-10 mb-10">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col">
+                  <span className="font-mono text-3xl font-bold text-foreground">
+                    {stat.value}
+                  </span>
+                  <span className="font-mono text-xs text-muted uppercase tracking-wider mt-1">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-4 bg-marker-blue text-white font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-marker-yellow)]"
-            >
-              {ctaPrimary}
-            </Link>
-            <Link
-              href="/projets"
-              className="inline-block px-8 py-4 border border-[var(--color-border)] text-foreground font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:border-foreground hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-border)]"
-            >
-              {ctaSecondary}
-            </Link>
-          </div>
+          <FadeIn delay={0.4}>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-4 bg-marker-blue text-white font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-marker-yellow)]"
+              >
+                {ctaPrimary}
+              </Link>
+              <Link
+                href="/projets"
+                className="inline-block px-8 py-4 border border-[var(--color-border)] text-foreground font-mono text-sm uppercase tracking-wider transition-all duration-200 hover:border-foreground hover:-translate-x-[2px] hover:-translate-y-[2px] hover:shadow-[4px_4px_0px_0px_var(--color-border)]"
+              >
+                {ctaSecondary}
+              </Link>
+            </div>
+          </FadeIn>
         </div>
 
         {/* Right column */}
+        <FadeIn delay={0.3}>
         <div className="relative flex items-center justify-center lg:justify-end">
           {/* Decorative blobs */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-marker-blue/[0.06] rounded-full blur-[100px] pointer-events-none" />
@@ -105,6 +117,7 @@ export default function HeroSection({
             />
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

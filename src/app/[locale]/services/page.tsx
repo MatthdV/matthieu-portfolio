@@ -3,6 +3,7 @@ import Image from "next/image";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import MarkerCircle from "@/components/MarkerCircle";
 import { Link } from "@/i18n/navigation";
+import FadeIn from "@/components/FadeIn";
 
 const SERVICES = [
   {
@@ -44,21 +45,27 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="px-6 py-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
-            <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+          <FadeIn>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-marker-blue" />
+              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+                {t("title")}
+              </span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h1
+              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+            >
               {t("title")}
-            </span>
-          </div>
-          <h1
-            className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-          >
-            {t("title")}
-          </h1>
-          <p className="max-w-2xl font-sans text-lg text-muted">
-            {t("description")}
-          </p>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p className="max-w-2xl font-sans text-lg text-muted">
+              {t("description")}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -66,9 +73,9 @@ export default function ServicesPage() {
       <section className="px-6 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
           {SERVICES.map((service, index) => (
+            <FadeIn key={service.key} delay={index * 0.1}>
             <article
-              key={service.key}
-              className="group relative flex flex-col border border-border bg-background p-8 transition-all duration-200 hover:-translate-y-1 hover:border-marker-blue md:p-10"
+              className="group relative flex flex-col border border-border bg-background p-8 transition-all duration-200 hover:-translate-y-1 hover:border-marker-blue md:p-10 h-full"
             >
               {/* Popular badge */}
               {service.popular && (
@@ -140,12 +147,14 @@ export default function ServicesPage() {
                 {t(`${service.key}Cta`)}
               </Link>
             </article>
+            </FadeIn>
           ))}
         </div>
       </section>
 
       {/* Bottom CTA */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
+        <FadeIn>
         <div className="mx-auto max-w-6xl border border-border p-8 text-center md:p-12">
           <p className="mb-3 font-sans text-xl font-bold tracking-tight text-foreground md:text-2xl">
             {t("bottomCtaTitle")}
@@ -160,6 +169,7 @@ export default function ServicesPage() {
             {t("bottomCtaCta")}
           </Link>
         </div>
+        </FadeIn>
       </section>
     </main>
   );

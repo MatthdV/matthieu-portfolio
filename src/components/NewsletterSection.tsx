@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import MarkerUnderline from "./MarkerUnderline";
+import FadeIn from "./FadeIn";
 
 interface NewsletterSectionProps {
   sectionLabel: string;
@@ -35,14 +36,17 @@ export default function NewsletterSection({
     <section className="px-6 py-24 md:px-12 lg:px-20">
       <div className="mx-auto max-w-6xl">
         {/* Section label */}
-        <div className="mb-6 flex items-center gap-3">
-          <span className="h-px w-8 bg-marker-blue" />
-          <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-            {sectionLabel}
-          </span>
-        </div>
+        <FadeIn>
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-px w-8 bg-marker-blue" />
+            <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+              {sectionLabel}
+            </span>
+          </div>
+        </FadeIn>
 
         {/* Content */}
+        <FadeIn delay={0.15}>
         <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:gap-16 lg:text-left">
           {/* Illustration */}
           <div className="relative mb-8 h-32 w-32 shrink-0 lg:mb-0 lg:h-40 lg:w-40">
@@ -94,6 +98,7 @@ export default function NewsletterSection({
             )}
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

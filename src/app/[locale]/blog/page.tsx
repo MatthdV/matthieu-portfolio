@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { getLocalizedPosts } from "@/data/posts";
 import MarkerUnderline from "@/components/MarkerUnderline";
+import FadeIn from "@/components/FadeIn";
 
 export default function BlogPage() {
   const t = useTranslations("BlogPage");
@@ -12,21 +13,27 @@ export default function BlogPage() {
       {/* Header */}
       <section className="px-6 py-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
-            <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-              Blog
-            </span>
-          </div>
-          <h1
-            className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-          >
-            {t("title")}
-          </h1>
-          <p className="max-w-2xl font-sans text-lg text-muted">
-            {t("description")}
-          </p>
+          <FadeIn>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-marker-blue" />
+              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
+                Blog
+              </span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h1
+              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+            >
+              {t("title")}
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <p className="max-w-2xl font-sans text-lg text-muted">
+              {t("description")}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -34,8 +41,8 @@ export default function BlogPage() {
       <section className="px-6 pb-24 md:px-12 lg:px-20">
         <div className="mx-auto flex max-w-6xl flex-col gap-6">
           {posts.map((post, index) => (
+            <FadeIn key={post.slug} delay={index * 0.1}>
             <article
-              key={post.slug}
               className="group border border-border bg-background p-8 transition-all duration-200 hover:border-marker-blue hover:-translate-y-1 md:p-10"
             >
               {/* Date + tags row */}
@@ -79,12 +86,14 @@ export default function BlogPage() {
                 </span>
               </div>
             </article>
+            </FadeIn>
           ))}
         </div>
       </section>
 
       {/* Newsletter CTA */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
+        <FadeIn>
         <div className="mx-auto max-w-6xl border border-border p-8 text-center md:p-12">
           <p className="mb-2 font-sans text-xl font-bold tracking-tight text-foreground md:text-2xl">
             {t("newsletterTitle")}
@@ -93,6 +102,7 @@ export default function BlogPage() {
             {t("newsletterDescription")}
           </p>
         </div>
+        </FadeIn>
       </section>
     </main>
   );
