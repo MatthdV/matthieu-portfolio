@@ -17,4 +17,10 @@
 - [x] Ajouter la section newsletter avec formulaire email
 - [x] Responsive : tester et ajuster mobile/tablet
 - [x] Performance : optimiser images, lazy loading, Core Web Vitals
-- [ ] Préparer le déploiement Vercel
+- [x] Ajouter next-intl pour le support multilingue
+- [x] Créer les fichiers de traduction FR, EN, ES
+- [x] Traduire la page d'accueil (hero, services, projets)
+- [x] Traduire les pages services, blog, contact
+- [x] Ajouter un sélecteur de langue dans la navbar (FR/EN/ES)
+- [x] Configurer les URLs localisées (/fr, /en, /es)
+- [x] Préparer le déploiement Vercel

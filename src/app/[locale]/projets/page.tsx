@@ -1,29 +1,19 @@
-import type { Metadata } from "next";
-import { projects } from "@/data/projects";
-
-export const metadata: Metadata = {
-  title: "Projets",
-  description:
-    "Portfolio de projets : agents IA, automation n8n, intégrations Jira, Apps Script. Découvrez les résultats concrets livrés en production.",
-  alternates: { canonical: "/projets" },
-  openGraph: {
-    title: "Projets — Matthieu de Villele",
-    description:
-      "7 projets livrés en production — automation, IA et intégrations enterprise.",
-    url: "/projets",
-  },
-};
+import { useTranslations } from "next-intl";
+import { getLocalizedProjects } from "@/data/projects";
 
 export default function ProjetsPage() {
+  const t = useTranslations("ProjectsPage");
+  const tp = useTranslations("Projects");
+  const projects = getLocalizedProjects(tp);
+
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-4xl">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-          Projets
+          {t("title")}
         </h1>
         <p className="mt-4 text-lg text-foreground/60">
-          7 projets livrés en production — automation, IA et intégrations
-          enterprise.
+          {t("description")}
         </p>
 
         <div className="mt-16 space-y-12 sm:space-y-20">
@@ -66,20 +56,18 @@ export default function ProjetsPage() {
               </div>
 
               <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-3">
-                {/* Problème */}
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.03] p-5">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/40">
-                    Problème
+                    {t("problem")}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">
                     {project.problem}
                   </p>
                 </div>
 
-                {/* Stack */}
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.03] p-5">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/40">
-                    Stack
+                    {t("stack")}
                   </h3>
                   <ul className="mt-2 space-y-1">
                     {project.stack?.map((tech) => (
@@ -93,10 +81,9 @@ export default function ProjetsPage() {
                   </ul>
                 </div>
 
-                {/* Résultats */}
                 <div className="rounded-xl border border-accent/20 bg-accent/[0.05] p-5">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-accent">
-                    Résultats
+                    {t("results")}
                   </h3>
                   <ul className="mt-2 space-y-1">
                     {project.results?.map((result) => (
@@ -117,13 +104,13 @@ export default function ProjetsPage() {
         {/* CTA */}
         <div className="mt-24 text-center">
           <p className="text-foreground/60">
-            Un projet similaire en tête ?
+            {t("ctaText")}
           </p>
           <a
             href="https://calendly.com"
             className="mt-4 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-hover"
           >
-            Réserver un audit IA gratuit
+            {t("ctaButton")}
           </a>
         </div>
       </div>

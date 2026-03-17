@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/navigation";
 
 export interface Project {
   title: string;
@@ -11,7 +13,12 @@ export interface Project {
   results?: string[];
 }
 
-export default function ProjectCard({ project }: { project: Project }) {
+interface ProjectCardProps {
+  project: Project;
+  learnMoreLabel: string;
+}
+
+export default function ProjectCard({ project, learnMoreLabel }: ProjectCardProps) {
   return (
     <div className="group flex flex-col rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 transition-colors hover:border-accent/30 hover:bg-accent/[0.05]">
       <div className="mb-3 flex flex-wrap gap-2">
@@ -33,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={`/projets#${project.slug}`}
           className="text-sm font-medium text-accent hover:text-accent-hover transition-colors"
         >
-          En savoir plus &rarr;
+          {learnMoreLabel} &rarr;
         </Link>
         {project.github && (
           <a

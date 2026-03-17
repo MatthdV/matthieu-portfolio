@@ -1,6 +1,11 @@
 "use client";
 
-export default function NewsletterForm() {
+interface NewsletterFormProps {
+  placeholder: string;
+  subscribe: string;
+}
+
+export default function NewsletterForm({ placeholder, subscribe }: NewsletterFormProps) {
   return (
     <form
       className="mx-auto mt-6 flex max-w-sm flex-col gap-3 sm:flex-row"
@@ -8,7 +13,7 @@ export default function NewsletterForm() {
     >
       <input
         type="email"
-        placeholder="votre@email.com"
+        placeholder={placeholder}
         required
         className="flex-1 rounded-lg border border-foreground/15 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
       />
@@ -16,7 +21,7 @@ export default function NewsletterForm() {
         type="submit"
         className="shrink-0 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
       >
-        S&apos;inscrire
+        {subscribe}
       </button>
     </form>
   );

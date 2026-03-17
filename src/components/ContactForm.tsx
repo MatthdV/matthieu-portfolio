@@ -2,7 +2,26 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export interface ContactFormTranslations {
+  nameLabel: string;
+  namePlaceholder: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  budgetLabel: string;
+  budgetPlaceholder: string;
+  budgetLt2k: string;
+  budget2k5k: string;
+  budget5k10k: string;
+  budget10kPlus: string;
+  budgetRetainer: string;
+  messageLabel: string;
+  messagePlaceholder: string;
+  submit: string;
+  successTitle: string;
+  successMessage: string;
+}
+
+export default function ContactForm({ translations: t }: { translations: ContactFormTranslations }) {
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
@@ -21,9 +40,9 @@ export default function ContactForm() {
             d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <h3 className="mt-4 text-xl font-semibold">Message envoyé !</h3>
+        <h3 className="mt-4 text-xl font-semibold">{t.successTitle}</h3>
         <p className="mt-2 text-sm text-foreground/60">
-          Merci pour votre message. Je reviens vers vous sous 24h.
+          {t.successMessage}
         </p>
       </div>
     );
@@ -43,7 +62,7 @@ export default function ContactForm() {
             htmlFor="name"
             className="mb-1.5 block text-sm font-medium text-foreground/70"
           >
-            Nom
+            {t.nameLabel}
           </label>
           <input
             id="name"
@@ -51,7 +70,7 @@ export default function ContactForm() {
             type="text"
             required
             className="w-full rounded-lg border border-foreground/15 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-            placeholder="Jean Dupont"
+            placeholder={t.namePlaceholder}
           />
         </div>
         <div>
@@ -59,7 +78,7 @@ export default function ContactForm() {
             htmlFor="email"
             className="mb-1.5 block text-sm font-medium text-foreground/70"
           >
-            Email
+            {t.emailLabel}
           </label>
           <input
             id="email"
@@ -67,7 +86,7 @@ export default function ContactForm() {
             type="email"
             required
             className="w-full rounded-lg border border-foreground/15 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-            placeholder="jean@entreprise.com"
+            placeholder={t.emailPlaceholder}
           />
         </div>
       </div>
@@ -77,19 +96,19 @@ export default function ContactForm() {
           htmlFor="budget"
           className="mb-1.5 block text-sm font-medium text-foreground/70"
         >
-          Budget estimé
+          {t.budgetLabel}
         </label>
         <select
           id="budget"
           name="budget"
           className="w-full rounded-lg border border-foreground/15 bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
         >
-          <option value="">Sélectionner un budget</option>
-          <option value="<2k">&lt; 2 000 €</option>
-          <option value="2k-5k">2 000 € – 5 000 €</option>
-          <option value="5k-10k">5 000 € – 10 000 €</option>
-          <option value="10k+">10 000 € +</option>
-          <option value="retainer">Retainer mensuel</option>
+          <option value="">{t.budgetPlaceholder}</option>
+          <option value="<2k">{t.budgetLt2k}</option>
+          <option value="2k-5k">{t.budget2k5k}</option>
+          <option value="5k-10k">{t.budget5k10k}</option>
+          <option value="10k+">{t.budget10kPlus}</option>
+          <option value="retainer">{t.budgetRetainer}</option>
         </select>
       </div>
 
@@ -98,7 +117,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="mb-1.5 block text-sm font-medium text-foreground/70"
         >
-          Message
+          {t.messageLabel}
         </label>
         <textarea
           id="message"
@@ -106,7 +125,7 @@ export default function ContactForm() {
           rows={5}
           required
           className="w-full resize-none rounded-lg border border-foreground/15 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          placeholder="Décrivez votre projet ou votre besoin..."
+          placeholder={t.messagePlaceholder}
         />
       </div>
 
@@ -114,7 +133,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover sm:w-auto"
       >
-        Envoyer le message
+        {t.submit}
       </button>
     </form>
   );

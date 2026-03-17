@@ -1,92 +1,56 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Audit IA gratuit, implémentation automation, agents IA custom et retainer mensuel. Découvrez mes offres pour automatiser et accélérer votre business.",
-  alternates: { canonical: "/services" },
-  openGraph: {
-    title: "Services — Matthieu de Villele",
-    description:
-      "Audit IA gratuit, automation sur-mesure, agents IA custom et retainer mensuel.",
-    url: "/services",
-  },
-};
-
-const services = [
-  {
-    name: "Audit IA gratuit",
-    price: "Gratuit",
-    duration: "30 min",
-    description:
-      "Un appel de 30 minutes pour analyser vos process actuels, identifier les quick wins d'automatisation et définir une feuille de route IA concrète.",
-    features: [
-      "Analyse de vos workflows existants",
-      "Identification des tâches automatisables",
-      "Recommandations priorisées par ROI",
-      "Feuille de route actionnable",
-    ],
-    cta: "Réserver un créneau",
-    highlighted: false,
-  },
-  {
-    name: "Implémentation Automation",
-    price: "À partir de 2 000 €",
-    duration: "1–4 semaines",
-    description:
-      "Conception et déploiement de workflows automatisés avec n8n, Google Apps Script ou Jira Automation. Livré clé en main avec documentation.",
-    features: [
-      "Workflow n8n ou Apps Script sur-mesure",
-      "Intégration avec vos outils existants",
-      "Tests et monitoring inclus",
-      "Documentation et formation équipe",
-    ],
-    cta: "Discuter de mon projet",
-    highlighted: false,
-  },
-  {
-    name: "Agent IA Custom",
-    price: "À partir de 5 000 €",
-    duration: "2–6 semaines",
-    description:
-      "Développement d'un agent IA sur-mesure : chatbot, assistant interne, pipeline RAG ou automatisation intelligente adaptée à votre métier.",
-    features: [
-      "Agent IA adapté à votre contexte métier",
-      "Intégration RAG avec vos données",
-      "Interface conversationnelle (Slack, web, API)",
-      "Itérations et fine-tuning inclus",
-    ],
-    cta: "Discuter de mon projet",
-    highlighted: true,
-  },
-  {
-    name: "Retainer mensuel",
-    price: "À partir de 1 500 €/mois",
-    duration: "Engagement flexible",
-    description:
-      "Support continu pour maintenir, optimiser et étendre vos automations. Inclut monitoring proactif, corrections et nouvelles fonctionnalités.",
-    features: [
-      "Monitoring et maintenance proactive",
-      "Corrections et optimisations continues",
-      "Nouvelles automations chaque mois",
-      "Support prioritaire par Slack",
-    ],
-    cta: "En savoir plus",
-    highlighted: false,
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function ServicesPage() {
+  const t = useTranslations("ServicesPage");
+
+  const services = [
+    {
+      name: t("service1Name"),
+      price: t("service1Price"),
+      duration: t("service1Duration"),
+      description: t("service1Desc"),
+      features: [t("service1Feature1"), t("service1Feature2"), t("service1Feature3"), t("service1Feature4")],
+      cta: t("service1Cta"),
+      highlighted: false,
+    },
+    {
+      name: t("service2Name"),
+      price: t("service2Price"),
+      duration: t("service2Duration"),
+      description: t("service2Desc"),
+      features: [t("service2Feature1"), t("service2Feature2"), t("service2Feature3"), t("service2Feature4")],
+      cta: t("service2Cta"),
+      highlighted: false,
+    },
+    {
+      name: t("service3Name"),
+      price: t("service3Price"),
+      duration: t("service3Duration"),
+      description: t("service3Desc"),
+      features: [t("service3Feature1"), t("service3Feature2"), t("service3Feature3"), t("service3Feature4")],
+      cta: t("service3Cta"),
+      highlighted: true,
+    },
+    {
+      name: t("service4Name"),
+      price: t("service4Price"),
+      duration: t("service4Duration"),
+      description: t("service4Desc"),
+      features: [t("service4Feature1"), t("service4Feature2"), t("service4Feature3"), t("service4Feature4")],
+      cta: t("service4Cta"),
+      highlighted: false,
+    },
+  ];
+
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Services
+            {t("title")}
           </h1>
           <p className="mt-4 text-lg text-foreground/60">
-            Des offres claires pour chaque étape de votre transformation
-            automation &amp; IA.
+            {t("description")}
           </p>
         </div>
 
@@ -102,7 +66,7 @@ export default function ServicesPage() {
             >
               {service.highlighted && (
                 <span className="absolute -top-3 left-6 rounded-full bg-accent px-3 py-0.5 text-xs font-semibold text-white">
-                  Populaire
+                  {t("popular")}
                 </span>
               )}
 
@@ -163,17 +127,16 @@ export default function ServicesPage() {
         {/* Bottom CTA */}
         <div className="mt-24 rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-12 text-center">
           <h2 className="text-2xl font-bold">
-            Pas sûr de l&apos;offre qui vous convient ?
+            {t("bottomCtaTitle")}
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-foreground/60">
-            Commencez par un audit gratuit de 30 minutes. On identifie ensemble
-            les opportunités et je vous recommande la meilleure approche.
+            {t("bottomCtaDesc")}
           </p>
           <a
             href="https://calendly.com"
             className="mt-6 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-hover"
           >
-            Discutons de votre projet
+            {t("bottomCtaCta")}
           </a>
         </div>
       </div>

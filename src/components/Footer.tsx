@@ -1,11 +1,6 @@
-import Link from "next/link";
+"use client";
 
-const footerLinks = [
-  { href: "/projets", label: "Projets" },
-  { href: "/services", label: "Services" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
-];
+import { Link } from "@/i18n/navigation";
 
 const socialLinks = [
   {
@@ -66,7 +61,18 @@ const socialLinks = [
   },
 ];
 
-export default function Footer() {
+interface FooterLink {
+  href: "/projets" | "/services" | "/blog" | "/contact";
+  label: string;
+}
+
+interface FooterProps {
+  tagline: string;
+  copyright: string;
+  links: FooterLink[];
+}
+
+export default function Footer({ tagline, copyright, links }: FooterProps) {
   return (
     <footer className="border-t border-foreground/10 bg-background">
       <div className="mx-auto max-w-6xl px-6 py-12">
@@ -76,12 +82,12 @@ export default function Footer() {
               Matthieu<span className="text-accent">.</span>
             </Link>
             <p className="mt-2 text-sm text-foreground/50">
-              Automation &amp; AI Engineer
+              {tagline}
             </p>
           </div>
 
           <ul className="flex gap-6">
-            {footerLinks.map((link) => (
+            {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -110,8 +116,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-foreground/10 pt-8 text-center text-sm text-foreground/40">
-          &copy; {new Date().getFullYear()} Matthieu de Villele. Tous droits
-          réservés.
+          &copy; {new Date().getFullYear()} Matthieu de Villele. {copyright}
         </div>
       </div>
     </footer>

@@ -1,23 +1,16 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { posts } from "@/data/posts";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { getLocalizedPosts } from "@/data/posts";
 import NewsletterForm from "@/components/NewsletterForm";
+import { useLocale } from "next-intl";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Articles sur l'automation, l'IA, n8n, Jira et Google Apps Script. Retours d'expérience, guides pratiques et comparatifs.",
-  alternates: { canonical: "/blog" },
-  openGraph: {
-    title: "Blog — Matthieu de Villele",
-    description:
-      "Retours d'expérience, guides pratiques et veille automation & IA.",
-    url: "/blog",
-  },
-};
-
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString("fr-FR", {
+function formatDate(dateStr: string, locale: string) {
+  const localeMap: Record<string, string> = {
+    fr: "fr-FR",
+    en: "en-US",
+    es: "es-ES",
+  };
+  return new Date(dateStr).toLocaleDateString(localeMap[locale] || "fr-FR", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -25,13 +18,20 @@ function formatDate(dateStr: string) {
 }
 
 export default function BlogPage() {
+  const t = useTranslations("BlogPage");
+  const tp = useTranslations("Posts");
+  const tNewsletter = useTranslations("NewsletterForm");
+  const locale = useLocale();
+  const posts = getLocalizedPosts(tp);
+
   return (
     <main className="px-6 py-24">
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Blog</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          {t("title")}
+        </h1>
         <p className="mt-4 text-lg text-foreground/60">
-          Retours d&apos;expérience, guides pratiques et veille automation &amp;
-          IA.
+          {t("description")}
         </p>
 
         {/* Article list */}
@@ -39,7 +39,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article key={post.slug} className="py-8 first:pt-0 last:pb-0">
               <time className="text-xs text-foreground/40">
-                {formatDate(post.date)}
+                {formatDate(post.date, locale)}
               </time>
               <h2 className="mt-2 text-xl font-semibold">
                 <Link
@@ -65,7 +65,7 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="ml-auto text-sm font-medium text-accent transition-colors hover:text-accent-hover"
                 >
-                  Lire plus &rarr;
+                  {t("readMore")} &rarr;
                 </Link>
               </div>
             </article>
@@ -74,12 +74,11 @@ export default function BlogPage() {
 
         {/* Newsletter CTA */}
         <div className="mt-20 rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-8 text-center sm:p-12">
-          <h2 className="text-2xl font-bold">Newsletter IA &amp; Automation</h2>
+          <h2 className="text-2xl font-bold">{t("newsletterTitle")}</h2>
           <p className="mx-auto mt-3 max-w-md text-sm text-foreground/60">
-            Un email par semaine avec les meilleures ressources, outils et
-            retours d&apos;expérience sur l&apos;automation et l&apos;IA.
+            {t("newsletterDescription")}
           </p>
-          <NewsletterForm />
+          <NewsletterForm placeholder={tNewsletter("placeholder")} subscribe={tNewsletter("subscribe")} />
         </div>
       </div>
     </main>
