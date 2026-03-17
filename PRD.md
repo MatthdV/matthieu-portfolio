@@ -102,3 +102,11 @@ Site web personnel moderne, rapide et SEO-optimisé pour positionner Matthieu de
 - [ ] Responsive : tester et ajuster mobile/tablet
 - [ ] Performance : optimiser images, lazy loading, Core Web Vitals
 - [ ] Préparer le déploiement Vercel
+
+## Internationalisation (i18n)
+- [ ] Ajouter next-intl pour le support multilingue
+- [ ] Créer les fichiers de traduction FR, EN, ES
+- [ ] Traduire la page d'accueil (hero, services, projets)
+- [ ] Traduire les pages services, blog, contact
+- [ ] Ajouter un sélecteur de langue dans la navbar (FR/EN/ES)
+- [ ] Configurer les URLs localisées (/fr, /en, /es)
