@@ -1,9 +1,11 @@
 import { useTranslations } from "next-intl";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   const t = useTranslations("HomePage");
+  const tProjects = useTranslations("Projects");
 
   const stats = [
     { value: t("stat1Value"), label: t("stat1Label") },
@@ -40,6 +42,16 @@ export default function Home() {
     },
   ];
 
+  const projects = [
+    { number: "01", title: tProjects("hyprTitle"), tags: ["OpenAI", "n8n", "LiteLLM"] },
+    { number: "02", title: tProjects("n8nTitle"), tags: ["n8n", "Jira", "Slack"] },
+    { number: "03", title: tProjects("kindlyTitle"), tags: ["Apps Script", "Gmail"] },
+    { number: "04", title: tProjects("caplabourTitle"), tags: ["BigQuery", "Sheets"] },
+    { number: "05", title: tProjects("bigpictureTitle"), tags: ["Jira", "Confluence"] },
+    { number: "06", title: tProjects("jiraTitle"), tags: ["Jira Cloud", "18 rules"] },
+    { number: "07", title: tProjects("catalogueTitle"), tags: ["Registry", "Apps Script"] },
+  ];
+
   return (
     <main className="flex flex-col">
       <HeroSection
@@ -56,6 +68,14 @@ export default function Home() {
         title={t("servicesBentoTitle")}
         titleAccent={t("servicesBentoTitleAccent")}
         services={services}
+      />
+      <ProjectsSection
+        sectionLabel={t("projectsSectionLabel")}
+        title={t("projectsTitle")}
+        titleAccent={t("projectsTitleAccent")}
+        projects={projects}
+        viewAllLabel={t("projectsViewAll")}
+        viewAllHref="https://github.com/matthieu-de-villele"
       />
     </main>
   );

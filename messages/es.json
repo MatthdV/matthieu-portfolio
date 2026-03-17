@@ -40,7 +40,10 @@
     "service4Title": "Retainer mensual",
     "service4Desc": "Soporte continuo para mantener, optimizar y extender tus automatizaciones. Monitoring proactivo, correcciones y nuevas funcionalidades cada mes.",
     "service4Price": "1.5k€ / mes",
-    "projectsTitle": "Proyectos",
+    "projectsSectionLabel": "02 — Proyectos",
+    "projectsTitle": "No son POC. Son",
+    "projectsTitleAccent": "producción.",
+    "projectsViewAll": "Ver todo en GitHub",
     "projectsDescription": "Una selección de proyectos entregados en producción — automatización, IA e integraciones.",
     "newsletterTitle": "Newsletter IA & Automation",
     "newsletterDescription": "Un email por semana con los mejores recursos, herramientas y experiencias sobre automatización e IA."
