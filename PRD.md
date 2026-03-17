@@ -156,7 +156,7 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] Créer le composant Footer v2 (minimal)
 
 ### Phase 2 : Page d'accueil
-- [ ] Hero section asymétrique avec stats et CTAs
+- [x] Hero section asymétrique avec stats et CTAs
 - [ ] Intégrer hero-illustration.png (ou placeholder si absent)
 - [ ] Créer les composants marker-underline et marker-circle
 - [ ] Section services en bento grid avec illustrations marker

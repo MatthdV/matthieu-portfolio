@@ -1,12 +1,26 @@
 import { useTranslations } from "next-intl";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   const t = useTranslations("HomePage");
 
+  const stats = [
+    { value: t("stat1Value"), label: t("stat1Label") },
+    { value: t("stat2Value"), label: t("stat2Label") },
+    { value: t("stat3Value"), label: t("stat3Label") },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6">
-      <h1 className="text-4xl font-bold">{t("heroTitle")}</h1>
-      <p className="mt-4 text-gray-muted">{t("heroSubtitle")}</p>
+    <main className="flex flex-col">
+      <HeroSection
+        tag={t("heroTag")}
+        title={t("heroTitle")}
+        titleAccent={t("heroTitleAccent")}
+        description={t("heroDescription")}
+        stats={stats}
+        ctaPrimary={t("ctaPrimary")}
+        ctaSecondary={t("ctaSecondary")}
+      />
     </main>
   );
 }
