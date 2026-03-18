@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "Matthieu de Villèle <onboarding@resend.dev>",
+      from: "Matthieu de Villèle <bonjour@matthieudevillele.com>",
       to: email,
       subject,
       html,
