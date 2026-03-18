@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import MarkerUnderline from "@/components/MarkerUnderline";
 import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
+import PageHeader from "@/components/PageHeader";
+import StaggerContainer from "@/components/StaggerContainer";
+import StaggerItem from "@/components/StaggerItem";
 
 export async function generateMetadata({
   params,
@@ -79,31 +82,13 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <section className="px-6 py-24 md:px-12 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          <FadeIn>
-            <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-8 bg-marker-blue" />
-              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-                {t("title")}
-              </span>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1
-              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-            >
-              <MarkerUnderline color="blue">{t("title")}</MarkerUnderline>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="max-w-2xl font-sans text-lg text-muted">
-              {t("description")}
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHeader
+        label={t("title")}
+        title={t("title")}
+        description={t("description")}
+      >
+        <MarkerUnderline color="blue">{t("title")}</MarkerUnderline>
+      </PageHeader>
 
       {/* 2-column: Form + Sidebar */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
@@ -133,10 +118,10 @@ export default function ContactPage() {
               {t("sidebarTitle")}
             </h2>
 
-            <div className="flex flex-col gap-4">
+            <StaggerContainer className="flex flex-col gap-4" stagger={0.08} delay={0.1}>
               {CONTACT_LINKS.map((link) => (
+                <StaggerItem key={link.key} direction="left">
                 <a
-                  key={link.key}
                   href={link.href}
                   target={link.key !== "email" ? "_blank" : undefined}
                   rel={link.key !== "email" ? "noopener noreferrer" : undefined}
@@ -152,9 +137,10 @@ export default function ContactPage() {
                     &rarr;
                   </span>
                 </a>
+                </StaggerItem>
               ))}
-
               {/* Calendly */}
+              <StaggerItem direction="left">
               <a
                 href="https://calendly.com/matthieudevillele"
                 target="_blank"
@@ -183,7 +169,8 @@ export default function ContactPage() {
                   &rarr;
                 </span>
               </a>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
 
             {/* Note */}
             <p className="border-l-2 border-marker-yellow pl-4 font-mono text-xs leading-relaxed text-muted">

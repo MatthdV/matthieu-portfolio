@@ -6,6 +6,11 @@ import MarkerUnderline from "@/components/MarkerUnderline";
 import MarkerCircle from "@/components/MarkerCircle";
 import { Link } from "@/i18n/navigation";
 import FadeIn from "@/components/FadeIn";
+import PageHeader from "@/components/PageHeader";
+import StaggerContainer from "@/components/StaggerContainer";
+import StaggerItem from "@/components/StaggerItem";
+import HoverCard from "@/components/HoverCard";
+import MarkerButton from "@/components/MarkerButton";
 
 export async function generateMetadata({
   params,
@@ -31,39 +36,20 @@ export default function ProjetsPage() {
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <section className="px-6 py-24 md:px-12 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          <FadeIn>
-            <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-8 bg-marker-blue" />
-              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-                {t("title")}
-              </span>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1
-              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-            >
-              {t("title")}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="max-w-2xl font-sans text-lg text-muted">
-              {t("description")}
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHeader
+        label={t("title")}
+        title={t("title")}
+        description={t("description")}
+      />
 
       {/* Project cards */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8">
+        <StaggerContainer className="mx-auto flex max-w-6xl flex-col gap-8" stagger={0.1}>
           {projects.map((project, index) => (
-            <FadeIn key={project.slug} delay={index * 0.1}>
+            <StaggerItem key={project.slug} direction="left">
+            <HoverCard>
             <article
-              className="group rounded-none border border-border bg-background p-8 transition-all duration-200 hover:border-marker-blue hover:-translate-y-1 md:p-10"
+              className="relative group rounded-none border border-border bg-background p-8 md:p-10"
             >
               {/* Top row: number + title + tags */}
               <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
@@ -167,9 +153,10 @@ export default function ProjetsPage() {
                 </div>
               )}
             </article>
-            </FadeIn>
+            </HoverCard>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </section>
 
       {/* Bottom CTA */}
@@ -179,12 +166,9 @@ export default function ProjetsPage() {
           <p className="mb-6 font-sans text-xl font-bold tracking-tight text-foreground md:text-2xl">
             {t("ctaText")}
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-marker-blue px-8 py-3 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-marker-yellow)]"
-          >
+          <MarkerButton href="/contact" color="blue" variant="filled">
             {t("ctaButton")}
-          </Link>
+          </MarkerButton>
         </div>
         </FadeIn>
       </section>

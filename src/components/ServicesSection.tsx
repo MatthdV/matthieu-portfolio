@@ -91,27 +91,41 @@ export default function ServicesSection({
                 whileHover="hovered"
                 initial="rest"
                 animate="rest"
-                variants={{
-                  rest: { y: 0, boxShadow: "0px 0px 0px transparent" },
-                  hovered: { y: -6, boxShadow: "6px 6px 0px #1A65FF" },
-                }}
-                transition={{ duration: 0.2 }}
+                className="relative overflow-hidden"
               >
+                {/* Marker fill background — paints left to right */}
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 bg-marker-blue/[0.06] pointer-events-none"
+                  style={{ originX: 0 }}
+                  variants={{
+                    rest: { scaleX: 0 },
+                    hovered: { scaleX: 1 },
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                />
+                {/* Marker top border */}
+                <motion.span
+                  aria-hidden
+                  className="absolute top-0 left-0 right-0 h-[2px] bg-marker-blue pointer-events-none"
+                  style={{ originX: 0 }}
+                  variants={{
+                    rest: { scaleX: 0 },
+                    hovered: { scaleX: 1 },
+                  }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                />
+                <motion.div
+                  variants={{
+                    rest: { y: 0 },
+                    hovered: { y: -4 },
+                  }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                >
                 <Link
                   href="/services"
-                  className="group relative flex flex-col border border-border bg-background p-6 overflow-hidden h-full"
+                  className="group relative flex flex-col border border-border bg-background p-6 h-full"
                 >
-                  {/* Marker top border on hover — inherits "hovered" from parent */}
-                  <motion.span
-                    aria-hidden
-                    className="absolute top-0 left-0 right-0 h-[3px] bg-marker-blue"
-                    style={{ originX: 0 }}
-                    variants={{
-                      rest: { scaleX: 0 },
-                      hovered: { scaleX: 1 },
-                    }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  />
 
                   {/* Icon */}
                   <div className="mb-5 h-14 w-14 relative">
@@ -145,6 +159,7 @@ export default function ServicesSection({
                     {service.price}
                   </span>
                 </Link>
+                </motion.div>
               </motion.div>
             </motion.div>
           ))}

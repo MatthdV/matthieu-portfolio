@@ -6,6 +6,11 @@ import MarkerUnderline from "@/components/MarkerUnderline";
 import MarkerCircle from "@/components/MarkerCircle";
 import { Link } from "@/i18n/navigation";
 import FadeIn from "@/components/FadeIn";
+import PageHeader from "@/components/PageHeader";
+import StaggerContainer from "@/components/StaggerContainer";
+import StaggerItem from "@/components/StaggerItem";
+import HoverCard from "@/components/HoverCard";
+import MarkerButton from "@/components/MarkerButton";
 
 export async function generateMetadata({
   params,
@@ -61,39 +66,20 @@ export default function ServicesPage() {
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <section className="px-6 py-24 md:px-12 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          <FadeIn>
-            <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-8 bg-marker-blue" />
-              <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
-                {t("title")}
-              </span>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1
-              className="mb-4 font-sans font-bold tracking-[-2px] text-foreground"
-              style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-            >
-              {t("title")}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="max-w-2xl font-sans text-lg text-muted">
-              {t("description")}
-            </p>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHeader
+        label={t("title")}
+        title={t("title")}
+        description={t("description")}
+      />
 
       {/* Service cards */}
       <section className="px-6 pb-24 md:px-12 lg:px-20">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+        <StaggerContainer className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2" stagger={0.1}>
           {SERVICES.map((service, index) => (
-            <FadeIn key={service.key} delay={index * 0.1}>
+            <StaggerItem key={service.key}>
+            <HoverCard className="h-full">
             <article
-              className="group relative flex flex-col border border-border bg-background p-8 transition-all duration-200 hover:-translate-y-1 hover:border-marker-blue md:p-10 h-full"
+              className="relative flex flex-col border border-border bg-background p-8 md:p-10 h-full"
             >
               {/* Popular badge */}
               {service.popular && (
@@ -159,16 +145,14 @@ export default function ServicesPage() {
               </ul>
 
               {/* CTA */}
-              <Link
-                href="/contact"
-                className="inline-block w-full border border-border bg-transparent px-6 py-3 text-center font-mono text-sm font-bold uppercase tracking-wider text-foreground transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-marker-blue hover:shadow-[4px_4px_0_var(--color-marker-blue)]"
-              >
+              <MarkerButton href="/contact" color="blue" variant="outline">
                 {t(`${service.key}Cta`)}
-              </Link>
+              </MarkerButton>
             </article>
-            </FadeIn>
+            </HoverCard>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </section>
 
       {/* Bottom CTA */}
@@ -181,12 +165,9 @@ export default function ServicesPage() {
           <p className="mx-auto mb-6 max-w-xl font-sans text-sm text-muted">
             {t("bottomCtaDesc")}
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-marker-blue px-8 py-3 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-marker-yellow)]"
-          >
+          <MarkerButton href="/contact" color="blue" variant="filled">
             {t("bottomCtaCta")}
-          </Link>
+          </MarkerButton>
         </div>
         </FadeIn>
       </section>

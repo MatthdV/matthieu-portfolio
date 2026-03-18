@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import MarkerUnderline from "./MarkerUnderline";
 import FadeIn from "./FadeIn";
 
@@ -59,7 +60,13 @@ export default function NewsletterSection({
         {/* Section label */}
         <FadeIn>
           <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
+            <motion.span
+              className="h-px bg-marker-blue"
+              initial={{ width: 0 }}
+              whileInView={{ width: 32 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            />
             <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
               {sectionLabel}
             </span>
