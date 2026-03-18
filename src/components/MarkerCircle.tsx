@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 type MarkerCircleProps = {
   children: React.ReactNode;
   color?: "yellow" | "blue" | "red";
@@ -26,7 +30,7 @@ export default function MarkerCircle({
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <ellipse
+        <motion.ellipse
           cx="50"
           cy="50"
           rx="46"
@@ -36,6 +40,10 @@ export default function MarkerCircle({
           strokeLinecap="round"
           strokeDasharray="4 2"
           transform="rotate(-3 50 50)"
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
         />
       </svg>
     </span>

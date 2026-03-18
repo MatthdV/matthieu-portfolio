@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MarkerLink from "./MarkerLink";
 
 type NavLink = {
   href: string;
@@ -20,10 +22,20 @@ type NavbarProps = {
 
 export default function Navbar({ navLinks, languageLabels }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 50));
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <motion.nav
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 transition-all duration-200 ${
+        scrolled ? "backdrop-blur-lg border-border/80" : "backdrop-blur-md"
+      }`}
+      animate={{ paddingTop: scrolled ? 8 : 16, paddingBottom: scrolled ? 8 : 16 }}
+      transition={{ duration: 0.2 }}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="group flex items-baseline">
           <span className="text-xl font-bold tracking-tight text-foreground transition-transform duration-150 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5">
@@ -37,12 +49,12 @@ export default function Navbar({ navLinks, languageLabels }: NavbarProps) {
           <ul className="flex items-center gap-6">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
+                <MarkerLink
                   href={link.href}
                   className="font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-150 hover:text-foreground"
                 >
                   {link.label}
-                </Link>
+                </MarkerLink>
               </li>
             ))}
           </ul>
@@ -80,13 +92,13 @@ export default function Navbar({ navLinks, languageLabels }: NavbarProps) {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
+                <MarkerLink
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="font-mono text-sm uppercase tracking-widest text-muted transition-colors duration-150 hover:text-foreground"
                 >
                   {link.label}
-                </Link>
+                </MarkerLink>
               </li>
             ))}
           </ul>
@@ -95,6 +107,6 @@ export default function Navbar({ navLinks, languageLabels }: NavbarProps) {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 }

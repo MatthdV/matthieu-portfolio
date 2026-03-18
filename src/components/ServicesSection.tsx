@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import MarkerUnderline from "./MarkerUnderline";
 import FadeIn from "./FadeIn";
 
@@ -19,6 +22,21 @@ interface ServicesSectionProps {
   services: ServiceCard[];
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.93 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export default function ServicesSection({
   sectionLabel,
   title,
@@ -31,7 +49,13 @@ export default function ServicesSection({
         {/* Section label */}
         <FadeIn>
           <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-8 bg-marker-blue" />
+            <motion.span
+              className="h-px bg-marker-blue"
+              initial={{ width: 0 }}
+              whileInView={{ width: 32 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            />
             <span className="font-mono text-xs uppercase tracking-widest text-marker-blue">
               {sectionLabel}
             </span>
@@ -49,49 +73,82 @@ export default function ServicesSection({
           </h2>
         </FadeIn>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {/* Bento grid — stagger */}
+        <motion.div
+          className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+        >
           {services.map((service, index) => (
-            <FadeIn key={index} delay={0.15 + index * 0.1} className={service.featured ? "md:col-span-2" : ""}>
-            <Link
-              href="/services"
-              className="group relative flex flex-col border border-border bg-background p-6 transition-all duration-200 hover:-translate-y-1 hover:border-marker-blue h-full"
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className={service.featured ? "md:col-span-2" : ""}
             >
-              {/* Icon */}
-              <div className="mb-5 h-14 w-14 relative">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  fill
-                  sizes="56px"
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Title */}
-              <h3 className="mb-2 font-sans text-xl font-bold tracking-tight text-foreground">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="mb-6 text-sm leading-relaxed text-muted flex-1">
-                {service.description}
-              </p>
-
-              {/* Price */}
-              <span
-                className={`font-mono text-sm font-bold ${
-                  service.priceColor === "blue"
-                    ? "text-marker-blue"
-                    : "text-marker-yellow"
-                }`}
+              <motion.div
+                whileHover="hovered"
+                initial="rest"
+                animate="rest"
+                variants={{
+                  rest: { y: 0, boxShadow: "0px 0px 0px transparent" },
+                  hovered: { y: -6, boxShadow: "6px 6px 0px #1A65FF" },
+                }}
+                transition={{ duration: 0.2 }}
               >
-                {service.price}
-              </span>
-            </Link>
-            </FadeIn>
+                <Link
+                  href="/services"
+                  className="group relative flex flex-col border border-border bg-background p-6 overflow-hidden h-full"
+                >
+                  {/* Marker top border on hover — inherits "hovered" from parent */}
+                  <motion.span
+                    aria-hidden
+                    className="absolute top-0 left-0 right-0 h-[3px] bg-marker-blue"
+                    style={{ originX: 0 }}
+                    variants={{
+                      rest: { scaleX: 0 },
+                      hovered: { scaleX: 1 },
+                    }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  />
+
+                  {/* Icon */}
+                  <div className="mb-5 h-14 w-14 relative">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      fill
+                      sizes="56px"
+                      className="object-contain"
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="mb-2 font-sans text-xl font-bold tracking-tight text-foreground">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mb-6 text-sm leading-relaxed text-muted flex-1">
+                    {service.description}
+                  </p>
+
+                  {/* Price */}
+                  <span
+                    className={`font-mono text-sm font-bold ${
+                      service.priceColor === "blue"
+                        ? "text-marker-blue"
+                        : "text-marker-yellow"
+                    }`}
+                  >
+                    {service.price}
+                  </span>
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ClientProviders from "@/components/ClientProviders";
 import "@/app/globals.css";
 
 const BASE_URL = "https://matthieudevillele.com";
@@ -100,7 +101,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Navbar navLinks={navLinks} languageLabels={languageLabels} />
           <div className="pt-16">
-            {children}
+            <ClientProviders>{children}</ClientProviders>
           </div>
           <Footer
             tagline={tFooter("tagline")}
