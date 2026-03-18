@@ -6,6 +6,9 @@ const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const NOTION_DATABASE_ID = "4cce1a0999ff4b499dbe406b7f535186";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const VALID_LOCALES = ["fr", "en", "es"] as const;
+type Locale = (typeof VALID_LOCALES)[number];
+
 export async function POST(req: NextRequest) {
   if (!NOTION_API_KEY) {
     return NextResponse.json(
@@ -14,18 +17,23 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { email?: string };
+  let body: { email?: string; locale?: string };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { email } = body;
+  const { email, locale } = body;
 
   if (!email) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
   }
+
+  // Validate locale — fallback to "fr" if unknown
+  const language: Locale = VALID_LOCALES.includes(locale as Locale)
+    ? (locale as Locale)
+    : "fr";
 
   // 1. Save to Notion
   const notionBody = {
@@ -42,6 +50,9 @@ export async function POST(req: NextRequest) {
       },
       Stage: {
         select: { name: "Cold Lead" },
+      },
+      Language: {
+        select: { name: language },
       },
     },
   };
@@ -65,7 +76,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // 2. Send welcome email via Resend
+  // 2. Send welcome email via Resend (non-blocking)
   const { subject, html } = welcomeEmail({ source: "newsletter" });
 
   try {
@@ -76,7 +87,6 @@ export async function POST(req: NextRequest) {
       html,
     });
   } catch (emailError) {
-    // Email failure is non-blocking — lead is saved in Notion regardless
     console.error("Resend error:", emailError);
   }
 

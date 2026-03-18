@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import MarkerUnderline from "./MarkerUnderline";
@@ -23,6 +24,7 @@ export default function NewsletterSection({
   placeholder,
   subscribe,
 }: NewsletterSectionProps) {
+  const locale = useLocale();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -39,7 +41,7 @@ export default function NewsletterSection({
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale }),
       });
 
       if (!res.ok) {
