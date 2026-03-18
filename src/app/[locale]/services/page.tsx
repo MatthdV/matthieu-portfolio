@@ -79,7 +79,7 @@ export default function ServicesPage() {
             <StaggerItem key={service.key}>
             <HoverCard className="h-full">
             <article
-              className="relative flex flex-col border border-border bg-background p-8 md:p-10 h-full"
+              className="relative flex flex-col border border-border p-8 md:p-10 h-full"
             >
               {/* Popular badge */}
               {service.popular && (
