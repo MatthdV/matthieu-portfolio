@@ -19,7 +19,7 @@ export function welcomeEmail({
           J'ai bien reçu votre message, merci.
         </p>
         <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
-          Je reviens vers vous sous 24h — en général plutôt moins, mais autant être honnête au cas où j'aie la tête dans un projet.
+          Je reviens vers vous sous 24h. En général c'est moins, mais autant être honnête au cas où j'aie la tête dans un projet.
         </p>
         <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
           Si vous voulez vous faire une idée de mon travail en attendant, mon
