@@ -25,42 +25,26 @@ export default function MarkerUnderline({
     <span className={`relative inline-block ${className}`}>
       {children}
       <svg
-        className="absolute left-[-2%] bottom-[0.02em] w-[104%] h-[0.28em] pointer-events-none -z-10"
-        viewBox="0 0 300 12"
+        className="absolute left-[-1%] bottom-[0.04em] w-[102%] h-[0.22em] pointer-events-none -z-10"
+        viewBox="0 0 300 10"
         preserveAspectRatio="none"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
-        style={{ transform: "rotate(-1.5deg)" }}
+        style={{ transform: "rotate(-1deg)" }}
       >
-        {/* Main hand-drawn stroke */}
         <motion.path
-          d="M2,7 C18,4 45,9 80,6 C115,3 140,8 175,5 C210,8 245,3 270,7 C285,4 295,8 298,6"
+          d="M2,6 C40,4.5 80,7 130,5.5 C180,4 220,7 260,5 C280,6.5 295,4.5 298,5.5"
           stroke={stroke}
-          strokeWidth="7"
+          strokeWidth="6"
           strokeLinecap="round"
-          opacity="0.9"
+          opacity="0.85"
           initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 0.9 }}
+          whileInView={{ pathLength: 1, opacity: 0.85 }}
           viewport={{ once: true, margin: "-30px" }}
           transition={{
-            pathLength: { duration: 0.7, ease: [0.43, 0.13, 0.23, 0.96] as const, delay: 0.2 },
+            pathLength: { duration: 0.7, ease: "easeOut", delay: 0.2 },
             opacity: { duration: 0.1, delay: 0.2 },
-          }}
-        />
-        {/* Secondary thinner stroke for texture */}
-        <motion.path
-          d="M5,5 C30,8 70,3 110,7 C150,4 190,9 230,5 C260,8 280,4 296,7"
-          stroke={stroke}
-          strokeWidth="4"
-          strokeLinecap="round"
-          opacity="0.4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 0.4 }}
-          viewport={{ once: true, margin: "-30px" }}
-          transition={{
-            pathLength: { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] as const, delay: 0.35 },
-            opacity: { duration: 0.1, delay: 0.35 },
           }}
         />
       </svg>

@@ -120,7 +120,7 @@ export default function ServicesSection({
                     rest: { y: 0 },
                     hovered: { y: -4 },
                   }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                 <Link
                   href="/services"

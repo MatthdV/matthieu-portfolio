@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 interface HoverCardProps {
   children: React.ReactNode;
   className?: string;
+  lift?: number;
 }
 
-export default function HoverCard({ children, className = "" }: HoverCardProps) {
+export default function HoverCard({ children, className = "", lift = -4 }: HoverCardProps) {
   return (
     <motion.div
       className={`relative overflow-hidden ${className}`}
@@ -40,9 +41,9 @@ export default function HoverCard({ children, className = "" }: HoverCardProps) 
       <motion.div
         variants={{
           rest: { y: 0 },
-          hovered: { y: -4 },
+          hovered: { y: lift },
         }}
-        transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {children}
       </motion.div>

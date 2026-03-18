@@ -44,7 +44,7 @@ export default function BlogPage() {
         <StaggerContainer className="mx-auto flex max-w-6xl flex-col gap-6" stagger={0.1}>
           {posts.map((post, index) => (
             <StaggerItem key={post.slug} direction="left">
-            <HoverCard>
+            <HoverCard lift={-3}>
             <article
               className="relative group border border-border bg-background p-8 md:p-10"
             >
