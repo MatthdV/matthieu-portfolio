@@ -25,7 +25,7 @@ export default function MarkerUnderline({
     <span className={`relative inline-block ${className}`}>
       {children}
       <svg
-        className="absolute left-[-1%] bottom-[0.04em] w-[102%] h-[0.22em] pointer-events-none -z-10"
+        className="absolute left-[-1%] bottom-[0.04em] w-[102%] h-[0.16em] pointer-events-none -z-10"
         viewBox="0 0 300 10"
         preserveAspectRatio="none"
         fill="none"
@@ -36,7 +36,7 @@ export default function MarkerUnderline({
         <motion.path
           d="M2,6 C40,4.5 80,7 130,5.5 C180,4 220,7 260,5 C280,6.5 295,4.5 298,5.5"
           stroke={stroke}
-          strokeWidth="6"
+          strokeWidth="3"
           strokeLinecap="round"
           opacity="0.85"
           initial={{ pathLength: 0, opacity: 0 }}

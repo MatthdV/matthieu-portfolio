@@ -96,8 +96,8 @@ export default function ServicesSection({
                 {/* Marker fill background — paints left to right */}
                 <motion.span
                   aria-hidden
-                  className="absolute inset-0 bg-marker-blue/[0.06] pointer-events-none"
-                  style={{ originX: 0 }}
+                  className="absolute inset-0 pointer-events-none"
+                  style={{ backgroundColor: 'rgba(26, 101, 255, 0.06)', originX: 0 }}
                   variants={{
                     rest: { scaleX: 0 },
                     hovered: { scaleX: 1 },

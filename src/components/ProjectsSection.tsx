@@ -44,8 +44,8 @@ function ProjectRowItem({ project }: { project: ProjectRow }) {
       {/* Marker highlight fill */}
       <motion.span
         aria-hidden
-        className="absolute inset-0 bg-marker-blue/[0.08] pointer-events-none"
-        style={{ originX: 0, scaleX: 0 }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ backgroundColor: 'rgba(26, 101, 255, 0.08)', originX: 0, scaleX: 0 }}
         variants={{
           hovered: { scaleX: 1 },
         }}
