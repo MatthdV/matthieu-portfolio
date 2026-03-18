@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+import { welcomeEmail } from "@/lib/emails/welcome";
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const NOTION_DATABASE_ID = "4cce1a0999ff4b499dbe406b7f535186";
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Map form budget values to Notion select options
 const BUDGET_MAP: Record<string, string> = {
@@ -38,6 +41,7 @@ export async function POST(req: NextRequest) {
 
   const notionBudget = budget ? BUDGET_MAP[budget] : undefined;
 
+  // 1. Save to Notion
   const notionBody: Record<string, unknown> = {
     parent: { database_id: NOTION_DATABASE_ID },
     properties: {
@@ -66,7 +70,7 @@ export async function POST(req: NextRequest) {
     },
   };
 
-  const response = await fetch("https://api.notion.com/v1/pages", {
+  const notionResponse = await fetch("https://api.notion.com/v1/pages", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${NOTION_API_KEY}`,
@@ -76,13 +80,29 @@ export async function POST(req: NextRequest) {
     body: JSON.stringify(notionBody),
   });
 
-  if (!response.ok) {
-    const error = await response.json();
+  if (!notionResponse.ok) {
+    const error = await notionResponse.json();
     console.error("Notion API error:", error);
     return NextResponse.json(
       { error: "Failed to save to Notion" },
       { status: 500 }
     );
+  }
+
+  // 2. Send welcome email via Resend
+  const firstName = name.split(" ")[0];
+  const { subject, html } = welcomeEmail({ firstName, source: "contact" });
+
+  try {
+    await resend.emails.send({
+      from: "Matthieu de Villèle <onboarding@resend.dev>",
+      to: email,
+      subject,
+      html,
+    });
+  } catch (emailError) {
+    // Email failure is non-blocking — lead is saved in Notion regardless
+    console.error("Resend error:", emailError);
   }
 
   return NextResponse.json({ success: true });
