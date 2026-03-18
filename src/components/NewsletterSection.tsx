@@ -24,11 +24,32 @@ export default function NewsletterSection({
 }: NewsletterSectionProps) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Erreur lors de l'inscription");
+      }
+
       setSubmitted(true);
+    } catch {
+      setError("Une erreur est survenue. Réessaie dans quelques instants.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -80,22 +101,28 @@ export default function NewsletterSection({
                 </span>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row max-w-md">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={placeholder}
-                  required
-                  className="flex-1 border border-border bg-background px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted focus:border-marker-blue focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="border border-marker-blue bg-marker-blue px-6 py-3 font-mono text-sm font-bold text-background transition-all duration-200 sm:border-l-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--marker-yellow)]"
-                >
-                  {subscribe}
-                </button>
-              </form>
+              <div className="flex flex-col gap-2">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row max-w-md">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={placeholder}
+                    required
+                    className="flex-1 border border-border bg-background px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted focus:border-marker-blue focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="border border-marker-blue bg-marker-blue px-6 py-3 font-mono text-sm font-bold text-background transition-all duration-200 sm:border-l-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--marker-yellow)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                  >
+                    {loading ? "..." : subscribe}
+                  </button>
+                </form>
+                {error && (
+                  <p className="font-mono text-xs text-red-500">{error}</p>
+                )}
+              </div>
             )}
           </div>
         </div>

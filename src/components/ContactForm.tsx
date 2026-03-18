@@ -32,10 +32,36 @@ export default function ContactForm({
   successMessage,
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, budget, message }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Une erreur est survenue. Réessaie ou contacte-moi directement.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -61,6 +87,8 @@ export default function ContactForm({
         </label>
         <input
           type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder={namePlaceholder}
           required
           className={inputClasses}
@@ -74,6 +102,8 @@ export default function ContactForm({
         </label>
         <input
           type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder={emailPlaceholder}
           required
           className={inputClasses}
@@ -85,7 +115,12 @@ export default function ContactForm({
         <label className="mb-2 block font-mono text-xs uppercase tracking-widest text-muted">
           {budgetLabel}
         </label>
-        <select className={`${inputClasses} appearance-none`} defaultValue="">
+        <select
+          className={`${inputClasses} appearance-none`}
+          value={budget}
+          onChange={(e) => setBudget(e.target.value)}
+          defaultValue=""
+        >
           <option value="" disabled>
             {budgetPlaceholder}
           </option>
@@ -103,6 +138,8 @@ export default function ContactForm({
           {messageLabel}
         </label>
         <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           placeholder={messagePlaceholder}
           required
           rows={5}
@@ -110,12 +147,18 @@ export default function ContactForm({
         />
       </div>
 
+      {/* Error */}
+      {error && (
+        <p className="font-mono text-xs text-red-500">{error}</p>
+      )}
+
       {/* Submit */}
       <button
         type="submit"
-        className="w-full bg-marker-blue px-8 py-3 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-marker-yellow)]"
+        disabled={loading}
+        className="w-full bg-marker-blue px-8 py-3 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-marker-yellow)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none"
       >
-        {submit}
+        {loading ? "..." : submit}
       </button>
     </form>
   );
