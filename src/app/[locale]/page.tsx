@@ -95,7 +95,7 @@ export default function Home() {
         titleAccent={t("projectsTitleAccent")}
         projects={projects}
         viewAllLabel={t("projectsViewAll")}
-        viewAllHref="https://github.com/matthieu-de-villele"
+        viewAllHref="https://github.com/MatthdV"
       />
       <NewsletterSection
         sectionLabel={t("newsletterSectionLabel")}

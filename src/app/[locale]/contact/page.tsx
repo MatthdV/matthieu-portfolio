@@ -54,7 +54,7 @@ const CONTACT_LINKS = [
   },
   {
     key: "github",
-    href: "https://github.com/matthieudevillele",
+    href: "https://github.com/MatthdV",
     label: "GitHub",
     icon: (
       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

@@ -24,7 +24,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "hypr-ai-performance-review",
     tags: ["IA", "Apps Script", "Automation"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["Google Apps Script", "OpenAI API", "Google Sheets", "Google Forms"],
     titleKey: "hyprTitle",
     descKey: "hyprDesc",
@@ -34,7 +34,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "bigpicture-initiative-tracker",
     tags: ["Jira", "Apps Script", "Integration"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["Jira API", "Confluence API", "Google Apps Script", "BigPicture"],
     titleKey: "bigpictureTitle",
     descKey: "bigpictureDesc",
@@ -44,7 +44,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "caplabour-capacity-planning",
     tags: ["Apps Script", "Google Sheets", "Planning"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["Google Apps Script", "Google Sheets", "Jira API", "Charts API"],
     titleKey: "caplabourTitle",
     descKey: "caplabourDesc",
@@ -54,7 +54,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "kindly-reminder",
     tags: ["Bot", "n8n", "Monitoring"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["n8n", "Slack API", "Google Sheets", "Cron scheduling"],
     titleKey: "kindlyTitle",
     descKey: "kindlyDesc",
@@ -64,7 +64,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "n8n-enterprise-workflows",
     tags: ["n8n", "Automation", "Enterprise"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["n8n", "REST APIs", "Webhooks", "PostgreSQL", "Slack API"],
     titleKey: "n8nTitle",
     descKey: "n8nDesc",
@@ -74,7 +74,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "jira-automation-rules",
     tags: ["Jira", "Automation", "Cloud"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["Jira Cloud Automation", "JQL", "Jira REST API", "Smart Values"],
     titleKey: "jiraTitle",
     descKey: "jiraDesc",
@@ -84,7 +84,7 @@ const projectsBase: ProjectBase[] = [
   {
     slug: "automation-catalogue",
     tags: ["Documentation", "Apps Script", "Governance"],
-    github: "https://github.com/matthieu-de-villele",
+    github: "https://github.com/MatthdV",
     stack: ["Google Apps Script", "Google Sheets", "n8n API", "Jira API"],
     titleKey: "catalogueTitle",
     descKey: "catalogueDesc",
