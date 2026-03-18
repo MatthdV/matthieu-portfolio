@@ -52,8 +52,9 @@ export default function NewsletterSection({
           <div className="relative mb-8 h-32 w-32 shrink-0 lg:mb-0 lg:h-40 lg:w-40">
             <Image
               src="/images/icon-newsletter.png"
-              alt=""
+              alt="Newsletter icon"
               fill
+              sizes="(max-width: 1024px) 128px, 160px"
               className="object-contain"
             />
           </div>

@@ -108,6 +108,7 @@ export default function ServicesPage() {
                   src={service.icon}
                   alt={t(`${service.key}Name`)}
                   fill
+                  sizes="64px"
                   className="object-contain"
                 />
               </div>

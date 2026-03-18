@@ -112,6 +112,7 @@ export default function HeroSection({
               src="/images/hero-illustration.png"
               alt="Illustration marker — homme, robot et laptop"
               fill
+              sizes="(max-width: 640px) 320px, 520px"
               className="object-contain"
               priority
             />

@@ -63,6 +63,7 @@ export default function ServicesSection({
                   src={service.icon}
                   alt={service.title}
                   fill
+                  sizes="56px"
                   className="object-contain"
                 />
               </div>
