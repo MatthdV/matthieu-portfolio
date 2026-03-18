@@ -176,5 +176,5 @@ Le dossier `public/images/` contient des illustrations marker custom (PNG) :
 - [x] SEO metadata par page et par langue
 - [x] Sitemap multilingue + robots.txt
 - [x] OpenGraph images
-- [ ] Performance : fonts display swap, LazyMotion, image optimization
-- [ ] Préparer le déploiement Vercel
+- [x] Performance : fonts display swap, LazyMotion, image optimization
+- [x] Préparer le déploiement Vercel
