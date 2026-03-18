@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
-const NOTION_DATABASE_ID = "b65bb09b-5fd5-4bad-923c-13405b556768";
+const NOTION_DATABASE_ID = "4cce1a0999ff4b499dbe406b7f535186";
 
 export async function POST(req: NextRequest) {
   if (!NOTION_API_KEY) {
