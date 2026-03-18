@@ -46,7 +46,7 @@ export default function BlogPage() {
             <StaggerItem key={post.slug} direction="left">
             <HoverCard lift={-3}>
             <article
-              className="relative group border border-border bg-background p-8 md:p-10"
+              className="relative group border border-border p-8 md:p-10"
             >
               {/* Date + tags row */}
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

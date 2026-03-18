@@ -49,7 +49,7 @@ export default function ProjetsPage() {
             <StaggerItem key={project.slug} direction="left">
             <HoverCard>
             <article
-              className="relative group rounded-none border border-border bg-background p-8 md:p-10"
+              className="relative group rounded-none border border-border p-8 md:p-10"
             >
               {/* Top row: number + title + tags */}
               <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">

@@ -124,7 +124,7 @@ export default function ServicesSection({
                 >
                 <Link
                   href="/services"
-                  className="group relative flex flex-col border border-border bg-background p-6 h-full"
+                  className="group relative flex flex-col border border-border p-6 h-full"
                 >
 
                   {/* Icon */}
