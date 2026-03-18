@@ -24,8 +24,8 @@ export async function generateMetadata({
 const CONTACT_LINKS = [
   {
     key: "email",
-    href: "mailto:matthieu@devillele.com",
-    label: "matthieu@devillele.com",
+    href: "mailto:matthieu.devillele@gmail.com",
+    label: "matthieu.devillele@gmail.com",
     icon: (
       <svg
         className="h-5 w-5"
