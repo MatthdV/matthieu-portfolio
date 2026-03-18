@@ -5,17 +5,61 @@ export function welcomeEmail({
   firstName?: string;
   source: "contact" | "newsletter";
 }): { subject: string; html: string } {
-  const greeting = firstName ? `Bonjour ${firstName}` : "Bonjour";
-
-  const introText =
-    source === "contact"
-      ? "Merci d'avoir pris le temps de me contacter via mon site. J'ai bien reçu ton message et je te réponds très prochainement — en général sous 24h."
-      : "Merci de t'être abonné à ma newsletter. Tu recevras régulièrement des insights sur l'automatisation et l'IA appliquées aux business.";
+  const greeting = firstName ? `Bonjour ${firstName},` : "Bonjour,";
 
   const subject =
     source === "contact"
-      ? "Message bien reçu — Matthieu de Villèle"
-      : "Bienvenue dans la newsletter — Matthieu de Villèle";
+      ? "Bien reçu."
+      : "Vous êtes dans la boucle.";
+
+  const bodyContent =
+    source === "contact"
+      ? `
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          J'ai bien reçu votre message, merci.
+        </p>
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Je reviens vers vous sous 24h — en général plutôt moins, mais autant être honnête au cas où j'aie la tête dans un projet.
+        </p>
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Si vous voulez vous faire une idée de mon travail en attendant, mon
+          <a href="https://matthieu-portfolio.vercel.app/fr" style="color:#2563eb;text-decoration:none;">portfolio</a>
+          et mon
+          <a href="https://github.com/MatthdV" style="color:#2563eb;text-decoration:none;">GitHub</a>
+          sont là pour ça.
+        </p>
+        <p style="margin:0 0 32px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Et si vous préférez qu'on échange directement plutôt que d'attendre,
+          <a href="https://calendly.com/matthieudevillele" style="color:#2563eb;text-decoration:none;font-weight:600;">mon Calendly est ouvert</a>.
+        </p>
+        <p style="margin:0;font-size:15px;color:#4b4a46;line-height:1.8;">
+          À très vite,<br/>Matthieu
+        </p>
+      `
+      : `
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Vous venez de rejoindre la newsletter — bienvenue.
+        </p>
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Le fil directeur : ce que l'IA et l'automatisation peuvent vraiment faire, au-delà des démos impressionnantes et des promesses marketing. Des cas concrets, des outils que j'utilise réellement, des expérimentations qui ont marché — et parfois celles qui n'ont pas marché.
+        </p>
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Pas de framework en 7 étapes ni de "10 façons de transformer votre business avec l'IA." Juste ce que je trouve utile à partager.
+        </p>
+        <p style="margin:0 0 20px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          La fréquence ? Quand j'ai quelque chose à dire. Ça peut être toutes les semaines, ça peut être deux fois par mois.
+        </p>
+        <p style="margin:0 0 32px;font-size:15px;color:#4b4a46;line-height:1.8;">
+          Si vous voulez voir qui je suis avant le prochain numéro —
+          <a href="https://matthieu-portfolio.vercel.app/fr" style="color:#2563eb;text-decoration:none;">mon portfolio</a>
+          et mon
+          <a href="https://linkedin.com/in/matthieudevillele" style="color:#2563eb;text-decoration:none;">LinkedIn</a>
+          sont là pour ça.
+        </p>
+        <p style="margin:0;font-size:15px;color:#4b4a46;line-height:1.8;">
+          À bientôt,<br/>Matthieu
+        </p>
+      `;
 
   const html = `<!DOCTYPE html>
 <html lang="fr">
@@ -44,65 +88,11 @@ export function welcomeEmail({
 
           <!-- Body -->
           <tr>
-            <td style="padding:40px 40px 32px;">
-              <p style="margin:0 0 24px;font-size:22px;font-family:Georgia,serif;font-weight:bold;color:#1a1917;line-height:1.3;">
-                ${greeting} 👋
+            <td style="padding:40px 40px 40px;">
+              <p style="margin:0 0 28px;font-size:15px;color:#1a1917;line-height:1.8;font-weight:600;">
+                ${greeting}
               </p>
-              <p style="margin:0 0 20px;font-size:14px;color:#4b4a46;line-height:1.7;">
-                ${introText}
-              </p>
-              <p style="margin:0 0 20px;font-size:14px;color:#4b4a46;line-height:1.7;">
-                En attendant, voici un aperçu rapide de ce que je fais&nbsp;: j'aide les entrepreneurs et PME à <strong>automatiser leurs processus métier</strong> grâce à l'IA — de la génération de leads à la gestion de contenu, en passant par les workflows internes.
-              </p>
-              <p style="margin:0;font-size:14px;color:#4b4a46;line-height:1.7;">
-                N'hésite pas à explorer mes projets ou à réserver un créneau directement dans mon agenda.
-              </p>
-            </td>
-          </tr>
-
-          <!-- Divider -->
-          <tr>
-            <td style="padding:0 40px;">
-              <div style="border-top:1px solid #e2e0d8;"></div>
-            </td>
-          </tr>
-
-          <!-- Links -->
-          <tr>
-            <td style="padding:32px 40px;">
-              <p style="margin:0 0 16px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#9ca3af;">
-                ME RETROUVER
-              </p>
-              <table cellpadding="0" cellspacing="0">
-                <tr>
-                  <td style="padding:6px 0;">
-                    <a href="https://matthieu-portfolio.vercel.app/fr" style="color:#2563eb;text-decoration:none;font-size:13px;">
-                      → Portfolio &amp; projets
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 0;">
-                    <a href="https://linkedin.com/in/matthieudevillele" style="color:#2563eb;text-decoration:none;font-size:13px;">
-                      → LinkedIn
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 0;">
-                    <a href="https://github.com/MatthdV" style="color:#2563eb;text-decoration:none;font-size:13px;">
-                      → GitHub
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 0;">
-                    <a href="https://calendly.com/matthieudevillele" style="color:#fbbf24;text-decoration:none;font-size:13px;font-weight:bold;">
-                      → Réserver un call de 30 min
-                    </a>
-                  </td>
-                </tr>
-              </table>
+              ${bodyContent}
             </td>
           </tr>
 
@@ -116,8 +106,16 @@ export function welcomeEmail({
           <!-- Footer -->
           <tr>
             <td style="padding:24px 40px 32px;">
-              <p style="margin:0 0 4px;font-size:13px;color:#1a1917;">Matthieu de Villèle</p>
-              <p style="margin:0;font-size:12px;color:#9ca3af;">Consultant Automation &amp; IA · matthieu.devillele@gmail.com</p>
+              <p style="margin:0 0 8px;font-size:12px;color:#9ca3af;">
+                <a href="https://matthieu-portfolio.vercel.app/fr" style="color:#9ca3af;text-decoration:none;">Portfolio</a>
+                &nbsp;·&nbsp;
+                <a href="https://linkedin.com/in/matthieudevillele" style="color:#9ca3af;text-decoration:none;">LinkedIn</a>
+                &nbsp;·&nbsp;
+                <a href="https://github.com/MatthdV" style="color:#9ca3af;text-decoration:none;">GitHub</a>
+                &nbsp;·&nbsp;
+                <a href="https://calendly.com/matthieudevillele" style="color:#9ca3af;text-decoration:none;">Calendly</a>
+              </p>
+              <p style="margin:0;font-size:12px;color:#c4c2ba;">matthieu.devillele@gmail.com</p>
             </td>
           </tr>
 
