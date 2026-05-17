@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import NewsletterSection from "@/components/NewsletterSection";
 
 export async function generateMetadata({
@@ -25,6 +26,7 @@ export async function generateMetadata({
 export default function Home() {
   const t = useTranslations("HomePage");
   const tProjects = useTranslations("Projects");
+  const tTestimonials = useTranslations("Testimonials");
   const tNewsletter = useTranslations("NewsletterForm");
 
   const stats = [
@@ -63,13 +65,28 @@ export default function Home() {
   ];
 
   const projects = [
-    { number: "01", title: tProjects("hyprTitle"), tags: ["OpenAI", "n8n", "LiteLLM"] },
-    { number: "02", title: tProjects("n8nTitle"), tags: ["n8n", "Jira", "Slack"] },
-    { number: "03", title: tProjects("kindlyTitle"), tags: ["Apps Script", "Gmail"] },
-    { number: "04", title: tProjects("caplabourTitle"), tags: ["BigQuery", "Sheets"] },
-    { number: "05", title: tProjects("bigpictureTitle"), tags: ["Jira", "Confluence"] },
-    { number: "06", title: tProjects("jiraTitle"), tags: ["Jira Cloud", "18 rules"] },
-    { number: "07", title: tProjects("catalogueTitle"), tags: ["Registry", "Apps Script"] },
+    { number: "01", title: tProjects("kallpaTitle"), tags: ["SaaS", "Next.js", "AI"] },
+    { number: "02", title: tProjects("jobhunterTitle"), tags: ["Python", "Claude API", "MCP"] },
+    { number: "03", title: tProjects("imocTitle"), tags: ["n8n", "RAG", "Pinecone"] },
+    { number: "04", title: tProjects("hyprTitle"), tags: ["OpenAI", "n8n", "LiteLLM"] },
+    { number: "05", title: tProjects("n8nTitle"), tags: ["n8n", "Jira", "Slack"] },
+    { number: "06", title: tProjects("caplabourTitle"), tags: ["BigQuery", "Sheets"] },
+    { number: "07", title: tProjects("bigpictureTitle"), tags: ["Jira", "Confluence"] },
+  ];
+
+  const testimonials = [
+    {
+      quote: tTestimonials("michalQuote"),
+      name: tTestimonials("michalName"),
+      role: tTestimonials("michalRole"),
+      company: tTestimonials("michalCompany"),
+    },
+    {
+      quote: tTestimonials("aniketQuote"),
+      name: tTestimonials("aniketName"),
+      role: tTestimonials("aniketRole"),
+      company: tTestimonials("aniketCompany"),
+    },
   ];
 
   return (
@@ -96,6 +113,12 @@ export default function Home() {
         projects={projects}
         viewAllLabel={t("projectsViewAll")}
         viewAllHref="https://github.com/MatthdV"
+      />
+      <TestimonialsSection
+        sectionLabel={tTestimonials("sectionLabel")}
+        title={tTestimonials("title")}
+        titleAccent={tTestimonials("titleAccent")}
+        testimonials={testimonials}
       />
       <NewsletterSection
         sectionLabel={t("newsletterSectionLabel")}

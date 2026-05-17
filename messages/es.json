@@ -191,7 +191,25 @@
     "catalogueProblem": "Con 40+ automatizaciones en producción, nadie sabía exactamente qué existía, quién era responsable, ni si funcionaba correctamente.",
     "catalogueResult1": "40+ automatizaciones documentadas y catalogadas",
     "catalogueResult2": "Ownership claro para cada workflow",
-    "catalogueResult3": "Dashboard de salud con alertas de fallos"
+    "catalogueResult3": "Dashboard de salud con alertas de fallos",
+    "imocTitle": "IMOC RAG Incident Review Creator",
+    "imocDesc": "Sistema RAG que genera automáticamente post-mortems de incidentes estructurados y vectoriza todos los datos de incidentes JPROD para recuperación instantánea.",
+    "imocProblem": "Las revisiones de incidentes requerían horas de trabajo manual, resultando en documentación inconsistente, aprendizajes tardíos y sin base de conocimientos buscable.",
+    "imocResult1": "Post-mortems generados en <5 min vs 2h+ manualmente",
+    "imocResult2": "Todos los incidentes JPROD vectorizados y consultables",
+    "imocResult3": "Herramienta en uso diario de producción por el equipo de gestión de incidentes",
+    "kallpaTitle": "Kallpa Running Coach",
+    "kallpaDesc": "SaaS de coaching de running con IA que genera planes de entrenamiento personalizados usando el algoritmo VDOT y métodos Pfitzinger. Disponible en app.kallpa.run.",
+    "kallpaProblem": "Los corredores no tenían acceso asequible a planes de entrenamiento estructurados adaptados a su nivel real, calendario de carreras y restricciones semanales.",
+    "kallpaResult1": "SaaS completo en producción en app.kallpa.run",
+    "kallpaResult2": "4 idiomas (FR/EN/ES/PT), integración Strava y wearables",
+    "kallpaResult3": "Algoritmo VDOT + Pfitzinger para periodización específica de carrera",
+    "jobhunterTitle": "Jobhunter-AI",
+    "jobhunterDesc": "Pipeline de búsqueda de empleo semi-autónomo con puntuación multi-bloque IA. Analiza Gmail, bolsas de trabajo y LinkedIn para identificar las oportunidades más relevantes.",
+    "jobhunterProblem": "La búsqueda de empleo es ruidosa y lleva mucho tiempo. Ninguna herramienta coincide oportunidades con un perfil personal matizado en múltiples dimensiones.",
+    "jobhunterResult1": "Multi-perfil, Docker-ready, open-source",
+    "jobhunterResult2": "Puntuación IA en 6 dimensiones con auto-match ≥80",
+    "jobhunterResult3": "Pipeline usado en búsqueda de empleo real con señal medible"
   },
   "Posts": {
     "post1Title": "Cómo automaticé las evaluaciones de desempeño para 150+ empleados con IA",
@@ -207,5 +225,18 @@
     "fr": "FR",
     "en": "EN",
     "es": "ES"
+  },
+  "Testimonials": {
+    "sectionLabel": "// lo que dicen",
+    "title": "Validado por quienes",
+    "titleAccent": "vieron entregar.",
+    "michalName": "Michal Hromek",
+    "michalRole": "Interim Head of Incident Management & AI Transformation Lead",
+    "michalCompany": "Groupon",
+    "michalQuote": "Matthieu era un miembro clave de nuestro equipo de automatización — alguien que realmente hace que las cosas avancen. Construyó nuestros pipelines de automatización N8N de principio a fin, especialmente el RAG Incident Review Creator. Ambas herramientas son ahora parte de nuestra rutina diaria. Matthieu es agudo, autónomo y tiene un talento real para transformar problemas operativos complejos en automatizaciones limpias y escalables.",
+    "aniketName": "Aniket Sen",
+    "aniketRole": "Automation & AI Manager",
+    "aniketCompany": "Groupon",
+    "aniketQuote": "Matthieu es una verdadera potencia de innovación. Lideró una iniciativa de automatización que racionalizó por completo nuestro pipeline de procesamiento de datos, reduciendo el tiempo de procesamiento manual en más de un 40%. Más allá del aspecto técnico, tiene un talento natural para tender puentes con las partes interesadas no técnicas. Matthieu tiene mi más alta recomendación."
   }
 }

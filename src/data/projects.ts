@@ -91,6 +91,35 @@ const projectsBase: ProjectBase[] = [
     problemKey: "catalogueProblem",
     resultKeys: ["catalogueResult1", "catalogueResult2", "catalogueResult3"],
   },
+  {
+    slug: "imoc-rag-incident-review",
+    tags: ["n8n", "RAG", "AI"],
+    stack: ["n8n", "OpenAI API", "Pinecone", "PostgreSQL", "Slack API"],
+    titleKey: "imocTitle",
+    descKey: "imocDesc",
+    problemKey: "imocProblem",
+    resultKeys: ["imocResult1", "imocResult2", "imocResult3"],
+  },
+  {
+    slug: "kallpa-running-coach",
+    tags: ["SaaS", "Next.js", "AI"],
+    github: "https://github.com/MatthdV",
+    stack: ["Next.js 14", "Supabase", "Vercel", "Claude API", "Strava API"],
+    titleKey: "kallpaTitle",
+    descKey: "kallpaDesc",
+    problemKey: "kallpaProblem",
+    resultKeys: ["kallpaResult1", "kallpaResult2", "kallpaResult3"],
+  },
+  {
+    slug: "jobhunter-ai",
+    tags: ["Python", "AI", "MCP"],
+    github: "https://github.com/MatthdV",
+    stack: ["Python", "Claude API", "MCP", "Gmail API", "PostgreSQL"],
+    titleKey: "jobhunterTitle",
+    descKey: "jobhunterDesc",
+    problemKey: "jobhunterProblem",
+    resultKeys: ["jobhunterResult1", "jobhunterResult2", "jobhunterResult3"],
+  },
 ];
 
 export function getLocalizedProjects(

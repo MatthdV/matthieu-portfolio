@@ -191,7 +191,25 @@
     "catalogueProblem": "With 40+ automations in production, nobody knew exactly what existed, who was responsible, or if it was working correctly.",
     "catalogueResult1": "40+ automations documented and catalogued",
     "catalogueResult2": "Clear ownership for each workflow",
-    "catalogueResult3": "Health dashboard with outage alerts"
+    "catalogueResult3": "Health dashboard with outage alerts",
+    "imocTitle": "IMOC RAG Incident Review Creator",
+    "imocDesc": "RAG-powered system that automatically generates structured incident post-mortems and vectorizes all JPROD incident data for instant retrieval.",
+    "imocProblem": "Incident reviews required hours of manual work, resulting in inconsistent documentation, delayed learnings, and no searchable incident knowledge base.",
+    "imocResult1": "Incident reviews generated in <5 min vs 2+ hours manually",
+    "imocResult2": "All JPROD incidents automatically vectorized and searchable",
+    "imocResult3": "Tool in daily production use by the incident management team",
+    "kallpaTitle": "Kallpa Running Coach",
+    "kallpaDesc": "AI running coach SaaS generating personalized training plans using VDOT algorithm and Pfitzinger methods. Live at app.kallpa.run.",
+    "kallpaProblem": "Runners had no affordable access to structured training plans adapted to their real level, race calendar, and weekly time constraints.",
+    "kallpaResult1": "Full SaaS in production at app.kallpa.run",
+    "kallpaResult2": "4 locales (FR/EN/ES/PT), Strava & wearable integration",
+    "kallpaResult3": "VDOT + Pfitzinger algorithm for race-specific periodization",
+    "jobhunterTitle": "Jobhunter-AI",
+    "jobhunterDesc": "Semi-autonomous job search pipeline with AI-powered multi-bloc scoring. Scans Gmail, job boards, and LinkedIn to surface high-match opportunities.",
+    "jobhunterProblem": "Job hunting is noisy and time-consuming. No tool matches opportunities against a nuanced personal profile across multiple dimensions.",
+    "jobhunterResult1": "Multi-profile support, Docker-ready, open-source",
+    "jobhunterResult2": "AI scoring across 6 dimensions with auto-match ≥80",
+    "jobhunterResult3": "Pipeline actively used in real job search with measurable signal"
   },
   "Posts": {
     "post1Title": "How I automated performance reviews for 150+ employees with AI",
@@ -207,5 +225,18 @@
     "fr": "FR",
     "en": "EN",
     "es": "ES"
+  },
+  "Testimonials": {
+    "sectionLabel": "// what they say",
+    "title": "Trusted by those",
+    "titleAccent": "who've seen it ship.",
+    "michalName": "Michal Hromek",
+    "michalRole": "Interim Head of Incident Management & AI Transformation Lead",
+    "michalCompany": "Groupon",
+    "michalQuote": "Matthieu was a key member of our automation team and genuinely one of those people who just gets things done. He built out our N8N AI automation pipelines end to end — most notably the RAG-powered Incident Review Creator. Both tools are now part of how our team operates daily. Matthieu is sharp, self-directed, and has a real knack for translating messy operational problems into clean, scalable automations.",
+    "aniketName": "Aniket Sen",
+    "aniketRole": "Automation & AI Manager",
+    "aniketCompany": "Groupon",
+    "aniketQuote": "Matthieu is a powerhouse of innovation. He spearheaded an automation initiative that completely streamlined our data processing pipeline, reducing manual processing time by over 40%. Beyond the technical toolkit, he has a natural gift for bridging the gap with non-technical stakeholders. Matthieu has my highest possible recommendation."
   }
 }
