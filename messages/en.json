@@ -2,15 +2,15 @@
   "Metadata": {
     "siteName": "Matthieu de Villele — Automation & AI Engineer",
     "homeTitle": "Matthieu de Villele — Automation & AI Engineer | Workflows, AI Agents, Integrations",
-    "homeDescription": "Senior Automation & AI Engineer. I build workflows, AI agents, and integrations that eliminate manual work and accelerate your teams. 40+ workflows shipped, 150+ employees impacted.",
+    "homeDescription": "Senior Automation & AI Engineer. I build workflows, AI agents, and integrations that eliminate manual work and accelerate your teams. 40+ workflows shipped, 1500+ employees impacted.",
     "projetsTitle": "Projects — Matthieu de Villele | 7 automation & AI projects in production",
     "projetsDescription": "Discover 7 projects delivered to production: AI agents, n8n workflows, Jira automations, and enterprise integrations. Measurable results and detailed tech stack.",
-    "servicesTitle": "Services — Matthieu de Villele | AI Agents, Automation, Free Audit",
-    "servicesDescription": "Custom AI agents, process automation, free AI audit, and monthly retainer. Clear offerings for every stage of your automation & AI transformation.",
+    "servicesTitle": "Services — Matthieu de Villele | AI Agents, Automation, Retainer",
+    "servicesDescription": "Custom AI agents, process automation, agent development, and monthly retainer. Clear offerings for every stage of your automation & AI transformation.",
     "blogTitle": "Blog — Matthieu de Villele | Automation & AI Insights",
     "blogDescription": "Case studies, practical guides, and automation & AI insights. Tool comparisons, Jira tutorials, n8n, RAG, and best practices.",
-    "contactTitle": "Contact — Matthieu de Villele | Book a free AI audit",
-    "contactDescription": "Have a project in mind? Send me a message or book a slot directly for a free 30-minute AI audit."
+    "contactTitle": "Contact — Matthieu de Villele | Let's talk about your project",
+    "contactDescription": "Have a project in mind? Send me a message or book a 30-minute discovery call."
   },
   "Nav": {
     "home": "Home",
@@ -27,14 +27,14 @@
     "heroTag": "// available for missions",
     "heroTitle": "I automate your processes.",
     "heroTitleAccent": "AI does the rest.",
-    "heroDescription": "Ex-Groupon, I automated operations for 400+ people across 3 continents. Now I do the same for you.",
+    "heroDescription": "Ex-Groupon, I automated operations for 1500+ people across 3 continents. Now I do the same for you.",
     "stat1Value": "40+",
     "stat1Label": "workflows shipped",
-    "stat2Value": "150+",
+    "stat2Value": "1500+",
     "stat2Label": "employees impacted",
     "stat3Value": "3",
     "stat3Label": "continents",
-    "ctaPrimary": "Book a free AI audit",
+    "ctaPrimary": "Let's talk about your project",
     "ctaSecondary": "View my projects",
     "servicesSectionLabel": "01 — Services",
     "servicesBentoTitle": "What I do for your",
@@ -45,9 +45,9 @@
     "service2Title": "Process Automation",
     "service2Desc": "n8n workflows, Google Apps Script, Jira Automation. Eliminate manual tasks and connect your tools to save hours every week.",
     "service2Price": "2k€ / workflow",
-    "service3Title": "Free AI Audit",
+    "service3Title": "Discovery Call",
     "service3Desc": "Analysis of your existing processes, identification of automation opportunities, and personalized AI roadmap.",
-    "service3Price": "Free",
+    "service3Price": "30 min",
     "service4Title": "Monthly Retainer",
     "service4Desc": "Ongoing support to maintain, optimize, and extend your automations. Proactive monitoring, fixes, and new features every month.",
     "service4Price": "1.5k€ / month",
@@ -64,8 +64,8 @@
     "title": "Services",
     "description": "Clear offerings for every stage of your automation & AI transformation.",
     "popular": "Popular",
-    "service1Name": "Free AI Audit",
-    "service1Price": "Free",
+    "service1Name": "Discovery Call",
+    "service1Price": "",
     "service1Duration": "30 min",
     "service1Desc": "A 30-minute call to analyze your current processes, identify automation quick wins, and define a concrete AI roadmap.",
     "service1Feature1": "Analysis of your existing workflows",
@@ -101,7 +101,7 @@
     "service4Feature4": "Priority support via Slack",
     "service4Cta": "Learn more",
     "bottomCtaTitle": "Not sure which offer is right for you?",
-    "bottomCtaDesc": "Start with a free 30-minute audit. We identify opportunities together and I recommend the best approach.",
+    "bottomCtaDesc": "Start with a 30-minute discovery call. We identify opportunities together and I recommend the best approach.",
     "bottomCtaCta": "Let's discuss your project"
   },
   "ProjectsPage": {
@@ -111,7 +111,7 @@
     "stack": "Stack",
     "results": "Results",
     "ctaText": "Have a similar project in mind?",
-    "ctaButton": "Book a free AI audit"
+    "ctaButton": "Let's talk about your project"
   },
   "BlogPage": {
     "title": "Blog",
@@ -151,9 +151,9 @@
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",
-    "hyprDesc": "AI-powered performance review system for 150+ employees. Automatic generation of structured feedback and objective scoring.",
+    "hyprDesc": "AI-powered performance review system for 1500+ employees. Automatic generation of structured feedback and objective scoring.",
     "hyprProblem": "Manual performance reviews took 3 weeks per cycle and suffered from significant subjective biases, reducing employee trust.",
-    "hyprResult1": "150+ employees evaluated per cycle",
+    "hyprResult1": "1500+ employees evaluated per cycle",
     "hyprResult2": "Review time reduced from 3 weeks to 3 days",
     "hyprResult3": "Manager satisfaction score went from 62% to 91%",
     "bigpictureTitle": "BigPicture Initiative Tracker",
@@ -212,7 +212,7 @@
     "jobhunterResult3": "Pipeline actively used in real job search with measurable signal"
   },
   "Posts": {
-    "post1Title": "How I automated performance reviews for 150+ employees with AI",
+    "post1Title": "How I automated performance reviews for 1500+ employees with AI",
     "post1Summary": "Case study on designing a performance review system powered by GPT-4 and Google Apps Script. Results, limitations, and lessons learned.",
     "post2Title": "n8n vs Make vs Zapier: which automation tool to choose in 2026?",
     "post2Summary": "Detailed comparison of the 3 most popular automation platforms. Pricing, flexibility, self-hosting, and concrete use cases.",

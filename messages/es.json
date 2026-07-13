@@ -2,15 +2,15 @@
   "Metadata": {
     "siteName": "Matthieu de Villele — Automation & AI Engineer",
     "homeTitle": "Matthieu de Villele — Automation & AI Engineer | Workflows, Agentes IA, Integraciones",
-    "homeDescription": "Senior Automation & AI Engineer. Diseño workflows, agentes IA e integraciones que eliminan el trabajo manual y aceleran tus equipos. 40+ workflows entregados, 150+ empleados impactados.",
+    "homeDescription": "Senior Automation & AI Engineer. Diseño workflows, agentes IA e integraciones que eliminan el trabajo manual y aceleran tus equipos. 40+ workflows entregados, 1500+ empleados impactados.",
     "projetsTitle": "Proyectos — Matthieu de Villele | 7 proyectos automation & IA en producción",
     "projetsDescription": "Descubre 7 proyectos entregados en producción: agentes IA, workflows n8n, automatizaciones Jira e integraciones enterprise. Resultados medibles y stack técnico detallado.",
-    "servicesTitle": "Servicios — Matthieu de Villele | Agentes IA, Automatización, Auditoría gratuita",
-    "servicesDescription": "Agentes IA a medida, automatización de procesos, auditoría IA gratuita y retainer mensual. Ofertas claras para cada etapa de tu transformación automation & IA.",
+    "servicesTitle": "Servicios — Matthieu de Villele | Agentes IA, Automatización, Retainer",
+    "servicesDescription": "Agentes IA a medida, automatización de procesos, desarrollo de agentes y retainer mensual. Ofertas claras para cada etapa de tu transformación automation & IA.",
     "blogTitle": "Blog — Matthieu de Villele | Novedades Automation & IA",
     "blogDescription": "Casos de estudio, guías prácticas y novedades sobre automatización e IA. Comparativas de herramientas, tutoriales Jira, n8n, RAG y buenas prácticas.",
-    "contactTitle": "Contacto — Matthieu de Villele | Reserva una auditoría IA gratuita",
-    "contactDescription": "¿Tienes un proyecto en mente? Envíame un mensaje o reserva directamente una cita para una auditoría IA gratuita de 30 minutos."
+    "contactTitle": "Contacto — Matthieu de Villele | Hablemos de tu proyecto",
+    "contactDescription": "¿Tienes un proyecto en mente? Envíame un mensaje o reserva una llamada de descubrimiento de 30 minutos."
   },
   "Nav": {
     "home": "Inicio",
@@ -27,14 +27,14 @@
     "heroTag": "// disponible para misiones",
     "heroTitle": "Automatizo tus procesos.",
     "heroTitleAccent": "La IA hace el resto.",
-    "heroDescription": "Ex-Groupon, automaticé las operaciones de 400+ personas en 3 continentes. Ahora hago lo mismo para ti.",
+    "heroDescription": "Ex-Groupon, automaticé las operaciones de 1500+ personas en 3 continentes. Ahora hago lo mismo para ti.",
     "stat1Value": "40+",
     "stat1Label": "workflows entregados",
-    "stat2Value": "150+",
+    "stat2Value": "1500+",
     "stat2Label": "empleados impactados",
     "stat3Value": "3",
     "stat3Label": "continentes",
-    "ctaPrimary": "Reservar una auditoría IA gratuita",
+    "ctaPrimary": "Hablemos de tu proyecto",
     "ctaSecondary": "Ver mis proyectos",
     "servicesSectionLabel": "01 — Servicios",
     "servicesBentoTitle": "Lo que hago por tu",
@@ -45,9 +45,9 @@
     "service2Title": "Automatización de procesos",
     "service2Desc": "Workflows n8n, Google Apps Script, Jira Automation. Elimina tareas manuales y conecta tus herramientas para ganar horas cada semana.",
     "service2Price": "2k€ / workflow",
-    "service3Title": "Auditoría IA gratuita",
+    "service3Title": "Llamada de descubrimiento",
     "service3Desc": "Análisis de tus procesos existentes, identificación de oportunidades de automatización y hoja de ruta IA personalizada.",
-    "service3Price": "Gratis",
+    "service3Price": "30 min",
     "service4Title": "Retainer mensual",
     "service4Desc": "Soporte continuo para mantener, optimizar y extender tus automatizaciones. Monitoring proactivo, correcciones y nuevas funcionalidades cada mes.",
     "service4Price": "1.5k€ / mes",
@@ -64,8 +64,8 @@
     "title": "Servicios",
     "description": "Ofertas claras para cada etapa de tu transformación automation & IA.",
     "popular": "Popular",
-    "service1Name": "Auditoría IA gratuita",
-    "service1Price": "Gratis",
+    "service1Name": "Llamada de descubrimiento",
+    "service1Price": "",
     "service1Duration": "30 min",
     "service1Desc": "Una llamada de 30 minutos para analizar tus procesos actuales, identificar los quick wins de automatización y definir una hoja de ruta IA concreta.",
     "service1Feature1": "Análisis de tus workflows existentes",
@@ -101,7 +101,7 @@
     "service4Feature4": "Soporte prioritario por Slack",
     "service4Cta": "Saber más",
     "bottomCtaTitle": "¿No estás seguro de qué oferta te conviene?",
-    "bottomCtaDesc": "Empieza con una auditoría gratuita de 30 minutos. Identificamos juntos las oportunidades y te recomiendo el mejor enfoque.",
+    "bottomCtaDesc": "Empieza con una llamada de descubrimiento de 30 minutos. Identificamos juntos las oportunidades y te recomiendo el mejor enfoque.",
     "bottomCtaCta": "Hablemos de tu proyecto"
   },
   "ProjectsPage": {
@@ -111,7 +111,7 @@
     "stack": "Stack",
     "results": "Resultados",
     "ctaText": "¿Tienes un proyecto similar en mente?",
-    "ctaButton": "Reservar una auditoría IA gratuita"
+    "ctaButton": "Hablemos de tu proyecto"
   },
   "BlogPage": {
     "title": "Blog",
@@ -151,9 +151,9 @@
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",
-    "hyprDesc": "Sistema de evaluación de desempeño impulsado por IA para 150+ empleados. Generación automática de feedback estructurado y scoring objetivo.",
+    "hyprDesc": "Sistema de evaluación de desempeño impulsado por IA para 1500+ empleados. Generación automática de feedback estructurado y scoring objetivo.",
     "hyprProblem": "Las evaluaciones de desempeño manuales tardaban 3 semanas por ciclo y sufrían de sesgos subjetivos importantes, reduciendo la confianza de los empleados.",
-    "hyprResult1": "150+ empleados evaluados por ciclo",
+    "hyprResult1": "1500+ empleados evaluados por ciclo",
     "hyprResult2": "Tiempo de evaluación reducido de 3 semanas a 3 días",
     "hyprResult3": "Puntuación de satisfacción gerencial de 62% a 91%",
     "bigpictureTitle": "BigPicture Initiative Tracker",
@@ -212,7 +212,7 @@
     "jobhunterResult3": "Pipeline usado en búsqueda de empleo real con señal medible"
   },
   "Posts": {
-    "post1Title": "Cómo automaticé las evaluaciones de desempeño para 150+ empleados con IA",
+    "post1Title": "Cómo automaticé las evaluaciones de desempeño para 1500+ empleados con IA",
     "post1Summary": "Caso de estudio sobre el diseño de un sistema de performance review impulsado por GPT-4 y Google Apps Script. Resultados, limitaciones y lecciones aprendidas.",
     "post2Title": "n8n vs Make vs Zapier: ¿qué herramienta de automatización elegir en 2026?",
     "post2Summary": "Comparativa detallada de las 3 plataformas de automatización más populares. Precios, flexibilidad, self-hosting y casos de uso concretos.",

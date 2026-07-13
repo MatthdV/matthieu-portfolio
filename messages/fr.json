@@ -2,15 +2,15 @@
   "Metadata": {
     "siteName": "Matthieu de Villele — Automation & AI Engineer",
     "homeTitle": "Matthieu de Villele — Automation & AI Engineer | Workflows, Agents IA, Intégrations",
-    "homeDescription": "Senior Automation & AI Engineer. Je conçois des workflows, agents IA et intégrations qui éliminent le travail manuel et accélèrent vos équipes. 40+ workflows livrés, 150+ employés impactés.",
+    "homeDescription": "Senior Automation & AI Engineer. Je conçois des workflows, agents IA et intégrations qui éliminent le travail manuel et accélèrent vos équipes. 40+ workflows livrés, 1500+ employés impactés.",
     "projetsTitle": "Projets — Matthieu de Villele | 7 projets automation & IA en production",
     "projetsDescription": "Découvrez 7 projets livrés en production : agents IA, workflows n8n, automations Jira et intégrations enterprise. Résultats chiffrés et stack technique détaillée.",
-    "servicesTitle": "Services — Matthieu de Villele | Agents IA, Automation, Audit gratuit",
-    "servicesDescription": "Agents IA sur-mesure, automation de process, audit IA gratuit et retainer mensuel. Des offres claires pour chaque étape de votre transformation automation & IA.",
+    "servicesTitle": "Services — Matthieu de Villele | Agents IA, Automation, Retainer",
+    "servicesDescription": "Agents IA sur-mesure, automation de process, développement d'agents et retainer mensuel. Des offres claires pour chaque étape de votre transformation automation & IA.",
     "blogTitle": "Blog — Matthieu de Villele | Veille Automation & IA",
     "blogDescription": "Retours d'expérience, guides pratiques et veille automation & IA. Comparatifs d'outils, tutoriels Jira, n8n, RAG et bonnes pratiques.",
-    "contactTitle": "Contact — Matthieu de Villele | Réservez un audit IA gratuit",
-    "contactDescription": "Un projet en tête ? Envoyez-moi un message ou réservez directement un créneau pour un audit IA gratuit de 30 minutes."
+    "contactTitle": "Contact — Matthieu de Villele | Discutons de votre projet",
+    "contactDescription": "Un projet en tête ? Envoyez-moi un message ou réservez un appel découverte de 30 minutes."
   },
   "Nav": {
     "home": "Accueil",
@@ -27,14 +27,14 @@
     "heroTag": "// disponible pour missions",
     "heroTitle": "J'automatise vos process.",
     "heroTitleAccent": "L'IA fait le reste.",
-    "heroDescription": "Ex-Groupon, j ai automatisé les opérations de 400+ personnes sur 3 continents. Maintenant je fais pareil pour vous.",
+    "heroDescription": "Ex-Groupon, j ai automatisé les opérations de 1500+ personnes sur 3 continents. Maintenant je fais pareil pour vous.",
     "stat1Value": "40+",
     "stat1Label": "workflows livrés",
-    "stat2Value": "150+",
+    "stat2Value": "1500+",
     "stat2Label": "employés impactés",
     "stat3Value": "3",
     "stat3Label": "continents",
-    "ctaPrimary": "Réserver un audit IA gratuit",
+    "ctaPrimary": "Discutons de votre projet",
     "ctaSecondary": "Voir mes projets",
     "servicesSectionLabel": "01 — Services",
     "servicesBentoTitle": "Ce que je fais pour votre",
@@ -45,9 +45,9 @@
     "service2Title": "Automation de process",
     "service2Desc": "Workflows n8n, Google Apps Script, Jira Automation. Éliminez les tâches manuelles et connectez vos outils pour gagner des heures chaque semaine.",
     "service2Price": "2k€ / workflow",
-    "service3Title": "Audit IA gratuit",
+    "service3Title": "Appel découverte",
     "service3Desc": "Analyse de vos process existants, identification des opportunités d'automatisation et feuille de route IA personnalisée.",
-    "service3Price": "Gratuit",
+    "service3Price": "30 min",
     "service4Title": "Retainer mensuel",
     "service4Desc": "Support continu pour maintenir, optimiser et étendre vos automations. Monitoring proactif, corrections et nouvelles fonctionnalités chaque mois.",
     "service4Price": "1.5k€ / mois",
@@ -64,8 +64,8 @@
     "title": "Services",
     "description": "Des offres claires pour chaque étape de votre transformation automation & IA.",
     "popular": "Populaire",
-    "service1Name": "Audit IA gratuit",
-    "service1Price": "Gratuit",
+    "service1Name": "Appel découverte",
+    "service1Price": "",
     "service1Duration": "30 min",
     "service1Desc": "Un appel de 30 minutes pour analyser vos process actuels, identifier les quick wins d'automatisation et définir une feuille de route IA concrète.",
     "service1Feature1": "Analyse de vos workflows existants",
@@ -101,7 +101,7 @@
     "service4Feature4": "Support prioritaire par Slack",
     "service4Cta": "En savoir plus",
     "bottomCtaTitle": "Pas sûr de l'offre qui vous convient ?",
-    "bottomCtaDesc": "Commencez par un audit gratuit de 30 minutes. On identifie ensemble les opportunités et je vous recommande la meilleure approche.",
+    "bottomCtaDesc": "Commencez par un appel découverte de 30 minutes. On identifie ensemble les opportunités et je vous recommande la meilleure approche.",
     "bottomCtaCta": "Discutons de votre projet"
   },
   "ProjectsPage": {
@@ -111,7 +111,7 @@
     "stack": "Stack",
     "results": "Résultats",
     "ctaText": "Un projet similaire en tête ?",
-    "ctaButton": "Réserver un audit IA gratuit"
+    "ctaButton": "Discutons de votre projet"
   },
   "BlogPage": {
     "title": "Blog",
@@ -151,9 +151,9 @@
   },
   "Projects": {
     "hyprTitle": "HYPR AI Performance Review",
-    "hyprDesc": "Système de revues de performance propulsé par l'IA pour 150+ employés. Génération automatique de feedbacks structurés et scoring objectif.",
+    "hyprDesc": "Système de revues de performance propulsé par l'IA pour 1500+ employés. Génération automatique de feedbacks structurés et scoring objectif.",
     "hyprProblem": "Les revues de performance manuelles prenaient 3 semaines par cycle et souffraient de biais subjectifs importants, réduisant la confiance des employés.",
-    "hyprResult1": "150+ employés évalués par cycle",
+    "hyprResult1": "1500+ employés évalués par cycle",
     "hyprResult2": "Temps de revue réduit de 3 semaines à 3 jours",
     "hyprResult3": "Score de satisfaction managériale passé de 62% à 91%",
     "bigpictureTitle": "BigPicture Initiative Tracker",
@@ -212,7 +212,7 @@
     "jobhunterResult3": "Pipeline utilisé en recherche d'emploi réelle avec signal mesurable"
   },
   "Posts": {
-    "post1Title": "Comment j'ai automatisé les revues de performance pour 150+ employés avec l'IA",
+    "post1Title": "Comment j'ai automatisé les revues de performance pour 1500+ employés avec l'IA",
     "post1Summary": "Retour d'expérience sur la conception d'un système de performance review propulsé par GPT-4 et Google Apps Script. Résultats, limites et leçons apprises.",
     "post2Title": "n8n vs Make vs Zapier : quel outil d'automation choisir en 2026 ?",
     "post2Summary": "Comparatif détaillé des 3 plateformes d'automation les plus populaires. Pricing, flexibilité, self-hosting et cas d'usage concrets.",
