@@ -9,7 +9,7 @@
     "servicesDescription": "Custom AI agents, process automation, agent development, and monthly retainer. Clear offerings for every stage of your automation & AI transformation.",
     "blogTitle": "Blog — Matthieu de Villele | Automation & AI Insights",
     "blogDescription": "Case studies, practical guides, and automation & AI insights. Tool comparisons, Jira tutorials, n8n, RAG, and best practices.",
-    "contactTitle": "Contact — Matthieu de Villele | Let's talk about your project",
+    "contactTitle": "Contact — Matthieu de Villele | Let’s talk about your project",
     "contactDescription": "Have a project in mind? Send me a message or book a 30-minute discovery call."
   },
   "Nav": {
@@ -34,7 +34,7 @@
     "stat2Label": "employees impacted",
     "stat3Value": "3",
     "stat3Label": "continents",
-    "ctaPrimary": "Let's talk about your project",
+    "ctaPrimary": "Let’s talk about your project",
     "ctaSecondary": "View my projects",
     "servicesSectionLabel": "01 — Services",
     "servicesBentoTitle": "What I do for your",
@@ -102,7 +102,7 @@
     "service4Cta": "Learn more",
     "bottomCtaTitle": "Not sure which offer is right for you?",
     "bottomCtaDesc": "Start with a 30-minute discovery call. We identify opportunities together and I recommend the best approach.",
-    "bottomCtaCta": "Let's discuss your project"
+    "bottomCtaCta": "Let’s discuss your project"
   },
   "ProjectsPage": {
     "title": "Projects",
@@ -111,7 +111,7 @@
     "stack": "Stack",
     "results": "Results",
     "ctaText": "Have a similar project in mind?",
-    "ctaButton": "Let's talk about your project"
+    "ctaButton": "Let’s talk about your project"
   },
   "BlogPage": {
     "title": "Blog",
@@ -143,7 +143,7 @@
     "messagePlaceholder": "Describe your project or needs...",
     "submit": "Send message",
     "successTitle": "Message sent!",
-    "successMessage": "Thank you for your message. I'll get back to you within 24h."
+    "successMessage": "Thank you for your message. I’ll get back to you within 24h."
   },
   "NewsletterForm": {
     "placeholder": "your@email.com",
@@ -229,7 +229,7 @@
   "Testimonials": {
     "sectionLabel": "// what they say",
     "title": "Trusted by those",
-    "titleAccent": "who've seen it ship.",
+    "titleAccent": "who’ve seen it ship.",
     "michalName": "Michal Hromek",
     "michalRole": "Interim Head of Incident Management & AI Transformation Lead",
     "michalCompany": "Groupon",
