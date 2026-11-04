@@ -190,7 +190,6 @@
         {
           "name": "Seguimiento mensual",
           "price": "desde [[followFrom]] al mes",
-          "duration": "Compromiso flexible",
           "body": "Mantenimiento y evolución de 1 a 3 automatizaciones, cada mes."
         }
       ],

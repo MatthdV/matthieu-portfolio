@@ -189,7 +189,6 @@
         {
           "name": "Suivi mensuel",
           "price": "à partir de [[followFrom]] par mois",
-          "duration": "Engagement flexible",
           "body": "Maintenance et évolution de 1 à 3 automatisations, chaque mois."
         }
       ],

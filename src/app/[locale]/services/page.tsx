@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return pageMetadata(params.locale, "services");
 }
 
-type AutoItem = { name: string; price: string; duration: string; body: string };
+type AutoItem = { name: string; price: string; duration?: string; body: string };
 
 export default function ServicesPage({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
@@ -71,7 +71,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
                 <p className="text-lg">{i.body}</p>
                 <p className="md:text-right">
                   <span className="block font-bold">{i.price}</span>
-                  <span className="text-soft">{i.duration}</span>
+                  {i.duration && <span className="text-soft">{i.duration}</span>}
                 </p>
               </li>
             ))}

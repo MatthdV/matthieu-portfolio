@@ -189,7 +189,6 @@
         {
           "name": "Monthly follow-up",
           "price": "from [[followFrom]] a month",
-          "duration": "Flexible commitment",
           "body": "Maintenance and development of 1 to 3 automations, every month."
         }
       ],
