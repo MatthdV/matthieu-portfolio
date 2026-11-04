@@ -1,165 +1,127 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Link } from "@/i18n/navigation";
 
-interface ContactFormProps {
-  nameLabel: string;
-  namePlaceholder: string;
-  emailLabel: string;
-  emailPlaceholder: string;
-  budgetLabel: string;
-  budgetPlaceholder: string;
-  budgetOptions: { value: string; label: string }[];
-  messageLabel: string;
-  messagePlaceholder: string;
+export type ContactFormLabels = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  messageHelp: string;
+  consent: string;
+  consentLink: string;
   submit: string;
+  sending: string;
   successTitle: string;
-  successMessage: string;
-}
+  success: string;
+  error: string;
+  invalid: string;
+};
 
-export default function ContactForm({
-  nameLabel,
-  namePlaceholder,
-  emailLabel,
-  emailPlaceholder,
-  budgetLabel,
-  budgetPlaceholder,
-  budgetOptions,
-  messageLabel,
-  messagePlaceholder,
-  submit,
-  successTitle,
-  successMessage,
-}: ContactFormProps) {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+type Status = "idle" | "sending" | "ok" | "error" | "invalid";
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [budget, setBudget] = useState("");
-  const [message, setMessage] = useState("");
+const field =
+  "mt-1 block w-full border-2 border-ink bg-white px-3 py-3 text-base text-ink placeholder:text-soft";
 
-  const handleSubmit = async (e: React.FormEvent) => {
+export default function ContactForm({ labels, locale }: { labels: ContactFormLabels; locale: string }) {
+  const [status, setStatus] = useState<Status>("idle");
+  const openedAt = useRef(Date.now());
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setLoading(true);
-    setError(null);
-
+    const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      setStatus("invalid");
+      form.reportValidity();
+      return;
+    }
+    setStatus("sending");
+    const data = new FormData(form);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, budget, message }),
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          message: data.get("message"),
+          consent: data.get("consent") === "on",
+          company: data.get("company"),
+          elapsed: Date.now() - openedAt.current,
+          locale,
+        }),
       });
-
-      if (!res.ok) {
-        throw new Error("Erreur lors de l'envoi");
-      }
-
-      setSubmitted(true);
+      setStatus(res.ok ? "ok" : res.status === 400 ? "invalid" : "error");
+      if (res.ok) form.reset();
     } catch {
-      setError("Une erreur est survenue. Réessaie ou contacte-moi directement.");
-    } finally {
-      setLoading(false);
+      setStatus("error");
     }
-  };
+  }
 
-  if (submitted) {
+  if (status === "ok") {
     return (
-      <div className="border border-marker-blue p-8">
-        <h3 className="mb-2 font-sans text-xl font-bold text-foreground">
-          {successTitle}
-        </h3>
-        <p className="font-mono text-sm text-muted">{successMessage}</p>
+      <div role="status" className="border-2 border-ink bg-white p-6">
+        <p className="font-display text-2xl">{labels.successTitle}</p>
+        <p className="mt-2">{labels.success}</p>
       </div>
     );
   }
 
-  const inputClasses =
-    "w-full border border-border bg-background px-4 py-3 font-mono text-sm text-foreground placeholder:text-muted focus:border-marker-blue focus:outline-none transition-colors duration-200";
-
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-      {/* Name */}
+    <form onSubmit={onSubmit} noValidate className="space-y-5" aria-describedby="form-status">
       <div>
-        <label className="mb-2 block font-mono text-xs uppercase tracking-widest text-muted">
-          {nameLabel}
-        </label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder={namePlaceholder}
-          required
-          className={inputClasses}
-        />
+        <label htmlFor="cf-name" className="font-bold">{labels.name}</label>
+        <input id="cf-name" name="name" type="text" required autoComplete="name" maxLength={120} className={field} />
       </div>
-
-      {/* Email */}
       <div>
-        <label className="mb-2 block font-mono text-xs uppercase tracking-widest text-muted">
-          {emailLabel}
-        </label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={emailPlaceholder}
-          required
-          className={inputClasses}
-        />
+        <label htmlFor="cf-email" className="font-bold">{labels.email}</label>
+        <input id="cf-email" name="email" type="email" required autoComplete="email" maxLength={200} className={field} />
       </div>
-
-      {/* Budget */}
       <div>
-        <label className="mb-2 block font-mono text-xs uppercase tracking-widest text-muted">
-          {budgetLabel}
-        </label>
-        <select
-          className={`${inputClasses} appearance-none`}
-          value={budget}
-          onChange={(e) => setBudget(e.target.value)}
-          defaultValue=""
-        >
-          <option value="" disabled>
-            {budgetPlaceholder}
-          </option>
-          {budgetOptions.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              {opt.label}
-            </option>
-          ))}
-        </select>
+        <label htmlFor="cf-phone" className="font-bold">{labels.phone}</label>
+        <input id="cf-phone" name="phone" type="tel" autoComplete="tel" maxLength={40} className={field} />
       </div>
-
-      {/* Message */}
       <div>
-        <label className="mb-2 block font-mono text-xs uppercase tracking-widest text-muted">
-          {messageLabel}
-        </label>
+        <label htmlFor="cf-message" className="font-bold">{labels.message}</label>
         <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder={messagePlaceholder}
+          id="cf-message"
+          name="message"
           required
           rows={5}
-          className={`${inputClasses} resize-none`}
+          maxLength={3000}
+          aria-describedby="cf-message-help"
+          className={field}
         />
+        <p id="cf-message-help" className="mt-1 text-sm text-soft">{labels.messageHelp}</p>
       </div>
 
-      {/* Error */}
-      {error && (
-        <p className="font-mono text-xs text-red-500">{error}</p>
-      )}
+      {/* Champ piège : invisible pour les visiteurs, rempli par les robots. */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+        <label>
+          Company
+          <input name="company" type="text" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
 
-      {/* Submit */}
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-marker-blue px-8 py-3 font-mono text-sm font-bold uppercase tracking-wider text-white transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--color-marker-yellow)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      >
-        {loading ? "..." : submit}
+      <div className="flex items-start gap-3">
+        <input id="cf-consent" name="consent" type="checkbox" required className="mt-1 h-6 w-6 shrink-0 accent-tomato" />
+        <label htmlFor="cf-consent">
+          {labels.consent}{" "}
+          <Link href="/confidentialite" className="font-bold underline">
+            {labels.consentLink}
+          </Link>
+        </label>
+      </div>
+
+      <button type="submit" disabled={status === "sending"} className="btn btn-red w-full sm:w-auto">
+        {status === "sending" ? labels.sending : labels.submit}
       </button>
+
+      <p id="form-status" role="status" aria-live="polite" className="min-h-[1.5rem] font-bold text-tomato">
+        {status === "error" ? labels.error : status === "invalid" ? labels.invalid : ""}
+      </p>
     </form>
   );
 }

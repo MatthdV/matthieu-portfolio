@@ -1,45 +1,35 @@
 "use client";
 
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { useParams } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
-type LanguageSwitcherProps = {
-  labels: {
-    fr: string;
-    en: string;
-    es: string;
-  };
-};
+const LOCALES = [
+  { code: "fr", name: "Français" },
+  { code: "en", name: "English" },
+  { code: "es", name: "Español" },
+] as const;
 
-const locales = ["fr", "en", "es"] as const;
-
-export default function LanguageSwitcher({ labels }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({ label }: { label: string }) {
   const pathname = usePathname();
-  const router = useRouter();
-  const params = useParams();
-  const currentLocale = params.locale as string;
-
-  function handleSwitch(locale: string) {
-    router.replace(pathname, { locale });
-  }
-
+  const current = useLocale();
   return (
-    <div className="flex items-center gap-1 font-mono text-xs uppercase tracking-wider">
-      {locales.map((locale, i) => (
-        <span key={locale} className="flex items-center">
-          {i > 0 && <span className="mx-1 text-muted">/</span>}
-          <button
-            onClick={() => handleSwitch(locale)}
-            className={`transition-colors duration-150 ${
-              currentLocale === locale
-                ? "text-marker-blue font-bold"
-                : "text-muted hover:text-foreground"
-            }`}
-          >
-            {labels[locale]}
-          </button>
-        </span>
+    <nav aria-label={label} className="flex items-center gap-1 text-sm font-bold">
+      {LOCALES.map(({ code, name }) => (
+        <Link
+          key={code}
+          href={pathname}
+          locale={code}
+          hrefLang={code}
+          lang={code}
+          aria-label={name}
+          aria-current={current === code ? "true" : undefined}
+          className={`px-2 py-2 uppercase ${
+            current === code ? "border-b-[3px] border-tomato text-ink" : "text-soft hover:text-ink"
+          }`}
+        >
+          {code}
+        </Link>
       ))}
-    </div>
+    </nav>
   );
 }

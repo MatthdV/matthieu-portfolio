@@ -3,33 +3,64 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #0a0a0a;
-  --color-foreground: #f5f5f0;
-  --color-muted: #888888;
-  --color-border: #222222;
-  --color-marker-blue: #1A65FF;
-  --color-marker-yellow: #FFCD2E;
-  --color-marker-red: #FE342C;
+  color-scheme: light;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
-  position: relative;
+  background: #f4f1ea;
+  color: #17160f;
+  font-feature-settings: "tnum" 0;
 }
 
-/* Grain / noise overlay — SVG feTurbulence filter */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
+:focus-visible {
+  outline: 3px solid #c8321e;
+  outline-offset: 3px;
+}
+
+.on-green :focus-visible {
+  outline-color: #f4f1ea;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[3rem] items-center justify-center border-2 border-ink px-6 py-3 font-display text-base uppercase tracking-wide transition-transform duration-150;
+  }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 #17160f; }
+  .btn-red { @apply border-tomato bg-tomato text-white; }
+  .btn-red:hover { box-shadow: 4px 4px 0 #17160f; }
+  .btn-paper { @apply border-paper bg-paper text-ink; }
+  .btn-paper:hover { box-shadow: 4px 4px 0 #c8321e; }
+  .btn-line { @apply border-ink bg-transparent text-ink; }
+  .btn-line-light { @apply border-paper bg-transparent text-paper; }
+  .btn-line-light:hover { box-shadow: 4px 4px 0 #c8321e; }
+
+  .leader {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .leader::after {
+    content: "";
+    order: 1;
+    flex: 1 1 1rem;
+    border-bottom: 3px dotted currentColor;
+    opacity: 0.55;
+    min-width: 1rem;
+    transform: translateY(-0.25em);
+  }
+  .leader > :first-child { order: 0; }
+  .leader > :last-child { order: 2; white-space: nowrap; }
+
+  .label {
+    @apply font-sans text-sm font-bold uppercase tracking-[0.14em];
+  }
 }

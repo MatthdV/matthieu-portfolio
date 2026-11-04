@@ -1,47 +1,37 @@
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { SITE, isPlaceholder, telHref } from "@/config/site";
 
-type FooterProps = {
-  tagline: string;
-  copyright: string;
-  navLinks: { href: string; label: string }[];
-};
-
-export default function Footer({ tagline, copyright, navLinks }: FooterProps) {
-  const year = new Date().getFullYear();
+export default function Footer() {
+  const t = useTranslations("Footer");
+  const n = useTranslations("Nav");
+  const status = isPlaceholder(SITE.siret) ? t("statusPending") : t("statusSiret", { siret: SITE.siret });
 
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-12 md:flex-row md:items-start md:justify-between">
-        {/* Logo + tagline */}
-        <div className="flex flex-col items-center gap-1 md:items-start">
-          <Link href="/" className="group flex items-baseline">
-            <span className="text-xl font-bold tracking-tight text-foreground transition-transform duration-150 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5">
-              matthieu
-            </span>
-            <span className="text-xl font-bold text-marker-blue">.</span>
-          </Link>
-          <span className="font-mono text-xs text-muted">{tagline}</span>
+    <footer className="on-green bg-ink px-4 pb-24 pt-12 text-paper sm:px-6 md:pb-12">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div>
+          <p className="font-display text-xl uppercase leading-none">{SITE.name}</p>
+          <p className="mt-4 max-w-sm text-softOnGreen">{t("role")}</p>
+          <p className="mt-4 text-softOnGreen">{status}</p>
         </div>
-
-        {/* Nav links */}
-        <ul className="flex flex-wrap items-center justify-center gap-6">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="font-mono text-xs uppercase tracking-widest text-muted transition-colors duration-150 hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* Copyright */}
-        <p className="font-mono text-xs text-muted">
-          &copy; {year} Matthieu de Villele. {copyright}
-        </p>
+        <nav aria-label="Pied de page">
+          <ul className="space-y-1">
+            <li><Link className="inline-block py-2 hover:underline" href="/services">{n("services")}</Link></li>
+            <li><Link className="inline-block py-2 hover:underline" href="/projets">{n("projects")}</Link></li>
+            <li><Link className="inline-block py-2 hover:underline" href="/contact">{n("contact")}</Link></li>
+          </ul>
+        </nav>
+        <div>
+          <ul className="space-y-1">
+            <li><a className="inline-block py-2 hover:underline" href={telHref(SITE.phone)}>{SITE.phone}</a></li>
+            <li><a className="inline-block py-2 hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><Link className="inline-block py-2 hover:underline" href="/mentions-legales">{t("legal")}</Link></li>
+            <li><Link className="inline-block py-2 hover:underline" href="/confidentialite">{t("privacy")}</Link></li>
+          </ul>
+        </div>
       </div>
+      <p className="mx-auto mt-10 max-w-6xl text-sm text-softOnGreen">{t("rights", { year: new Date().getFullYear() })}</p>
     </footer>
   );
 }

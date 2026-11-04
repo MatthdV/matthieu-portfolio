@@ -1,27 +1,27 @@
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Archivo, Archivo_Black } from "next/font/google";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
-import Navbar from "@/components/Navbar";
+import { SITE } from "@/config/site";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ClientProviders from "@/components/ClientProviders";
+import CallBar from "@/components/CallBar";
 import "@/app/globals.css";
 
-const BASE_URL = "https://matthieudevillele.com";
-
-const spaceGrotesk = Space_Grotesk({
+const display = Archivo_Black({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  weight: "400",
+  variable: "--font-display",
   display: "swap",
-  weight: ["400", "700"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const body = Archivo({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  weight: ["400", "600", "700"],
+  variable: "--font-body",
   display: "swap",
-  weight: ["400", "700"],
 });
 
 export function generateStaticParams() {
@@ -33,36 +33,12 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const locale = params.locale;
-  const t = await getTranslations({ locale, namespace: "Metadata" });
-
+  const t = await getTranslations({ locale: params.locale, namespace: "Meta" });
   return {
-    metadataBase: new URL(BASE_URL),
-    title: {
-      default: t("homeTitle"),
-      template: `%s`,
-    },
+    metadataBase: new URL(SITE.url),
+    title: { default: t("homeTitle"), template: `%s | ${t("siteName")}` },
     description: t("homeDescription"),
-    alternates: {
-      canonical: `${BASE_URL}/${locale}`,
-      languages: {
-        fr: `${BASE_URL}/fr`,
-        en: `${BASE_URL}/en`,
-        es: `${BASE_URL}/es`,
-      },
-    },
-    openGraph: {
-      type: "website",
-      locale: locale === "fr" ? "fr_FR" : locale === "es" ? "es_ES" : "en_US",
-      siteName: t("siteName"),
-    },
-    twitter: {
-      card: "summary_large_image",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -73,41 +49,25 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  if (!hasLocale(routing.locales, params.locale)) notFound();
   setRequestLocale(params.locale);
-  const locale = params.locale;
   const messages = await getMessages();
-  const t = await getTranslations("Nav");
-  const tLang = await getTranslations("LanguageSwitcher");
-
-  const tFooter = await getTranslations("Footer");
-
-  const navLinks = [
-    { href: "/", label: t("home") },
-    { href: "/projets", label: t("projects") },
-    { href: "/services", label: t("services") },
-    { href: "/blog", label: t("blog") },
-    { href: "/contact", label: t("contact") },
-  ];
-
-  const languageLabels = {
-    fr: tLang("fr"),
-    en: tLang("en"),
-    es: tLang("es"),
-  };
+  const t = await getTranslations("Common");
 
   return (
-    <html lang={locale} className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-background text-foreground antialiased font-sans">
-        <NextIntlClientProvider messages={messages}>
-          <Navbar navLinks={navLinks} languageLabels={languageLabels} />
-          <div className="pt-16">
-            <ClientProviders>{children}</ClientProviders>
-          </div>
-          <Footer
-            tagline={tFooter("tagline")}
-            copyright={tFooter("copyright")}
-            navLinks={navLinks}
-          />
+    <html lang={params.locale} className={`${display.variable} ${body.variable}`}>
+      <body className="bg-paper font-sans text-base text-ink antialiased">
+        <NextIntlClientProvider messages={{}}>
+          <a
+            href="#contenu"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:bg-ink focus:px-4 focus:py-3 focus:text-paper"
+          >
+            {t("skip")}
+          </a>
+          <Header />
+          <div id="contenu">{children}</div>
+          <Footer />
+          <CallBar />
         </NextIntlClientProvider>
       </body>
     </html>

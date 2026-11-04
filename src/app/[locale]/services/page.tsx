@@ -1,175 +1,81 @@
 import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
-import Image from "next/image";
-import MarkerUnderline from "@/components/MarkerUnderline";
-import MarkerCircle from "@/components/MarkerCircle";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import FadeIn from "@/components/FadeIn";
-import PageHeader from "@/components/PageHeader";
-import StaggerContainer from "@/components/StaggerContainer";
-import StaggerItem from "@/components/StaggerItem";
-import HoverCard from "@/components/HoverCard";
-import MarkerButton from "@/components/MarkerButton";
+import { SITE, telHref } from "@/config/site";
+import { pageMetadata } from "@/lib/seo";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: "Metadata" });
-  return {
-    title: t("servicesTitle"),
-    description: t("servicesDescription"),
-    openGraph: {
-      title: t("servicesTitle"),
-      description: t("servicesDescription"),
-    },
-  };
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  return pageMetadata(params.locale, "services");
 }
 
-const SERVICES = [
-  {
-    key: "service1",
-    icon: "/images/icon-audit.png",
-    priceColor: "blue" as const,
-    markerColor: "blue" as const,
-    features: 4,
-  },
-  {
-    key: "service2",
-    icon: "/images/icon-automation.png",
-    priceColor: "yellow" as const,
-    markerColor: "yellow" as const,
-    features: 4,
-  },
-  {
-    key: "service3",
-    icon: "/images/icon-agents.png",
-    priceColor: "yellow" as const,
-    markerColor: "red" as const,
-    features: 4,
-    popular: true,
-  },
-  {
-    key: "service4",
-    icon: "/images/icon-retainer.png",
-    priceColor: "yellow" as const,
-    markerColor: "yellow" as const,
-    features: 4,
-  },
-];
+type AutoItem = { name: string; price: string; duration: string; body: string };
 
-export default function ServicesPage() {
-  const t = useTranslations("ServicesPage");
+export default function ServicesPage({ params }: { params: { locale: string } }) {
+  setRequestLocale(params.locale);
+  const t = useTranslations("Services");
+  const home = useTranslations("Home");
+  const included = t.raw("site.included") as string[];
+  const items = t.raw("auto.items") as AutoItem[];
 
   return (
-    <main className="flex flex-col">
-      {/* Header */}
-      <PageHeader
-        label={t("title")}
-        title={t("title")}
-        description={t("description")}
-      />
-
-      {/* Service cards */}
-      <section className="px-6 pb-24 md:px-12 lg:px-20">
-        <StaggerContainer className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2" stagger={0.1}>
-          {SERVICES.map((service, index) => (
-            <StaggerItem key={service.key}>
-            <HoverCard className="h-full">
-            <article
-              className="relative flex flex-col border border-border p-8 md:p-10 h-full"
-            >
-              {/* Popular badge */}
-              {service.popular && (
-                <span className="absolute right-6 top-6 border border-marker-red bg-marker-red/10 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-marker-red">
-                  {t("popular")}
-                </span>
-              )}
-
-              {/* Icon */}
-              <div className="relative mb-6 h-16 w-16">
-                <Image
-                  src={service.icon}
-                  alt={t(`${service.key}Name`)}
-                  fill
-                  sizes="64px"
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Name */}
-              <h2 className="mb-2 font-sans text-2xl font-bold tracking-tight text-foreground">
-                {index === 0 ? (
-                  <MarkerUnderline color={service.markerColor}>
-                    {t(`${service.key}Name`)}
-                  </MarkerUnderline>
-                ) : (
-                  t(`${service.key}Name`)
-                )}
-              </h2>
-
-              {/* Price + Duration */}
-              <div className="mb-4 flex items-baseline gap-3">
-                <span
-                  className={`font-mono text-lg font-bold ${
-                    service.priceColor === "blue"
-                      ? "text-marker-blue"
-                      : "text-marker-yellow"
-                  }`}
-                >
-                  {t(`${service.key}Price`)}
-                </span>
-                <span className="font-mono text-xs text-muted">
-                  {t(`${service.key}Duration`)}
-                </span>
-              </div>
-
-              {/* Description */}
-              <p className="mb-6 font-sans text-sm leading-relaxed text-foreground/80">
-                {t(`${service.key}Desc`)}
-              </p>
-
-              {/* Features */}
-              <ul className="mb-8 flex flex-1 flex-col gap-3">
-                {Array.from({ length: service.features }, (_, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-2 font-mono text-sm text-muted"
-                  >
-                    <span className="mt-0.5 text-marker-blue">&rarr;</span>
-                    {t(`${service.key}Feature${i + 1}`)}
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <MarkerButton href="/contact" color="blue" variant="outline">
-                {t(`${service.key}Cta`)}
-              </MarkerButton>
-            </article>
-            </HoverCard>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+    <main>
+      <section className="border-b-2 border-ink py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h1 className="font-display text-4xl sm:text-6xl">{t("title")}</h1>
+          <p className="mt-4 max-w-2xl text-lg">{t("intro")}</p>
+        </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="px-6 pb-24 md:px-12 lg:px-20">
-        <FadeIn>
-        <div className="mx-auto max-w-6xl border border-border p-8 text-center md:p-12">
-          <p className="mb-3 font-sans text-xl font-bold tracking-tight text-foreground md:text-2xl">
-            {t("bottomCtaTitle")}
-          </p>
-          <p className="mx-auto mb-6 max-w-xl font-sans text-sm text-muted">
-            {t("bottomCtaDesc")}
-          </p>
-          <MarkerButton href="/contact" color="blue" variant="filled">
-            {t("bottomCtaCta")}
-          </MarkerButton>
+      <section className="on-green bg-green py-14 text-paper sm:py-20" aria-labelledby="site-title">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
+          <div>
+            <p className="label text-softOnGreen">{t("site.label")}</p>
+            <h2 id="site-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">{t("site.title")}</h2>
+            <p className="mt-4 max-w-lg text-lg">{t("site.body")}</p>
+            <dl className="mt-8 space-y-4 text-xl">
+              <div className="leader">
+                <dt>{t("site.setup")}</dt>
+                <dd className="font-display text-3xl">{home("hero.setupAmount")}</dd>
+              </div>
+              <div className="leader">
+                <dt>{t("site.monthly")}</dt>
+                <dd className="font-display text-3xl">{home("hero.monthlyAmount")}</dd>
+              </div>
+            </dl>
+            <p className="mt-6 text-softOnGreen">{home("price.note", { vat: SITE.vat })}</p>
+            <p className="mt-6">
+              <Link href="/#comment" className="font-bold underline">{t("site.stepsLink")}</Link>
+            </p>
+          </div>
+          <div>
+            <h3 className="label text-softOnGreen">{t("site.includedTitle")}</h3>
+            <ul className="mt-4">
+              {included.map((i) => (
+                <li key={i} className="border-t-2 border-paper py-4 font-display text-xl last:border-b-2">{i}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-        </FadeIn>
+      </section>
+
+      <section className="py-14 sm:py-20" aria-labelledby="auto-title">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="label text-tomato">{t("auto.label")}</p>
+          <h2 id="auto-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">{t("auto.title")}</h2>
+          <ul className="mt-10">
+            {items.map((i) => (
+              <li key={i.name} className="grid gap-3 border-t-2 border-ink py-6 last:border-b-2 md:grid-cols-[1fr_2fr_1fr] md:gap-8">
+                <h3 className="font-display text-2xl">{i.name}</h3>
+                <p className="text-lg">{i.body}</p>
+                <p className="md:text-right">
+                  <span className="block font-bold">{i.price}</span>
+                  <span className="text-soft">{i.duration}</span>
+                </p>
+              </li>
+            ))}
+          </ul>
+          <a href={telHref(SITE.phone)} className="btn btn-red mt-10">{t("cta")}</a>
+        </div>
       </section>
     </main>
   );
