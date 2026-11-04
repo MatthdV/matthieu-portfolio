@@ -11,6 +11,9 @@ export const SITE = {
   siret: "TODO_SIRET",
   address: "TODO_ADDRESS",
   linkedin: "https://linkedin.com/in/matthieudevillele",
+  /** Prise de rendez-vous Cal.com, liens sortants sans intégration. */
+  booking15: "https://cal.com/matthieu-de-villele/15min",
+  booking30: "https://cal.com/matthieu-de-villele/30min",
   hostName: "Vercel Inc.",
   hostAddress: "TODO_VERCEL_ADDRESS",
   /** Remplacer par "OK" quand les deux personnes ont donné leur accord. */

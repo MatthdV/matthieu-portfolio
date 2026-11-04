@@ -14,6 +14,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
   setRequestLocale(params.locale);
   const t = useTranslations("Services");
   const home = useTranslations("Home");
+  const c = useTranslations("Common");
   const included = t.raw("site.included") as string[];
   const items = t.raw("auto.items") as AutoItem[];
 
@@ -77,7 +78,10 @@ export default function ServicesPage({ params }: { params: { locale: string } })
             ))}
           </ul>
           <p className="mt-4 text-sm text-soft">{t("auto.note")}</p>
-          <a href={telHref(SITE.phone)} className="btn btn-red mt-8">{t("cta")}</a>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href={SITE.booking30} className="btn btn-red" rel="noopener noreferrer">{c("book30")}</a>
+            <a href={telHref(SITE.phone)} className="btn btn-line">{t("cta")}</a>
+          </div>
         </div>
       </section>
     </main>

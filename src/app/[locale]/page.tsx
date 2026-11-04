@@ -80,7 +80,10 @@ export default function Home({ params }: { params: { locale: string } }) {
             <p className="mt-3 text-sm text-soft">{t("hero.vatNote")}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={telHref(SITE.phone)} className="btn btn-red hidden md:inline-flex">
+              <a href={SITE.booking15} className="btn btn-red" rel="noopener noreferrer">
+                {c("book15")}
+              </a>
+              <a href={telHref(SITE.phone)} className="btn btn-line hidden md:inline-flex">
                 {c("callName")}
               </a>
               <a href="#comment" className="btn btn-line">

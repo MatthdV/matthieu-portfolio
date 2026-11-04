@@ -13,6 +13,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
   const locale = useLocale();
   const t = useTranslations("Contact");
   const f = useTranslations("Contact.form");
+  const c = useTranslations("Common");
   const labels = {
     name: f("name"),
     email: f("email"),
@@ -35,6 +36,9 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="font-display text-4xl sm:text-6xl">{t("title")}</h1>
           <p className="mt-4 max-w-2xl text-lg">{t("lead")}</p>
+          <a href={SITE.booking15} className="btn btn-red mt-8" rel="noopener noreferrer">
+            {c("book15")}
+          </a>
           <a
             href={telHref(SITE.phone)}
             className="mt-8 block font-display text-[clamp(2rem,9vw,3.5rem)] leading-none underline decoration-4 underline-offset-8"
