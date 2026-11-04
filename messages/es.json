@@ -1,242 +1,308 @@
 {
-  "Metadata": {
-    "siteName": "Matthieu de Villele — Automation & AI Engineer",
-    "homeTitle": "Matthieu de Villele — Automation & AI Engineer | Workflows, Agentes IA, Integraciones",
-    "homeDescription": "Senior Automation & AI Engineer. Diseño workflows, agentes IA e integraciones que eliminan el trabajo manual y aceleran tus equipos. 40+ workflows entregados, 1500+ empleados impactados.",
-    "projetsTitle": "Proyectos — Matthieu de Villele | 7 proyectos automation & IA en producción",
-    "projetsDescription": "Descubre 7 proyectos entregados en producción: agentes IA, workflows n8n, automatizaciones Jira e integraciones enterprise. Resultados medibles y stack técnico detallado.",
-    "servicesTitle": "Servicios — Matthieu de Villele | Agentes IA, Automatización, Retainer",
-    "servicesDescription": "Agentes IA a medida, automatización de procesos, desarrollo de agentes y retainer mensual. Ofertas claras para cada etapa de tu transformación automation & IA.",
-    "blogTitle": "Blog — Matthieu de Villele | Novedades Automation & IA",
-    "blogDescription": "Casos de estudio, guías prácticas y novedades sobre automatización e IA. Comparativas de herramientas, tutoriales Jira, n8n, RAG y buenas prácticas.",
-    "contactTitle": "Contacto — Matthieu de Villele | Hablemos de tu proyecto",
-    "contactDescription": "¿Tienes un proyecto en mente? Envíame un mensaje o reserva una llamada de descubrimiento de 30 minutos."
+  "Meta": {
+    "siteName": "Matthieu de Villele",
+    "homeTitle": "Sitio web para restaurantes y negocios: 690 € y luego 29 € al mes",
+    "homeDescription": "Construyo la demo de su sitio web antes de cualquier contacto. 690 € de puesta en marcha y luego 29 € al mes. Publicación, dominio y ficha de Google incluidos.",
+    "servicesTitle": "Servicios: sitio web para negocios, automatización y agentes de IA",
+    "servicesDescription": "Sitio web para negocios por 690 € y luego 29 € al mes. Automatización de procesos y agentes de IA para pequeñas y medianas empresas.",
+    "projetsTitle": "Proyectos de automatización en empresas",
+    "projetsDescription": "Tres proyectos de automatización realizados en Groupon: evaluaciones de desempeño, flujos de n8n y búsqueda de incidentes.",
+    "contactTitle": "Contacto: llame o escriba a Matthieu de Villele",
+    "contactDescription": "Teléfono, correo y formulario. Cuénteme sobre su negocio y su proyecto de sitio web.",
+    "mentionsTitle": "Aviso legal",
+    "mentionsDescription": "Editor, proveedor del servidor e información legal de matthieudevillele.com.",
+    "confidentialiteTitle": "Política de privacidad",
+    "confidentialiteDescription": "Los datos que recoge el formulario de contacto, su uso y sus derechos."
+  },
+  "Common": {
+    "skip": "Ir al contenido",
+    "call": "Llamar",
+    "callName": "Llamar a Matthieu",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "language": "Idioma",
+    "home": "Inicio"
   },
   "Nav": {
-    "home": "Inicio",
-    "projects": "Proyectos",
     "services": "Servicios",
-    "blog": "Blog",
+    "projects": "Proyectos",
     "contact": "Contacto"
   },
   "Footer": {
-    "tagline": "Automation & AI Engineer",
-    "copyright": "Todos los derechos reservados."
+    "role": "Sitios web para negocios y artesanos. Automatización y agentes de IA para pequeñas y medianas empresas.",
+    "statusPending": "Microempresa francesa en proceso de creación.",
+    "statusSiret": "Microempresa, SIRET {siret}.",
+    "legal": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "rights": "© {year} Matthieu de Villele"
   },
-  "HomePage": {
-    "heroTag": "// disponible para misiones",
-    "heroTitle": "Automatizo tus procesos.",
-    "heroTitleAccent": "La IA hace el resto.",
-    "heroDescription": "Ex-Groupon, automaticé las operaciones de 1500+ personas en 3 continentes. Ahora hago lo mismo para ti.",
-    "stat1Value": "40+",
-    "stat1Label": "workflows entregados",
-    "stat2Value": "1500+",
-    "stat2Label": "empleados impactados",
-    "stat3Value": "3",
-    "stat3Label": "continentes",
-    "ctaPrimary": "Hablemos de tu proyecto",
-    "ctaSecondary": "Ver mis proyectos",
-    "servicesSectionLabel": "01 — Servicios",
-    "servicesBentoTitle": "Lo que hago por tu",
-    "servicesBentoTitleAccent": "negocio",
-    "service1Title": "Agentes IA a medida",
-    "service1Desc": "Diseño y despliegue de agentes IA adaptados a tus necesidades: chatbots, asistentes internos, pipelines RAG, automatización inteligente.",
-    "service1Price": "Desde 5k€",
-    "service2Title": "Automatización de procesos",
-    "service2Desc": "Workflows n8n, Google Apps Script, Jira Automation. Elimina tareas manuales y conecta tus herramientas para ganar horas cada semana.",
-    "service2Price": "2k€ / workflow",
-    "service3Title": "Llamada de descubrimiento",
-    "service3Desc": "Análisis de tus procesos existentes, identificación de oportunidades de automatización y hoja de ruta IA personalizada.",
-    "service3Price": "30 min",
-    "service4Title": "Retainer mensual",
-    "service4Desc": "Soporte continuo para mantener, optimizar y extender tus automatizaciones. Monitoring proactivo, correcciones y nuevas funcionalidades cada mes.",
-    "service4Price": "1.5k€ / mes",
-    "projectsSectionLabel": "02 — Proyectos",
-    "projectsTitle": "No son POC. Son",
-    "projectsTitleAccent": "producción.",
-    "projectsViewAll": "Ver todo en GitHub",
-    "newsletterSectionLabel": "03 — Newsletter",
-    "newsletterTitle": "Resumen IA semanal.",
-    "newsletterTitleAccent": "Sin rodeos.",
-    "newsletterDescription": "Un email por semana con los mejores recursos, herramientas y experiencias sobre automatización e IA."
-  },
-  "ServicesPage": {
-    "title": "Servicios",
-    "description": "Ofertas claras para cada etapa de tu transformación automation & IA.",
-    "popular": "Popular",
-    "service1Name": "Llamada de descubrimiento",
-    "service1Price": "",
-    "service1Duration": "30 min",
-    "service1Desc": "Una llamada de 30 minutos para analizar tus procesos actuales, identificar los quick wins de automatización y definir una hoja de ruta IA concreta.",
-    "service1Feature1": "Análisis de tus workflows existentes",
-    "service1Feature2": "Identificación de tareas automatizables",
-    "service1Feature3": "Recomendaciones priorizadas por ROI",
-    "service1Feature4": "Hoja de ruta accionable",
-    "service1Cta": "Reservar una cita",
-    "service2Name": "Implementación Automation",
-    "service2Price": "Desde 2.000 €",
-    "service2Duration": "1–4 semanas",
-    "service2Desc": "Diseño y despliegue de workflows automatizados con n8n, Google Apps Script o Jira Automation. Entregado llave en mano con documentación.",
-    "service2Feature1": "Workflow n8n o Apps Script a medida",
-    "service2Feature2": "Integración con tus herramientas existentes",
-    "service2Feature3": "Tests y monitoring incluidos",
-    "service2Feature4": "Documentación y formación de equipo",
-    "service2Cta": "Hablar de mi proyecto",
-    "service3Name": "Agente IA Custom",
-    "service3Price": "Desde 5.000 €",
-    "service3Duration": "2–6 semanas",
-    "service3Desc": "Desarrollo de un agente IA a medida: chatbot, asistente interno, pipeline RAG o automatización inteligente adaptada a tu negocio.",
-    "service3Feature1": "Agente IA adaptado a tu contexto empresarial",
-    "service3Feature2": "Integración RAG con tus datos",
-    "service3Feature3": "Interfaz conversacional (Slack, web, API)",
-    "service3Feature4": "Iteraciones y fine-tuning incluidos",
-    "service3Cta": "Hablar de mi proyecto",
-    "service4Name": "Retainer mensual",
-    "service4Price": "Desde 1.500 €/mes",
-    "service4Duration": "Compromiso flexible",
-    "service4Desc": "Soporte continuo para mantener, optimizar y extender tus automatizaciones. Incluye monitoring proactivo, correcciones y nuevas funcionalidades.",
-    "service4Feature1": "Monitoring y mantenimiento proactivo",
-    "service4Feature2": "Correcciones y optimizaciones continuas",
-    "service4Feature3": "Nuevas automatizaciones cada mes",
-    "service4Feature4": "Soporte prioritario por Slack",
-    "service4Cta": "Saber más",
-    "bottomCtaTitle": "¿No estás seguro de qué oferta te conviene?",
-    "bottomCtaDesc": "Empieza con una llamada de descubrimiento de 30 minutos. Identificamos juntos las oportunidades y te recomiendo el mejor enfoque.",
-    "bottomCtaCta": "Hablemos de tu proyecto"
-  },
-  "ProjectsPage": {
-    "title": "Proyectos",
-    "description": "7 proyectos entregados en producción — automatización, IA e integraciones enterprise.",
-    "problem": "Problema",
-    "stack": "Stack",
-    "results": "Resultados",
-    "ctaText": "¿Tienes un proyecto similar en mente?",
-    "ctaButton": "Hablemos de tu proyecto"
-  },
-  "BlogPage": {
-    "title": "Blog",
-    "description": "Casos de estudio, guías prácticas y novedades sobre automatización e IA.",
-    "readMore": "Leer más",
-    "newsletterTitle": "Newsletter IA & Automation",
-    "newsletterDescription": "Un email por semana con los mejores recursos, herramientas y experiencias sobre automatización e IA."
-  },
-  "ContactPage": {
-    "title": "Contacto",
-    "description": "¿Tienes un proyecto en mente? Envíame un mensaje o reserva directamente una cita.",
-    "sidebarTitle": "Otras formas de contacto",
-    "sidebarNote": "Respuesta garantizada en menos de 5 minutos.",
-    "calendlyLabel": "Reservar una cita"
-  },
-  "ContactForm": {
-    "nameLabel": "Nombre",
-    "namePlaceholder": "Juan García",
-    "emailLabel": "Email",
-    "emailPlaceholder": "juan@empresa.com",
-    "budgetLabel": "Presupuesto estimado",
-    "budgetPlaceholder": "Seleccionar un presupuesto",
-    "budgetLt2k": "< 2.000 €",
-    "budget2k5k": "2.000 € – 5.000 €",
-    "budget5k10k": "5.000 € – 10.000 €",
-    "budget10kPlus": "10.000 € +",
-    "budgetRetainer": "Retainer mensual",
-    "messageLabel": "Mensaje",
-    "messagePlaceholder": "Describe tu proyecto o necesidad...",
-    "submit": "Enviar mensaje",
-    "successTitle": "¡Mensaje enviado!",
-    "successMessage": "Gracias por tu mensaje. Te respondo en menos de 24h."
-  },
-  "NewsletterForm": {
-    "placeholder": "tu@email.com",
-    "subscribe": "Suscribirse"
-  },
-  "Projects": {
-    "hyprTitle": "HYPR AI Performance Review",
-    "hyprDesc": "Sistema de evaluación de desempeño impulsado por IA para 1500+ empleados. Generación automática de feedback estructurado y scoring objetivo.",
-    "hyprProblem": "Las evaluaciones de desempeño manuales tardaban 3 semanas por ciclo y sufrían de sesgos subjetivos importantes, reduciendo la confianza de los empleados.",
-    "hyprResult1": "1500+ empleados evaluados por ciclo",
-    "hyprResult2": "Tiempo de evaluación reducido de 3 semanas a 3 días",
-    "hyprResult3": "Puntuación de satisfacción gerencial de 62% a 91%",
-    "bigpictureTitle": "BigPicture Initiative Tracker",
-    "bigpictureDesc": "Seguimiento de iniciativas cross-platform sincronizando Jira, Confluence y Google Sheets para visibilidad en tiempo real del avance de proyectos.",
-    "bigpictureProblem": "Los equipos usaban 3 herramientas diferentes sin vista consolidada. Las actualizaciones semanales requerían 4h de trabajo manual por PM.",
-    "bigpictureResult1": "Vista unificada de 50+ iniciativas",
-    "bigpictureResult2": "4h/semana ahorradas por PM",
-    "bigpictureResult3": "Adopción por 12 equipos en 2 meses",
-    "caplabourTitle": "CapLabour Capacity Planning",
-    "caplabourDesc": "Herramienta de planificación de capacidad (v1 + v2) que permite a los managers prever la carga y optimizar la asignación de recursos.",
-    "caplabourProblem": "La planificación de capacidad se hacía en Excel con datos obsoletos. Las sobreasignaciones se detectaban demasiado tarde, causando retrasos en proyectos.",
-    "caplabourResult1": "Visibilidad de capacidad en 8 equipos (60+ personas)",
-    "caplabourResult2": "Reducción del 40% en conflictos de asignación",
-    "caplabourResult3": "V2 entregada con previsión rodante de 12 semanas",
-    "kindlyTitle": "Kindly Reminder",
-    "kindlyDesc": "Bot de cumplimiento con monitoring automatizado. Envío de recordatorios inteligentes y seguimiento de acciones correctivas en tiempo real.",
-    "kindlyProblem": "Los equipos olvidaban regularmente completar las acciones de cumplimiento, generando riesgos de auditoría y seguimientos manuales costosos.",
-    "kindlyResult1": "Tasa de cumplimiento de 68% a 95%",
-    "kindlyResult2": "Cero seguimientos manuales necesarios",
-    "kindlyResult3": "Monitoring en tiempo real con alertas de escalada",
-    "n8nTitle": "n8n Enterprise Workflows",
-    "n8nDesc": "18 workflows de automatización enterprise cubriendo onboarding, reporting, alerting y sincronización de datos entre sistemas.",
-    "n8nProblem": "Docenas de procesos manuales repetitivos entre Slack, Jira, Google Workspace y herramientas internas, generando errores y pérdida de tiempo.",
-    "n8nResult1": "18 workflows en producción",
-    "n8nResult2": "200+ horas/mes ahorradas",
-    "n8nResult3": "99.5% uptime en 12 meses",
-    "jiraTitle": "Jira Automation Rules",
-    "jiraDesc": "18 reglas Jira Cloud automatizando la gestión de tickets: asignación, transiciones, notificaciones y seguimiento de SLA.",
-    "jiraProblem": "La gestión manual de tickets Jira creaba inconsistencias de estado, asignaciones olvidadas y seguimiento SLA aproximado.",
-    "jiraResult1": "18 reglas activas en 5 proyectos Jira",
-    "jiraResult2": "Tiempo de triaje reducido en 70%",
-    "jiraResult3": "Cumplimiento SLA mejorado de 78% a 96%",
-    "catalogueTitle": "Automation Catalogue",
-    "catalogueDesc": "Registro centralizado de todas las automatizaciones de la organización con documentación, ownership y métricas de rendimiento.",
-    "catalogueProblem": "Con 40+ automatizaciones en producción, nadie sabía exactamente qué existía, quién era responsable, ni si funcionaba correctamente.",
-    "catalogueResult1": "40+ automatizaciones documentadas y catalogadas",
-    "catalogueResult2": "Ownership claro para cada workflow",
-    "catalogueResult3": "Dashboard de salud con alertas de fallos",
-    "imocTitle": "IMOC RAG Incident Review Creator",
-    "imocDesc": "Sistema RAG que genera automáticamente post-mortems de incidentes estructurados y vectoriza todos los datos de incidentes JPROD para recuperación instantánea.",
-    "imocProblem": "Las revisiones de incidentes requerían horas de trabajo manual, resultando en documentación inconsistente, aprendizajes tardíos y sin base de conocimientos buscable.",
-    "imocResult1": "Post-mortems generados en <5 min vs 2h+ manualmente",
-    "imocResult2": "Todos los incidentes JPROD vectorizados y consultables",
-    "imocResult3": "Herramienta en uso diario de producción por el equipo de gestión de incidentes",
-    "kallpaTitle": "Kallpa Running Coach",
-    "kallpaDesc": "SaaS de coaching de running con IA que genera planes de entrenamiento personalizados usando el algoritmo VDOT y métodos Pfitzinger. Disponible en app.kallpa.run.",
-    "kallpaProblem": "Los corredores no tenían acceso asequible a planes de entrenamiento estructurados adaptados a su nivel real, calendario de carreras y restricciones semanales.",
-    "kallpaResult1": "SaaS completo en producción en app.kallpa.run",
-    "kallpaResult2": "4 idiomas (FR/EN/ES/PT), integración Strava y wearables",
-    "kallpaResult3": "Algoritmo VDOT + Pfitzinger para periodización específica de carrera",
-    "jobhunterTitle": "Jobhunter-AI",
-    "jobhunterDesc": "Pipeline de búsqueda de empleo semi-autónomo con puntuación multi-bloque IA. Analiza Gmail, bolsas de trabajo y LinkedIn para identificar las oportunidades más relevantes.",
-    "jobhunterProblem": "La búsqueda de empleo es ruidosa y lleva mucho tiempo. Ninguna herramienta coincide oportunidades con un perfil personal matizado en múltiples dimensiones.",
-    "jobhunterResult1": "Multi-perfil, Docker-ready, open-source",
-    "jobhunterResult2": "Puntuación IA en 6 dimensiones con auto-match ≥80",
-    "jobhunterResult3": "Pipeline usado en búsqueda de empleo real con señal medible"
-  },
-  "Posts": {
-    "post1Title": "Cómo automaticé las evaluaciones de desempeño para 1500+ empleados con IA",
-    "post1Summary": "Caso de estudio sobre el diseño de un sistema de performance review impulsado por GPT-4 y Google Apps Script. Resultados, limitaciones y lecciones aprendidas.",
-    "post2Title": "n8n vs Make vs Zapier: ¿qué herramienta de automatización elegir en 2026?",
-    "post2Summary": "Comparativa detallada de las 3 plataformas de automatización más populares. Precios, flexibilidad, self-hosting y casos de uso concretos.",
-    "post3Title": "5 automatizaciones Jira Cloud que todo equipo debería implementar",
-    "post3Summary": "Las 5 reglas Jira Automation con mayor impacto en la productividad de tus equipos. Templates incluidos, listos para importar.",
-    "post4Title": "Construir un pipeline RAG en producción: guía práctica",
-    "post4Summary": "De la teoría a la producción: chunking, embeddings, vector store y orquestación. Las decisiones técnicas que realmente importan."
-  },
-  "LanguageSwitcher": {
-    "fr": "FR",
-    "en": "EN",
-    "es": "ES"
+  "Home": {
+    "hero": {
+      "kicker": "Sitios web para negocios y artesanos",
+      "title": "El sitio web de su restaurante o negocio, listo antes de nuestra primera llamada.",
+      "lead": "Construyo una demo a la medida antes de contactarlo. Si le gusta, yo me encargo de publicarla.",
+      "setupAmount": "690 €",
+      "setupLabel": "de puesta en marcha",
+      "monthlyAmount": "29 €",
+      "monthlyLabel": "al mes después",
+      "steps": "Ver cómo funciona"
+    },
+    "how": {
+      "label": "Cómo funciona",
+      "title": "Primero la demo. Después, usted decide.",
+      "intro": "Construyo la demo antes de contactarlo. Usted la mira en su celular.",
+      "steps": [
+        {
+          "title": "La demo",
+          "body": "Construyo una demo a la medida de su negocio. Está lista antes de nuestra primera conversación. Plazo: {demo}."
+        },
+        {
+          "title": "Su opinión",
+          "body": "Usted la mira y me dice qué cambiaría."
+        },
+        {
+          "title": "Los ajustes",
+          "body": "Modifico la demo según sus comentarios."
+        },
+        {
+          "title": "La publicación",
+          "body": "Publico el sitio con su nombre de dominio y su ficha de Google. Plazo: {live}."
+        }
+      ]
+    },
+    "demo": {
+      "label": "Ejemplo ficticio",
+      "caption": "Este restaurante no existe. Muestra el tipo de página que construyo.",
+      "name": "Chez Exemple",
+      "tagline": "Cocina de temporada",
+      "hoursTitle": "Horario",
+      "hours": "Martes a sábado, de 12 a 14 h y de 19 a 22 h",
+      "dish": "Plato del día",
+      "dishPrice": "14 €",
+      "book": "Reservar una mesa"
+    },
+    "price": {
+      "label": "El precio",
+      "title": "690 € de puesta en marcha y luego 29 € al mes.",
+      "setup": "Puesta en marcha",
+      "monthly": "Mantenimiento y publicación, por mes",
+      "includedTitle": "Qué incluye",
+      "included": [
+        "La publicación",
+        "El nombre de dominio",
+        "Los cambios pequeños",
+        "La ficha de Google"
+      ],
+      "note": "Precios en euros. {vat}"
+    },
+    "auto": {
+      "label": "Automatización y agentes de IA",
+      "title": "Después, sus tareas repetitivas.",
+      "lead": "Puedo automatizar sus procesos con n8n y Google Apps Script. También construyo agentes de IA para pequeñas y medianas empresas.",
+      "prices": [
+        {
+          "name": "Flujo de trabajo",
+          "price": "desde 2.000 €"
+        },
+        {
+          "name": "Agente de IA",
+          "price": "desde 5.000 €"
+        },
+        {
+          "name": "Seguimiento mensual",
+          "price": "desde 1.500 € al mes"
+        }
+      ],
+      "proof": "En Groupon automaticé las operaciones de más de 1.500 personas en 3 continentes.",
+      "projectsTitle": "Tres proyectos",
+      "projectsLink": "Ver los proyectos",
+      "servicesLink": "Ver los servicios",
+      "testimonialsTitle": "Lo que dicen",
+      "testimonialsNote": "Extractos de recomendaciones de LinkedIn."
+    },
+    "about": {
+      "label": "Quién soy",
+      "title": "Matthieu de Villele",
+      "p1": "Trabajo de forma independiente y mi microempresa en Francia está en proceso de creación. Antes trabajé en Groupon.",
+      "p2": "Allí automaticé las operaciones de más de 1.500 personas en 3 continentes. Hoy construyo sitios web para negocios y artesanos, empezando por los restaurantes."
+    },
+    "contact": {
+      "label": "Contacto",
+      "title": "Lo más simple: llámeme.",
+      "lead": "También puede escribirme. Leo todos los mensajes.",
+      "formLink": "Escribir un mensaje"
+    }
   },
   "Testimonials": {
-    "sectionLabel": "// lo que dicen",
-    "title": "Validado por quienes",
-    "titleAccent": "vieron entregar.",
-    "michalName": "Michal Hromek",
-    "michalRole": "Interim Head of Incident Management & AI Transformation Lead",
-    "michalCompany": "Groupon",
-    "michalQuote": "Matthieu era un miembro clave de nuestro equipo de automatización — alguien que realmente hace que las cosas avancen. Construyó nuestros pipelines de automatización N8N de principio a fin, especialmente el RAG Incident Review Creator. Ambas herramientas son ahora parte de nuestra rutina diaria. Matthieu es agudo, autónomo y tiene un talento real para transformar problemas operativos complejos en automatizaciones limpias y escalables.",
-    "aniketName": "Aniket Sen",
-    "aniketRole": "Automation & AI Manager",
-    "aniketCompany": "Groupon",
-    "aniketQuote": "Matthieu es una verdadera potencia de innovación. Lideró una iniciativa de automatización que racionalizó por completo nuestro pipeline de procesamiento de datos, reduciendo el tiempo de procesamiento manual en más de un 40%. Más allá del aspecto técnico, tiene un talento natural para tender puentes con las partes interesadas no técnicas. Matthieu tiene mi más alta recomendación."
+    "items": [
+      {
+        "quote": "Construyó nuestros flujos de automatización en N8N de principio a fin, incluido el RAG Incident Review Creator. Matthieu es ágil, autónomo y tiene un talento real para convertir problemas operativos complejos en automatizaciones limpias y escalables.",
+        "name": "Michal Hromek",
+        "role": "Interim Head of Incident Management & AI Transformation Lead, Groupon"
+      },
+      {
+        "quote": "Matthieu es una verdadera fuerza de innovación. Tiene un talento natural para tender puentes con las partes interesadas no técnicas.",
+        "name": "Aniket Sen",
+        "role": "Automation & AI Manager, Groupon"
+      }
+    ]
+  },
+  "Services": {
+    "title": "Servicios",
+    "intro": "Dos actividades: sitios web para negocios y, después, automatización para pequeñas y medianas empresas.",
+    "site": {
+      "label": "Sitio web para negocios",
+      "title": "690 € y luego 29 € al mes",
+      "body": "Construyo la demo antes de cualquier contacto. Usted decide después. Primero restaurantes, luego todos los negocios y artesanos.",
+      "setup": "Puesta en marcha",
+      "monthly": "Mantenimiento y publicación, por mes",
+      "includedTitle": "Incluye",
+      "included": [
+        "La publicación",
+        "El nombre de dominio",
+        "Los cambios pequeños",
+        "La ficha de Google"
+      ],
+      "stepsLink": "Ver los pasos"
+    },
+    "auto": {
+      "label": "Automatización y agentes de IA",
+      "title": "Para pequeñas y medianas empresas",
+      "items": [
+        {
+          "name": "Flujo de trabajo",
+          "price": "desde 2.000 €",
+          "duration": "1 a 4 semanas",
+          "body": "Un flujo en n8n o Google Apps Script conectado a sus herramientas. Pruebas, seguimiento y documentación incluidos."
+        },
+        {
+          "name": "Agente de IA",
+          "price": "desde 5.000 €",
+          "duration": "2 a 6 semanas",
+          "body": "Un agente de IA adaptado a su negocio: asistente interno, chatbot o búsqueda en sus documentos."
+        },
+        {
+          "name": "Seguimiento mensual",
+          "price": "desde 1.500 € al mes",
+          "duration": "Compromiso flexible",
+          "body": "Mantenimiento y evolución de sus automatizaciones, cada mes."
+        }
+      ]
+    },
+    "cta": "Llamar a Matthieu"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "intro": "Tres proyectos de automatización en empresas, realizados en Groupon.",
+    "problem": "Problema",
+    "stack": "Herramientas",
+    "items": [
+      {
+        "title": "IMOC RAG Incident Review Creator",
+        "body": "Sistema RAG que genera informes posteriores a incidentes y hace los incidentes consultables. El equipo de gestión de incidentes lo usa todos los días.",
+        "problem": "Las revisiones de incidentes exigían horas de trabajo manual, con documentación irregular y sin una base de conocimiento para consultar.",
+        "stack": [
+          "n8n",
+          "RAG",
+          "Pinecone"
+        ]
+      },
+      {
+        "title": "HYPR AI Performance Review",
+        "body": "Sistema de evaluaciones de desempeño asistido por IA para más de 1.500 empleados. Genera comentarios estructurados y una puntuación.",
+        "problem": "Las evaluaciones de desempeño manuales eran lentas y estaban expuestas a sesgos subjetivos.",
+        "stack": [
+          "Google Apps Script",
+          "OpenAI API",
+          "Google Sheets",
+          "Google Forms"
+        ]
+      },
+      {
+        "title": "n8n Enterprise Workflows",
+        "body": "18 flujos de automatización en producción: incorporación, reportes, alertas y sincronización de datos entre sistemas.",
+        "problem": "Decenas de procesos manuales entre Slack, Jira, Google Workspace y herramientas internas, con errores y tiempo perdido.",
+        "stack": [
+          "n8n",
+          "Jira",
+          "Slack",
+          "Google Workspace"
+        ]
+      }
+    ],
+    "ctaText": "¿Una tarea repetitiva que eliminar?",
+    "cta": "Llamar a Matthieu"
+  },
+  "Contact": {
+    "title": "Contacto",
+    "lead": "Lo más simple: llámeme. También puede escribirme.",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo",
+    "linkedinLabel": "LinkedIn",
+    "formTitle": "Escribir un mensaje",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "phone": "Teléfono (opcional)",
+      "message": "Mensaje",
+      "messageHelp": "Su negocio, su ciudad, lo que espera de un sitio web.",
+      "consent": "Acepto que mis datos se usen para responder a mi solicitud.",
+      "consentLink": "Política de privacidad",
+      "submit": "Enviar el mensaje",
+      "sending": "Enviando",
+      "successTitle": "Mensaje recibido.",
+      "success": "Le respondo apenas pueda.",
+      "error": "El envío falló. Llámeme o escriba a {email}.",
+      "invalid": "Revise los campos marcados y la casilla de consentimiento."
+    }
+  },
+  "Legal": {
+    "title": "Aviso legal",
+    "editorTitle": "Editor del sitio",
+    "editorBody": "Matthieu de Villele, empresario individual (microempresa, Francia).",
+    "siret": "SIRET: {siret}",
+    "address": "Dirección: {address}",
+    "emailLine": "Correo: {email}",
+    "phoneLine": "Teléfono: {phone}",
+    "vatLine": "IVA: {vat}",
+    "publisherTitle": "Director de la publicación",
+    "publisherBody": "Matthieu de Villele.",
+    "hostTitle": "Proveedor del servidor",
+    "hostBody": "{hostName}, {hostAddress}.",
+    "ipTitle": "Propiedad intelectual",
+    "ipBody": "Los textos y los elementos gráficos de este sitio pertenecen a Matthieu de Villele. Se prohíbe toda reproducción sin autorización escrita. Las marcas citadas pertenecen a sus propietarios.",
+    "liabilityTitle": "Responsabilidad",
+    "liabilityBody": "Procuro que la información de este sitio sea exacta. Puede cambiar sin aviso. No me hago responsable del contenido de los sitios a los que enlaza.",
+    "dataTitle": "Datos personales",
+    "dataBody": "El tratamiento de sus datos se describe en la política de privacidad."
+  },
+  "Privacy": {
+    "title": "Política de privacidad",
+    "intro": "Este sitio solo recoge los datos que usted escribe en el formulario de contacto. No usa rastreadores ni cookies de medición de audiencia.",
+    "controllerTitle": "Responsable del tratamiento",
+    "controllerBody": "Matthieu de Villele, contacto: {email}.",
+    "dataTitle": "Datos recogidos",
+    "dataItems": [
+      "Su nombre y su correo",
+      "Su teléfono, si lo escribe",
+      "El contenido de su mensaje"
+    ],
+    "purposeTitle": "Para qué",
+    "purposeBody": "Estos datos sirven para responder a su solicitud y proponerle un sitio web. No se usan para publicidad ni se venden.",
+    "basisTitle": "Base legal",
+    "basisBody": "Su consentimiento, dado al marcar la casilla del formulario.",
+    "recipientsTitle": "Quién recibe sus datos",
+    "recipientsBody": "Solo yo, a través de estos servicios: Notion (almacenamiento de solicitudes), Resend (envío de correos) y Vercel (proveedor del sitio). Estos servicios pueden tratar datos fuera de la Unión Europea, con las garantías previstas por el RGPD.",
+    "retentionTitle": "Plazo de conservación",
+    "retentionBody": "{retention}",
+    "rightsTitle": "Sus derechos",
+    "rightsBody": "Usted puede acceder a sus datos, corregirlos, suprimirlos, oponerse a su uso o recuperarlos. Escriba a {email}. Si reside en Colombia, puede ejercer también sus derechos de conocer, actualizar, rectificar y suprimir sus datos conforme a la Ley 1581 de 2012. En Francia, puede acudir a la CNIL (cnil.fr).",
+    "cookiesTitle": "Cookies y rastreadores",
+    "cookiesBody": "Ninguna cookie de medición de audiencia, ningún píxel publicitario. Las fuentes las sirve este sitio, sin llamar a un servicio externo desde su navegador."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "body": "Esta página no existe.",
+    "back": "Volver al inicio"
   }
 }

@@ -1,37 +1,27 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { SITE } from "@/config/site";
+import { PAGE_PATHS } from "@/lib/seo";
 
-const siteUrl = "https://matthieudevillele.com";
-
-const pages = [
-  { path: "", changeFrequency: "monthly" as const, priority: 1 },
-  { path: "/projets", changeFrequency: "monthly" as const, priority: 0.8 },
-  { path: "/services", changeFrequency: "monthly" as const, priority: 0.8 },
-  { path: "/blog", changeFrequency: "weekly" as const, priority: 0.7 },
-  { path: "/contact", changeFrequency: "yearly" as const, priority: 0.6 },
-];
+const priority: Record<keyof typeof PAGE_PATHS, number> = {
+  home: 1,
+  services: 0.8,
+  projets: 0.8,
+  contact: 0.7,
+  mentions: 0.2,
+  confidentialite: 0.2,
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const entries: MetadataRoute.Sitemap = [];
-
-  for (const page of pages) {
-    const languages: Record<string, string> = {};
-    for (const locale of routing.locales) {
-      languages[locale] = `${siteUrl}/${locale}${page.path}`;
-    }
-
-    for (const locale of routing.locales) {
-      entries.push({
-        url: `${siteUrl}/${locale}${page.path}`,
-        lastModified: new Date(),
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-        alternates: {
-          languages,
-        },
-      });
-    }
-  }
-
-  return entries;
+  return (Object.keys(PAGE_PATHS) as (keyof typeof PAGE_PATHS)[]).flatMap((page) => {
+    const languages = Object.fromEntries(
+      routing.locales.map((l) => [l, `${SITE.url}/${l}${PAGE_PATHS[page]}`])
+    );
+    return routing.locales.map((locale) => ({
+      url: `${SITE.url}/${locale}${PAGE_PATHS[page]}`,
+      lastModified: new Date(),
+      priority: priority[page],
+      alternates: { languages },
+    }));
+  });
 }
