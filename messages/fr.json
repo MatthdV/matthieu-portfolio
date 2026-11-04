@@ -177,13 +177,13 @@
         {
           "name": "Automatisation simple",
           "price": "à partir de [[automationFrom]]",
-          "duration": "1 à 4 semaines",
+          "duration": "Délai précisé dans le devis, selon le périmètre",
           "body": "Une automatisation n8n ou Google Apps Script branchée sur vos outils. Au-delà d’un cas simple : sur devis. Tests, suivi et documentation inclus."
         },
         {
           "name": "Agent IA, offre pour PME",
           "price": "sur devis, à partir de [[agentFrom]]",
-          "duration": "2 à 6 semaines",
+          "duration": "Délai précisé dans le devis, selon le périmètre",
           "body": "Un agent IA adapté au métier de votre PME : assistant interne, chatbot ou recherche dans vos documents."
         },
         {

@@ -177,13 +177,13 @@
         {
           "name": "Simple automation",
           "price": "from [[automationFrom]]",
-          "duration": "1 to 4 weeks",
+          "duration": "Timeline set in the quote, depending on scope",
           "body": "An n8n or Google Apps Script automation connected to your tools. Beyond a simple case: on quote. Tests, monitoring and documentation included."
         },
         {
           "name": "AI agent, offer for mid-sized companies",
           "price": "on quote, from [[agentFrom]]",
-          "duration": "2 to 6 weeks",
+          "duration": "Timeline set in the quote, depending on scope",
           "body": "An AI agent suited to your company’s business: internal assistant, chatbot or search across your documents."
         },
         {

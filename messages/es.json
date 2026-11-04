@@ -178,13 +178,13 @@
         {
           "name": "Automatización simple",
           "price": "desde [[automationFrom]]",
-          "duration": "1 a 4 semanas",
+          "duration": "Plazo definido en la cotización, según el alcance",
           "body": "Una automatización en n8n o Google Apps Script conectada a sus herramientas. Más allá de un caso simple: según cotización. Pruebas, seguimiento y documentación incluidos."
         },
         {
           "name": "Agente de IA, oferta para medianas empresas",
           "price": "según cotización, desde [[agentFrom]]",
-          "duration": "2 a 6 semanas",
+          "duration": "Plazo definido en la cotización, según el alcance",
           "body": "Un agente de IA adaptado al negocio de su empresa: asistente interno, chatbot o búsqueda en sus documentos."
         },
         {
