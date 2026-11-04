@@ -221,7 +221,7 @@
       {
         "title": "n8n Enterprise Workflows",
         "body": "18 flujos de automatización en producción: incorporación, reportes, alertas y sincronización de datos entre sistemas.",
-        "problem": "Decenas de procesos manuales entre Slack, Jira, Google Workspace y herramientas internas, con errores y tiempo perdido.",
+        "problem": "Decenas de procesos manuales entre Slack, Jira, Google Workspace y herramientas internas. Causaban errores y tiempo perdido.",
         "stack": [
           "n8n",
           "Jira",
@@ -296,7 +296,7 @@
     "retentionTitle": "Plazo de conservación",
     "retentionBody": "{retention}",
     "rightsTitle": "Sus derechos",
-    "rightsBody": "Usted puede acceder a sus datos, corregirlos, suprimirlos, oponerse a su uso o recuperarlos. Escriba a {email}. Si reside en Colombia, puede ejercer también sus derechos de conocer, actualizar, rectificar y suprimir sus datos conforme a la Ley 1581 de 2012. En Francia, puede acudir a la CNIL (cnil.fr).",
+    "rightsBody": "Usted puede acceder a sus datos, corregirlos, suprimirlos, oponerse a su uso o recuperarlos, escribiendo a {email}. Si reside en Colombia, la Ley 1581 de 2012 también le permite conocerlos, actualizarlos y rectificarlos. En Francia, puede acudir a la CNIL (cnil.fr).",
     "cookiesTitle": "Cookies y rastreadores",
     "cookiesBody": "Ninguna cookie de medición de audiencia, ningún píxel publicitario. Las fuentes las sirve este sitio, sin llamar a un servicio externo desde su navegador."
   },

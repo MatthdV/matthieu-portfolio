@@ -221,7 +221,7 @@
       {
         "title": "n8n Enterprise Workflows",
         "body": "18 automation workflows in production: onboarding, reporting, alerting and data synchronisation between systems.",
-        "problem": "Dozens of manual processes between Slack, Jira, Google Workspace and internal tools, causing errors and lost time.",
+        "problem": "Dozens of manual processes between Slack, Jira, Google Workspace and internal tools. They caused errors and lost time.",
         "stack": [
           "n8n",
           "Jira",
