@@ -166,6 +166,7 @@ export default function Home({ params }: { params: { locale: string } }) {
             </dl>
             <p className="mt-6 text-softOnGreen">{t("price.extra")}</p>
             <p className="mt-2 text-softOnGreen">{t("price.note")}</p>
+            {t.has("price.currency") && <p className="mt-2 text-softOnGreen">{t("price.currency")}</p>}
           </div>
           <div>
             <h3 className="label text-softOnGreen">{t("price.includedTitle")}</h3>

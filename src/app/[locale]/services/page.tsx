@@ -44,6 +44,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
             </dl>
             <p className="mt-6 text-softOnGreen">{t("site.extra")}</p>
             <p className="mt-2 text-softOnGreen">{home("price.note")}</p>
+            {home.has("price.currency") && <p className="mt-2 text-softOnGreen">{home("price.currency")}</p>}
             <p className="mt-6">
               <Link href="/#comment" className="font-bold underline">{t("site.stepsLink")}</Link>
             </p>

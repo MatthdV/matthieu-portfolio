@@ -96,6 +96,7 @@
         "La ficha de Google"
       ],
       "note": "Precios en euros. [[vat]].",
+      "currency": "Facturo en euros. Su banco hace la conversión y puede aplicar comisiones bancarias.",
       "extra": "Después de [[includedMinutes]] minutos de cambios al mes: [[extraHour]] la hora."
     },
     "auto": {
