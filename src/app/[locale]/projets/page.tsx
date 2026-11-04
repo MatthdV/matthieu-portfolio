@@ -27,7 +27,7 @@ export default function ProjectsPage({ params }: { params: { locale: string } })
         <ol className="mx-auto max-w-6xl px-4 sm:px-6">
           {items.map((p, i) => (
             <li key={p.title} className="grid gap-6 border-t-2 border-ink py-10 last:border-b-2 lg:grid-cols-[6rem_1.2fr_1fr]">
-              <span className="font-display text-5xl leading-none text-tomato" aria-hidden="true">{i + 1}</span>
+              <span className="font-display text-5xl leading-none text-ink" aria-hidden="true">{i + 1}</span>
               <div>
                 <h2 className="font-display text-2xl sm:text-3xl">{p.title}</h2>
                 <p className="mt-3 max-w-xl text-lg">{p.body}</p>

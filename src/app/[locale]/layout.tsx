@@ -1,6 +1,6 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Archivo, Archivo_Black } from "next/font/google";
+import { Fraunces, Inter_Tight } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
@@ -10,14 +10,14 @@ import Footer from "@/components/Footer";
 import CallBar from "@/components/CallBar";
 import "@/app/globals.css";
 
-const display = Archivo_Black({
+const display = Fraunces({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["800"],
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Archivo({
+const body = Inter_Tight({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-body",
@@ -56,7 +56,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={params.locale} className={`${display.variable} ${body.variable}`}>
-      <body className="bg-paper font-sans text-base text-ink antialiased">
+      <body className="bg-paper font-sans text-lg text-ink antialiased">
         <NextIntlClientProvider messages={{}}>
           <a
             href="#contenu"

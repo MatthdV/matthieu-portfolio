@@ -2,8 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Palette tirée de l'illustration : papier, encre, jaune.
+   Valeurs en canaux RGB pour que Tailwind gère l'opacité. */
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
+  --c-paper: 245 245 245;   /* fond de page */
+  --c-ink: 16 16 16;        /* texte */
+  --c-card: 255 255 255;    /* cartes, champs */
+  --c-panel: 16 16 16;      /* blocs sombres */
+  --c-accent: 249 204 63;   /* jaune, fonds et surligneurs seulement */
+  --c-soft: 85 85 85;       /* texte secondaire sur le fond de page */
+  --c-soft-on-panel: 200 200 200;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-paper: 16 16 16;
+    --c-ink: 245 245 245;
+    --c-card: 28 28 28;
+    --c-panel: 30 30 30;
+    --c-soft: 190 190 190;
+    --c-soft-on-panel: 200 200 200;
+  }
+  /* Le surligneur devient une étiquette pleine : texte sombre sur jaune. */
+  .marker {
+    background: rgb(var(--c-accent));
+    color: #101010;
+    padding: 0 0.15em;
+  }
+  /* Dans un bloc sombre, le texte et les traits restent clairs. */
+  .on-green {
+    --c-paper: 245 245 245;
+    --c-ink: 16 16 16;
+    --c-card: 255 255 255;
+    --c-soft: 85 85 85;
+  }
 }
 
 html {
@@ -12,18 +45,17 @@ html {
 }
 
 body {
-  background: #f4f1ea;
-  color: #17160f;
-  font-feature-settings: "tnum" 0;
+  background: rgb(var(--c-paper));
+  color: rgb(var(--c-ink));
 }
 
 :focus-visible {
-  outline: 3px solid #c8321e;
+  outline: 3px solid rgb(var(--c-ink));
   outline-offset: 3px;
 }
 
 .on-green :focus-visible {
-  outline-color: #f4f1ea;
+  outline-color: rgb(var(--c-accent));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32,16 +64,24 @@ body {
 
 @layer components {
   .btn {
-    @apply inline-flex min-h-[3rem] items-center justify-center border-2 border-ink px-6 py-3 font-display text-base uppercase tracking-wide transition-transform duration-150;
+    @apply inline-flex min-h-[3rem] items-center justify-center border-2 border-ink px-6 py-3 font-sans text-base font-semibold transition-transform duration-150;
   }
-  .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 #17160f; }
-  .btn-red { @apply border-tomato bg-tomato text-white; }
-  .btn-red:hover { box-shadow: 4px 4px 0 #17160f; }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 rgb(var(--c-ink)); }
+  .btn-red { @apply border-ink bg-tomato text-[#101010]; }
   .btn-paper { @apply border-paper bg-paper text-ink; }
-  .btn-paper:hover { box-shadow: 4px 4px 0 #c8321e; }
+  .btn-paper:hover { box-shadow: 4px 4px 0 rgb(var(--c-accent)); }
   .btn-line { @apply border-ink bg-transparent text-ink; }
   .btn-line-light { @apply border-paper bg-transparent text-paper; }
-  .btn-line-light:hover { box-shadow: 4px 4px 0 #c8321e; }
+  .btn-line-light:hover { box-shadow: 4px 4px 0 rgb(var(--c-accent)); }
+  .on-green .btn-red { @apply border-tomato; }
+  .on-green .btn-red:hover { box-shadow: 4px 4px 0 rgb(var(--c-paper)); }
+
+  /* Surligneur jaune derrière un mot, comme au feutre. */
+  .marker {
+    background: linear-gradient(transparent 58%, rgb(var(--c-accent)) 58%, rgb(var(--c-accent)) 92%, transparent 92%);
+    color: inherit;
+    padding: 0 0.06em;
+  }
 
   .leader {
     display: flex;

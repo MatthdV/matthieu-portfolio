@@ -60,7 +60,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
 
       <section className="py-14 sm:py-20" aria-labelledby="auto-title">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="label text-tomato">{t("auto.label")}</p>
+          <p className="label text-ink">{t("auto.label")}</p>
           <h2 id="auto-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">{t("auto.title")}</h2>
           <ul className="mt-10">
             {items.map((i) => (

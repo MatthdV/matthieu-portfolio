@@ -39,30 +39,31 @@
   "Home": {
     "hero": {
       "kicker": "Sitios web para negocios y artesanos",
-      "title": "El sitio web de su restaurante o negocio, listo antes de nuestra primera llamada.",
-      "lead": "Construyo una demo a la medida antes de contactarlo. Si le gusta, yo me encargo de publicarla.",
+      "title": "El sitio web de su restaurante o comercio, listo antes de nuestra primera conversación.",
+      "lead": "Construyo una demostración con el nombre de su negocio y se la envío por correo. Usted la abre en un computador o en un celular.",
       "setupAmount": "690 €",
       "setupLabel": "de puesta en marcha",
       "monthlyAmount": "29 €",
       "monthlyLabel": "al mes después",
-      "steps": "Ver cómo funciona"
+      "steps": "Ver cómo funciona",
+      "imageAlt": "Dibujo con marcador: un desarrollador de espaldas frente a su computador. Un pequeño robot amarillo sostiene una llave inglesa."
     },
     "how": {
       "label": "Cómo funciona",
       "title": "Primero la demo. Después, usted decide.",
-      "intro": "Construyo la demo antes de contactarlo. Usted la mira en su celular.",
+      "intro": "Construyo la demostración antes de escribirle. Usted la abre en un computador o en un celular.",
       "steps": [
         {
-          "title": "La demo",
-          "body": "Construyo una demo a la medida de su negocio. Está lista antes de nuestra primera conversación. Plazo: {demo}."
+          "title": "El enlace",
+          "body": "Le envío por correo el enlace de su demostración. Se abre en computador y en celular, sin instalar nada."
         },
         {
           "title": "Su opinión",
-          "body": "Usted la mira y me dice qué cambiaría."
+          "body": "Usted la mira y me dice qué cambiaría. Responda al correo o llámeme."
         },
         {
           "title": "Los ajustes",
-          "body": "Modifico la demo según sus comentarios."
+          "body": "Modifico la demostración según sus comentarios. Plazo: {demo}."
         },
         {
           "title": "La publicación",

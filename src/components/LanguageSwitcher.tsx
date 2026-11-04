@@ -21,7 +21,7 @@ export default function LanguageSwitcher({ label }: { label: string }) {
           locale={code}
           hrefLang={code}
           lang={code}
-          aria-label={name}
+          aria-label={`${name} (${code})`}
           aria-current={current === code ? "true" : undefined}
           className={`px-2 py-2 uppercase ${
             current === code ? "border-b-[3px] border-tomato text-ink" : "text-soft hover:text-ink"

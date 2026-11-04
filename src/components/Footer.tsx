@@ -8,10 +8,10 @@ export default function Footer() {
   const status = isPlaceholder(SITE.siret) ? t("statusPending") : t("statusSiret", { siret: SITE.siret });
 
   return (
-    <footer className="on-green bg-ink px-4 pb-24 pt-12 text-paper sm:px-6 md:pb-12">
+    <footer className="on-green bg-green px-4 pb-24 pt-12 text-paper sm:px-6 md:pb-12">
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="font-display text-xl uppercase leading-none">{SITE.name}</p>
+          <p className="font-display text-xl leading-none">{SITE.name}</p>
           <p className="mt-4 max-w-sm text-softOnGreen">{t("role")}</p>
           <p className="mt-4 text-softOnGreen">{status}</p>
         </div>

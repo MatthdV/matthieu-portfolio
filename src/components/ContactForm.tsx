@@ -22,7 +22,7 @@ export type ContactFormLabels = {
 type Status = "idle" | "sending" | "ok" | "error" | "invalid";
 
 const field =
-  "mt-1 block w-full border-2 border-ink bg-white px-3 py-3 text-base text-ink placeholder:text-soft";
+  "mt-1 block w-full border-2 border-ink bg-card px-3 py-3 text-base text-ink placeholder:text-soft";
 
 export default function ContactForm({ labels, locale }: { labels: ContactFormLabels; locale: string }) {
   const [status, setStatus] = useState<Status>("idle");
@@ -62,7 +62,7 @@ export default function ContactForm({ labels, locale }: { labels: ContactFormLab
 
   if (status === "ok") {
     return (
-      <div role="status" className="border-2 border-ink bg-white p-6">
+      <div role="status" className="border-2 border-ink bg-card p-6">
         <p className="font-display text-2xl">{labels.successTitle}</p>
         <p className="mt-2">{labels.success}</p>
       </div>
@@ -119,7 +119,7 @@ export default function ContactForm({ labels, locale }: { labels: ContactFormLab
         {status === "sending" ? labels.sending : labels.submit}
       </button>
 
-      <p id="form-status" role="status" aria-live="polite" className="min-h-[1.5rem] font-bold text-tomato">
+      <p id="form-status" role="status" aria-live="polite" className="min-h-[1.5rem] font-bold text-ink">
         {status === "error" ? labels.error : status === "invalid" ? labels.invalid : ""}
       </p>
     </form>

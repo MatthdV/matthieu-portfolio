@@ -39,30 +39,31 @@
   "Home": {
     "hero": {
       "kicker": "Websites for shops and craftspeople",
-      "title": "Your restaurant or shop website, ready before our first call.",
-      "lead": "I build a custom demo before I contact you. If you like it, I take care of putting it online.",
+      "title": "Your restaurant or shop website, ready before our first conversation.",
+      "lead": "I build a demo with your business name, then email it to you. You can open it on a computer or a phone.",
       "setupAmount": "€690",
       "setupLabel": "to set up",
       "monthlyAmount": "€29",
       "monthlyLabel": "a month after that",
-      "steps": "See how it works"
+      "steps": "See how it works",
+      "imageAlt": "Marker drawing: a developer seen from behind at a computer. A small yellow robot holds a wrench."
     },
     "how": {
       "label": "How it works",
       "title": "The demo comes first. Then you decide.",
-      "intro": "I build the demo before I contact you. You look at it on your phone.",
+      "intro": "I build the demo before I write to you. You open it on a computer or a phone.",
       "steps": [
         {
-          "title": "The demo",
-          "body": "I build a custom demo for your business. It is ready before our first conversation. Lead time: {demo}."
+          "title": "The link",
+          "body": "I email you the link to your demo. It opens on a computer and on a phone, with nothing to install."
         },
         {
           "title": "Your opinion",
-          "body": "You look at it and tell me what you would change."
+          "body": "You look at it and tell me what you would change. Reply to the email or call me."
         },
         {
           "title": "The adjustments",
-          "body": "I change the demo based on your comments."
+          "body": "I change the demo to fit your comments. Time needed: {demo}."
         },
         {
           "title": "Going live",

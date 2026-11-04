@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -57,35 +58,48 @@ export default function Home({ params }: { params: { locale: string } }) {
       <JsonLd locale={locale} description={meta("homeDescription")} />
 
       {/* 1. Ce que je fais, avec le prix */}
-      <section className="on-green bg-green text-paper">
-        <div className={`${wrap} grid gap-10 py-12 sm:py-16 lg:grid-cols-[1.25fr_1fr] lg:items-end lg:py-24`}>
+      <section>
+        <div className={`${wrap} grid gap-10 py-10 sm:py-14 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:py-20`}>
           <div>
-            <p className="label text-softOnGreen">{t("hero.kicker")}</p>
-            <h1 className="mt-4 font-display text-[clamp(2.25rem,8.5vw,4.75rem)] leading-[1.02]">
+            <p className="label text-soft">{t("hero.kicker")}</p>
+            <h1 className="mt-4 font-display text-[clamp(2.25rem,7vw,4.25rem)] leading-[1.02] tracking-tight">
               {t("hero.title")}
             </h1>
-            <p className="mt-6 max-w-xl text-lg">{t("hero.lead")}</p>
+            <p className="mt-5 max-w-xl text-lg">{t("hero.lead")}</p>
+
+            <dl className="mt-7 flex flex-wrap items-end gap-x-10 gap-y-4">
+              <div>
+                <dd className="font-display text-[clamp(2.75rem,12vw,4.5rem)] leading-none">
+                  <span className="marker">{t("hero.setupAmount")}</span>
+                </dd>
+                <dt className="mt-1">{t("hero.setupLabel")}</dt>
+              </div>
+              <div>
+                <dd className="font-display text-[clamp(2rem,8vw,3rem)] leading-none">{t("hero.monthlyAmount")}</dd>
+                <dt className="mt-1">{t("hero.monthlyLabel")}</dt>
+              </div>
+            </dl>
+
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={telHref(SITE.phone)} className="btn btn-red">
+              <a href={telHref(SITE.phone)} className="btn btn-red hidden md:inline-flex">
                 {c("callName")}
               </a>
-              <a href="#comment" className="btn btn-line-light">
+              <a href="#comment" className="btn btn-line">
                 {t("hero.steps")}
               </a>
             </div>
-            <p className="mt-4 font-bold">{SITE.phone}</p>
+            <p className="mt-4 hidden font-bold md:block">{SITE.phone}</p>
           </div>
 
-          <div className="border-2 border-paper">
-            <div className="border-b-2 border-paper p-5 sm:p-6">
-              <p className="font-display text-[clamp(3.5rem,16vw,6.5rem)] leading-none">{t("hero.setupAmount")}</p>
-              <p className="mt-2 text-lg">{t("hero.setupLabel")}</p>
-            </div>
-            <div className="p-5 sm:p-6">
-              <p className="font-display text-[clamp(2.5rem,10vw,4rem)] leading-none">{t("hero.monthlyAmount")}</p>
-              <p className="mt-2 text-lg">{t("hero.monthlyLabel")}</p>
-            </div>
-          </div>
+          <Image
+            src="/images/hero-illustration.jpg"
+            alt={t("hero.imageAlt")}
+            width={1600}
+            height={893}
+            priority
+            sizes="(min-width: 1024px) 55vw, 100vw"
+            className="h-auto w-full border-2 border-ink"
+          />
         </div>
       </section>
 
@@ -93,7 +107,7 @@ export default function Home({ params }: { params: { locale: string } }) {
       <section id="comment" aria-labelledby="how-title" className="py-14 sm:py-20">
         <div className={`${wrap} grid gap-12 lg:grid-cols-[1.4fr_1fr]`}>
           <div>
-            <p className="label text-tomato">{t("how.label")}</p>
+            <p className="label text-ink">{t("how.label")}</p>
             <h2 id="how-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">
               {t("how.title")}
             </h2>
@@ -101,7 +115,10 @@ export default function Home({ params }: { params: { locale: string } }) {
             <ol className="mt-10 space-y-0">
               {steps.map((s, i) => (
                 <li key={s.title} className="grid grid-cols-[3.5rem_1fr] gap-4 border-t-2 border-ink py-6 sm:grid-cols-[5rem_1fr]">
-                  <span className="font-display text-5xl leading-none text-tomato sm:text-6xl" aria-hidden="true">
+                  <span
+                    className="flex h-14 w-14 items-center justify-center bg-tomato font-display text-3xl leading-none text-[#101010] sm:h-16 sm:w-16 sm:text-4xl"
+                    aria-hidden="true"
+                  >
                     {i + 1}
                   </span>
                   <div>
@@ -166,7 +183,7 @@ export default function Home({ params }: { params: { locale: string } }) {
       {/* 4. Automatisation et agents IA */}
       <section aria-labelledby="auto-title" className="py-14 sm:py-20">
         <div className={wrap}>
-          <p className="label text-tomato">{t("auto.label")}</p>
+          <p className="label text-ink">{t("auto.label")}</p>
           <h2 id="auto-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">
             {t("auto.title")}
           </h2>
@@ -223,7 +240,7 @@ export default function Home({ params }: { params: { locale: string } }) {
       <section aria-labelledby="about-title" className="border-t-2 border-ink py-14 sm:py-20">
         <div className={`${wrap} grid gap-6 lg:grid-cols-[1fr_1.6fr]`}>
           <div>
-            <p className="label text-tomato">{t("about.label")}</p>
+            <p className="label text-ink">{t("about.label")}</p>
             <h2 id="about-title" className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
               {t("about.title")}
             </h2>

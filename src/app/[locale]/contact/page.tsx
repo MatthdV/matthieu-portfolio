@@ -60,7 +60,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
               <dd className="mt-1 text-xl font-bold"><a className="underline" href={SITE.linkedin} rel="noopener noreferrer">linkedin.com/in/matthieudevillele</a></dd>
             </div>
           </dl>
-          <div className="border-2 border-ink bg-white p-5 sm:p-6">
+          <div className="border-2 border-ink bg-card p-5 sm:p-6">
             <h2 className="mb-5 font-display text-2xl">{t("formTitle")}</h2>
             <ContactForm labels={labels} locale={locale} />
           </div>

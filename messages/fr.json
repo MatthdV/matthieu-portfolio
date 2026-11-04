@@ -39,30 +39,31 @@
   "Home": {
     "hero": {
       "kicker": "Sites web pour commerces et artisans",
-      "title": "Votre site de restaurant ou de commerce, prêt avant notre premier appel.",
-      "lead": "Je construis une démo sur mesure avant de vous contacter. Si elle vous plaît, je m’occupe de la mise en ligne.",
+      "title": "Votre site de restaurant ou de commerce, prêt avant notre premier échange.",
+      "lead": "Je construis une démo à votre nom, puis je vous l’envoie par e-mail. Vous la voyez sur ordinateur ou sur téléphone.",
       "setupAmount": "690 €",
       "setupLabel": "de mise en place",
       "monthlyAmount": "29 €",
       "monthlyLabel": "par mois ensuite",
-      "steps": "Voir comment ça se passe"
+      "steps": "Voir comment ça se passe",
+      "imageAlt": "Dessin au feutre : un développeur de dos devant son ordinateur. Un petit robot jaune tient une clé à molette."
     },
     "how": {
       "label": "Comment ça se passe",
       "title": "D’abord la démo. Ensuite, vous décidez.",
-      "intro": "Je construis la démo avant de vous contacter. Vous la regardez sur votre téléphone.",
+      "intro": "Je construis la démo avant de vous écrire. Vous l’ouvrez sur ordinateur ou sur téléphone.",
       "steps": [
         {
-          "title": "La démo",
-          "body": "Je construis une démo sur mesure pour votre commerce. Elle est prête avant notre premier échange. Délai : {demo}."
+          "title": "Le lien",
+          "body": "Je vous envoie par e-mail le lien de votre démo. Elle s’ouvre sur ordinateur et sur téléphone, sans rien installer."
         },
         {
           "title": "Votre avis",
-          "body": "Vous la regardez et vous me dites ce que vous changeriez."
+          "body": "Vous la regardez et vous me dites ce que vous changeriez. Répondez à l’e-mail ou appelez-moi."
         },
         {
           "title": "Les ajustements",
-          "body": "Je modifie la démo selon vos remarques."
+          "body": "Je modifie la démo selon vos remarques. Délai : {demo}."
         },
         {
           "title": "La mise en ligne",
