@@ -1,6 +1,7 @@
 import {getRequestConfig} from 'next-intl/server';
 import {hasLocale} from 'next-intl';
 import {routing} from './routing';
+import {applyTokens, messageTokens} from '@/config/prices';
 
 export default getRequestConfig(async ({requestLocale}) => {
   let locale = await requestLocale;
@@ -8,8 +9,11 @@ export default getRequestConfig(async ({requestLocale}) => {
     locale = routing.defaultLocale;
   }
 
+  const messages = (await import(`../../messages/${locale}.json`)).default;
+
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    // Prix, délais et mention de TVA viennent de src/config/prices.ts.
+    messages: applyTokens(messages, messageTokens(locale)),
   };
 });

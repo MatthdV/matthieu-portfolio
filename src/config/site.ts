@@ -10,15 +10,9 @@ export const SITE = {
   phone: "TODO_PHONE",
   siret: "TODO_SIRET",
   address: "TODO_ADDRESS",
-  vat: "TODO_TVA",
   linkedin: "https://linkedin.com/in/matthieudevillele",
   hostName: "Vercel Inc.",
   hostAddress: "TODO_VERCEL_ADDRESS",
-  /** Délais exprimés en texte libre, par exemple « 48 heures » ou « 5 jours ouvrés ». */
-  delays: {
-    demo: "TODO_DELAI_DEMO",
-    live: "TODO_DELAI_MISE_EN_LIGNE",
-  },
   /** Remplacer par "OK" quand les deux personnes ont donné leur accord. */
   testimonialsConsent: "TODO_ACCORD_TEMOIGNAGES",
   /** Texte libre : nouvelle durée si vous la changez. */

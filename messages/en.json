@@ -1,10 +1,10 @@
 {
   "Meta": {
     "siteName": "Matthieu de Villele",
-    "homeTitle": "Website for restaurants and shops: €690, then €29 a month",
-    "homeDescription": "I build a demo of your website before any contact. €690 to set up, then €29 a month. Going live, domain name and Google listing included.",
+    "homeTitle": "Website for restaurants and shops: [[setup]], then [[monthly]] a month",
+    "homeDescription": "I build a demo of your website before any contact. [[setup]] to set up, then [[monthly]] a month. Going live, domain name and Google listing included.",
     "servicesTitle": "Services: websites for local businesses, automation and AI agents",
-    "servicesDescription": "Website for local businesses at €690, then €29 a month. Process automation and AI agents for small and mid-sized companies.",
+    "servicesDescription": "Website for local businesses at [[setup]], then [[monthly]] a month. Automation for small and mid-sized companies. AI agents for mid-sized companies.",
     "projetsTitle": "Business automation projects",
     "projetsDescription": "Three automation projects delivered at Groupon: performance reviews, n8n workflows and incident search.",
     "contactTitle": "Contact: call or write to Matthieu de Villele",
@@ -29,7 +29,7 @@
     "contact": "Contact"
   },
   "Footer": {
-    "role": "Websites for shops and craftspeople. Automation and AI agents for small and mid-sized companies.",
+    "role": "Websites for shops and craftspeople. Automation for small and mid-sized companies. AI agents for mid-sized companies.",
     "statusPending": "Micro-business registration in progress.",
     "statusSiret": "Micro-business, SIRET {siret}.",
     "legal": "Legal notice",
@@ -41,12 +41,13 @@
       "kicker": "Websites for shops and craftspeople",
       "title": "Your restaurant or shop website, ready before our first conversation.",
       "lead": "I build a demo with your business name, then email it to you. You can open it on a computer or a phone.",
-      "setupAmount": "€690",
+      "setupAmount": "[[setup]]",
       "setupLabel": "to set up",
-      "monthlyAmount": "€29",
+      "monthlyAmount": "[[monthly]]",
       "monthlyLabel": "a month after that",
       "steps": "See how it works",
-      "imageAlt": "Marker drawing: a developer seen from behind at a computer. A small yellow robot holds a wrench."
+      "imageAlt": "Marker drawing: a developer seen from behind at a computer. A small yellow robot holds a wrench.",
+      "vatNote": "[[vat]]"
     },
     "how": {
       "label": "How it works",
@@ -63,11 +64,11 @@
         },
         {
           "title": "The adjustments",
-          "body": "I change the demo to fit your comments. Time needed: {demo}."
+          "body": "I change the demo to fit your comments. Time needed: [[delayAdjustments]]."
         },
         {
           "title": "Going live",
-          "body": "I put the site online with your domain name and your Google listing. Lead time: {live}."
+          "body": "I put the site online with your domain name and your Google listing. Time needed: [[delayLive]]."
         }
       ]
     },
@@ -84,34 +85,35 @@
     },
     "price": {
       "label": "The price",
-      "title": "€690 to set up, then €29 a month.",
+      "title": "[[setup]] to set up, then [[monthly]] a month.",
       "setup": "Set-up",
       "monthly": "Maintenance and going live, per month",
       "includedTitle": "What is included",
       "included": [
         "Going live",
         "The domain name",
-        "Small changes",
+        "Small changes, up to [[includedMinutes]] minutes a month",
         "The Google listing"
       ],
-      "note": "Prices in euros. {vat}"
+      "note": "Prices in euros. [[vat]].",
+      "extra": "Beyond [[includedMinutes]] minutes of changes a month: [[extraHour]] an hour."
     },
     "auto": {
-      "label": "Automation and AI agents",
+      "label": "Automation",
       "title": "Next, your repetitive tasks.",
-      "lead": "I can automate your processes with n8n and Google Apps Script. I also build AI agents for small and mid-sized companies.",
+      "lead": "I can automate your processes with n8n and Google Apps Script. The prices below are indicative.",
       "prices": [
         {
-          "name": "Workflow",
-          "price": "from €2,000"
+          "name": "Simple automation",
+          "price": "from [[automationFrom]]"
         },
         {
-          "name": "AI agent",
-          "price": "from €5,000"
+          "name": "Beyond that",
+          "price": "on quote"
         },
         {
-          "name": "Monthly follow-up",
-          "price": "from €1,500 a month"
+          "name": "Monthly follow-up, 1 to 3 automations",
+          "price": "from [[followFrom]] a month"
         }
       ],
       "proof": "At Groupon, I automated the operations of more than 1,500 people across 3 continents.",
@@ -119,7 +121,8 @@
       "projectsLink": "See the projects",
       "servicesLink": "See the services",
       "testimonialsTitle": "What they say",
-      "testimonialsNote": "Excerpts from LinkedIn recommendations."
+      "testimonialsNote": "Excerpts from LinkedIn recommendations.",
+      "pricesNote": "Indicative prices, confirmed by quote."
     },
     "about": {
       "label": "Who I am",
@@ -153,7 +156,7 @@
     "intro": "Two activities: websites for local businesses, then automation for small and mid-sized companies.",
     "site": {
       "label": "Website for local businesses",
-      "title": "€690, then €29 a month",
+      "title": "[[setup]], then [[monthly]] a month",
       "body": "I build the demo before any contact. You decide afterwards. Restaurants first, then all shops and craftspeople.",
       "setup": "Set-up",
       "monthly": "Maintenance and going live, per month",
@@ -161,34 +164,36 @@
       "included": [
         "Going live",
         "The domain name",
-        "Small changes",
+        "Small changes, up to [[includedMinutes]] minutes a month",
         "The Google listing"
       ],
-      "stepsLink": "See the steps"
+      "stepsLink": "See the steps",
+      "extra": "Beyond [[includedMinutes]] minutes of changes a month: [[extraHour]] an hour."
     },
     "auto": {
       "label": "Automation and AI agents",
       "title": "For small and mid-sized companies",
       "items": [
         {
-          "name": "Workflow",
-          "price": "from €2,000",
+          "name": "Simple automation",
+          "price": "from [[automationFrom]]",
           "duration": "1 to 4 weeks",
-          "body": "An n8n or Google Apps Script workflow connected to your tools. Tests, monitoring and documentation included."
+          "body": "An n8n or Google Apps Script automation connected to your tools. Beyond a simple case: on quote. Tests, monitoring and documentation included."
         },
         {
-          "name": "AI agent",
-          "price": "from €5,000",
+          "name": "AI agent, offer for mid-sized companies",
+          "price": "on quote, from [[agentFrom]]",
           "duration": "2 to 6 weeks",
-          "body": "An AI agent suited to your business: internal assistant, chatbot or search across your documents."
+          "body": "An AI agent suited to your company’s business: internal assistant, chatbot or search across your documents."
         },
         {
           "name": "Monthly follow-up",
-          "price": "from €1,500 a month",
+          "price": "from [[followFrom]] a month",
           "duration": "Flexible commitment",
-          "body": "Maintenance and development of your automations, every month."
+          "body": "Maintenance and development of 1 to 3 automations, every month."
         }
-      ]
+      ],
+      "note": "Indicative prices, confirmed by quote."
     },
     "cta": "Call Matthieu"
   },
@@ -265,7 +270,7 @@
     "address": "Address: {address}",
     "emailLine": "E-mail: {email}",
     "phoneLine": "Phone: {phone}",
-    "vatLine": "VAT: {vat}",
+    "vatLine": "[[vat]]",
     "publisherTitle": "Publication director",
     "publisherBody": "Matthieu de Villele.",
     "hostTitle": "Site host",

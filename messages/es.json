@@ -1,10 +1,10 @@
 {
   "Meta": {
     "siteName": "Matthieu de Villele",
-    "homeTitle": "Sitio web para restaurantes y negocios: 690 € y luego 29 € al mes",
-    "homeDescription": "Construyo la demo de su sitio web antes de cualquier contacto. 690 € de puesta en marcha y luego 29 € al mes. Publicación, dominio y ficha de Google incluidos.",
+    "homeTitle": "Sitio web para restaurantes y negocios: [[setup]] y luego [[monthly]] al mes",
+    "homeDescription": "Construyo la demo de su sitio web antes de cualquier contacto. [[setup]] de puesta en marcha y luego [[monthly]] al mes. Publicación, dominio y ficha de Google incluidos.",
     "servicesTitle": "Servicios: sitio web para negocios, automatización y agentes de IA",
-    "servicesDescription": "Sitio web para negocios por 690 € y luego 29 € al mes. Automatización de procesos y agentes de IA para pequeñas y medianas empresas.",
+    "servicesDescription": "Sitio web para negocios por [[setup]] y luego [[monthly]] al mes. Automatización para pequeñas y medianas empresas. Agentes de IA para medianas empresas.",
     "projetsTitle": "Proyectos de automatización en empresas",
     "projetsDescription": "Tres proyectos de automatización realizados en Groupon: evaluaciones de desempeño, flujos de n8n y búsqueda de incidentes.",
     "contactTitle": "Contacto: llame o escriba a Matthieu de Villele",
@@ -29,7 +29,7 @@
     "contact": "Contacto"
   },
   "Footer": {
-    "role": "Sitios web para negocios y artesanos. Automatización y agentes de IA para pequeñas y medianas empresas.",
+    "role": "Sitios web para negocios y artesanos. Automatización para pequeñas y medianas empresas. Agentes de IA para medianas empresas.",
     "statusPending": "Microempresa francesa en proceso de creación.",
     "statusSiret": "Microempresa, SIRET {siret}.",
     "legal": "Aviso legal",
@@ -41,12 +41,13 @@
       "kicker": "Sitios web para negocios y artesanos",
       "title": "El sitio web de su restaurante o comercio, listo antes de nuestra primera conversación.",
       "lead": "Construyo una demostración con el nombre de su negocio y se la envío por correo. Usted la abre en un computador o en un celular.",
-      "setupAmount": "690 €",
+      "setupAmount": "[[setup]]",
       "setupLabel": "de puesta en marcha",
-      "monthlyAmount": "29 €",
+      "monthlyAmount": "[[monthly]]",
       "monthlyLabel": "al mes después",
       "steps": "Ver cómo funciona",
-      "imageAlt": "Dibujo con marcador: un desarrollador de espaldas frente a su computador. Un pequeño robot amarillo sostiene una llave inglesa."
+      "imageAlt": "Dibujo con marcador: un desarrollador de espaldas frente a su computador. Un pequeño robot amarillo sostiene una llave inglesa.",
+      "vatNote": "[[vat]]"
     },
     "how": {
       "label": "Cómo funciona",
@@ -63,11 +64,11 @@
         },
         {
           "title": "Los ajustes",
-          "body": "Modifico la demostración según sus comentarios. Plazo: {demo}."
+          "body": "Modifico la demostración según sus comentarios. Plazo: [[delayAdjustments]]."
         },
         {
           "title": "La publicación",
-          "body": "Publico el sitio con su nombre de dominio y su ficha de Google. Plazo: {live}."
+          "body": "Publico el sitio con su nombre de dominio y su ficha de Google. Plazo: [[delayLive]]."
         }
       ]
     },
@@ -84,34 +85,35 @@
     },
     "price": {
       "label": "El precio",
-      "title": "690 € de puesta en marcha y luego 29 € al mes.",
+      "title": "[[setup]] de puesta en marcha y luego [[monthly]] al mes.",
       "setup": "Puesta en marcha",
       "monthly": "Mantenimiento y publicación, por mes",
       "includedTitle": "Qué incluye",
       "included": [
         "La publicación",
         "El nombre de dominio",
-        "Los cambios pequeños",
+        "Los cambios pequeños, hasta [[includedMinutes]] minutos al mes",
         "La ficha de Google"
       ],
-      "note": "Precios en euros. {vat}"
+      "note": "Precios en euros. [[vat]].",
+      "extra": "Después de [[includedMinutes]] minutos de cambios al mes: [[extraHour]] la hora."
     },
     "auto": {
-      "label": "Automatización y agentes de IA",
+      "label": "Automatización",
       "title": "Después, sus tareas repetitivas.",
-      "lead": "Puedo automatizar sus procesos con n8n y Google Apps Script. También construyo agentes de IA para pequeñas y medianas empresas.",
+      "lead": "Puedo automatizar sus procesos con n8n y Google Apps Script. Los precios de abajo son indicativos.",
       "prices": [
         {
-          "name": "Flujo de trabajo",
-          "price": "desde 2.000 €"
+          "name": "Automatización simple",
+          "price": "desde [[automationFrom]]"
         },
         {
-          "name": "Agente de IA",
-          "price": "desde 5.000 €"
+          "name": "Más allá",
+          "price": "según cotización"
         },
         {
-          "name": "Seguimiento mensual",
-          "price": "desde 1.500 € al mes"
+          "name": "Seguimiento mensual, de 1 a 3 automatizaciones",
+          "price": "desde [[followFrom]] al mes"
         }
       ],
       "proof": "En Groupon automaticé las operaciones de más de 1.500 personas en 3 continentes.",
@@ -119,7 +121,8 @@
       "projectsLink": "Ver los proyectos",
       "servicesLink": "Ver los servicios",
       "testimonialsTitle": "Lo que dicen",
-      "testimonialsNote": "Extractos de recomendaciones de LinkedIn."
+      "testimonialsNote": "Extractos de recomendaciones de LinkedIn.",
+      "pricesNote": "Precios indicativos, confirmados con una cotización."
     },
     "about": {
       "label": "Quién soy",
@@ -153,7 +156,7 @@
     "intro": "Dos actividades: sitios web para negocios y, después, automatización para pequeñas y medianas empresas.",
     "site": {
       "label": "Sitio web para negocios",
-      "title": "690 € y luego 29 € al mes",
+      "title": "[[setup]] y luego [[monthly]] al mes",
       "body": "Construyo la demo antes de cualquier contacto. Usted decide después. Primero restaurantes, luego todos los negocios y artesanos.",
       "setup": "Puesta en marcha",
       "monthly": "Mantenimiento y publicación, por mes",
@@ -161,34 +164,36 @@
       "included": [
         "La publicación",
         "El nombre de dominio",
-        "Los cambios pequeños",
+        "Los cambios pequeños, hasta [[includedMinutes]] minutos al mes",
         "La ficha de Google"
       ],
-      "stepsLink": "Ver los pasos"
+      "stepsLink": "Ver los pasos",
+      "extra": "Después de [[includedMinutes]] minutos de cambios al mes: [[extraHour]] la hora."
     },
     "auto": {
       "label": "Automatización y agentes de IA",
       "title": "Para pequeñas y medianas empresas",
       "items": [
         {
-          "name": "Flujo de trabajo",
-          "price": "desde 2.000 €",
+          "name": "Automatización simple",
+          "price": "desde [[automationFrom]]",
           "duration": "1 a 4 semanas",
-          "body": "Un flujo en n8n o Google Apps Script conectado a sus herramientas. Pruebas, seguimiento y documentación incluidos."
+          "body": "Una automatización en n8n o Google Apps Script conectada a sus herramientas. Más allá de un caso simple: según cotización. Pruebas, seguimiento y documentación incluidos."
         },
         {
-          "name": "Agente de IA",
-          "price": "desde 5.000 €",
+          "name": "Agente de IA, oferta para medianas empresas",
+          "price": "según cotización, desde [[agentFrom]]",
           "duration": "2 a 6 semanas",
-          "body": "Un agente de IA adaptado a su negocio: asistente interno, chatbot o búsqueda en sus documentos."
+          "body": "Un agente de IA adaptado al negocio de su empresa: asistente interno, chatbot o búsqueda en sus documentos."
         },
         {
           "name": "Seguimiento mensual",
-          "price": "desde 1.500 € al mes",
+          "price": "desde [[followFrom]] al mes",
           "duration": "Compromiso flexible",
-          "body": "Mantenimiento y evolución de sus automatizaciones, cada mes."
+          "body": "Mantenimiento y evolución de 1 a 3 automatizaciones, cada mes."
         }
-      ]
+      ],
+      "note": "Precios indicativos, confirmados con una cotización."
     },
     "cta": "Llamar a Matthieu"
   },
@@ -265,7 +270,7 @@
     "address": "Dirección: {address}",
     "emailLine": "Correo: {email}",
     "phoneLine": "Teléfono: {phone}",
-    "vatLine": "IVA: {vat}",
+    "vatLine": "[[vat]]",
     "publisherTitle": "Director de la publicación",
     "publisherBody": "Matthieu de Villele.",
     "hostTitle": "Proveedor del servidor",

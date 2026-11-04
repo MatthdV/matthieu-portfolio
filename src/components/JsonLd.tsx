@@ -1,4 +1,5 @@
 import { SITE } from "@/config/site";
+import { PRICES } from "@/config/prices";
 
 /** Données structurées sans adresse, note ni avis. */
 export default function JsonLd({ locale, description }: { locale: string; description: string }) {
@@ -22,7 +23,7 @@ export default function JsonLd({ locale, description }: { locale: string; descri
         areaServed: area,
         offers: {
           "@type": "Offer",
-          price: "690",
+          price: String(PRICES.setup),
           priceCurrency: "EUR",
         },
       },

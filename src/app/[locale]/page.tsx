@@ -3,7 +3,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SITE, telHref } from "@/config/site";
-import { fill } from "@/lib/fill";
 import { pageMetadata } from "@/lib/seo";
 import PhoneDemo from "@/components/PhoneDemo";
 import ContactForm from "@/components/ContactForm";
@@ -30,7 +29,6 @@ export default function Home({ params }: { params: { locale: string } }) {
   const tt = useTranslations("Testimonials");
   const form = useTranslations("Contact.form");
 
-  const vars = { demo: SITE.delays.demo, live: SITE.delays.live };
   const steps = t.raw("how.steps") as Step[];
   const included = t.raw("price.included") as string[];
   const autoPrices = t.raw("auto.prices") as Row[];
@@ -79,6 +77,7 @@ export default function Home({ params }: { params: { locale: string } }) {
                 <dt className="mt-1">{t("hero.monthlyLabel")}</dt>
               </div>
             </dl>
+            <p className="mt-3 text-sm text-soft">{t("hero.vatNote")}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={telHref(SITE.phone)} className="btn btn-red hidden md:inline-flex">
@@ -123,7 +122,7 @@ export default function Home({ params }: { params: { locale: string } }) {
                   </span>
                   <div>
                     <h3 className="font-display text-xl">{s.title}</h3>
-                    <p className="mt-2 max-w-md">{fill(s.body, vars)}</p>
+                    <p className="mt-2 max-w-md">{s.body}</p>
                   </div>
                 </li>
               ))}
@@ -165,7 +164,8 @@ export default function Home({ params }: { params: { locale: string } }) {
                 <dd className="font-display text-3xl">{t("hero.monthlyAmount")}</dd>
               </div>
             </dl>
-            <p className="mt-6 text-softOnGreen">{t("price.note", { vat: SITE.vat })}</p>
+            <p className="mt-6 text-softOnGreen">{t("price.extra")}</p>
+            <p className="mt-2 text-softOnGreen">{t("price.note")}</p>
           </div>
           <div>
             <h3 className="label text-softOnGreen">{t("price.includedTitle")}</h3>
@@ -197,6 +197,7 @@ export default function Home({ params }: { params: { locale: string } }) {
               </div>
             ))}
           </dl>
+          <p className="mt-4 text-sm text-soft">{t("auto.pricesNote")}</p>
           <p className="mt-4">
             <Link href="/services" className="font-bold underline">{t("auto.servicesLink")}</Link>
           </p>

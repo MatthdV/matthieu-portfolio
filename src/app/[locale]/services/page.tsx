@@ -42,7 +42,8 @@ export default function ServicesPage({ params }: { params: { locale: string } })
                 <dd className="font-display text-3xl">{home("hero.monthlyAmount")}</dd>
               </div>
             </dl>
-            <p className="mt-6 text-softOnGreen">{home("price.note", { vat: SITE.vat })}</p>
+            <p className="mt-6 text-softOnGreen">{t("site.extra")}</p>
+            <p className="mt-2 text-softOnGreen">{home("price.note")}</p>
             <p className="mt-6">
               <Link href="/#comment" className="font-bold underline">{t("site.stepsLink")}</Link>
             </p>
@@ -74,7 +75,8 @@ export default function ServicesPage({ params }: { params: { locale: string } })
               </li>
             ))}
           </ul>
-          <a href={telHref(SITE.phone)} className="btn btn-red mt-10">{t("cta")}</a>
+          <p className="mt-4 text-sm text-soft">{t("auto.note")}</p>
+          <a href={telHref(SITE.phone)} className="btn btn-red mt-8">{t("cta")}</a>
         </div>
       </section>
     </main>
