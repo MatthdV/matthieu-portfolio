@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SITE, telHref } from "@/config/site";
+import { SITE } from "@/config/site";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
@@ -32,8 +32,8 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
-          <a href={telHref(SITE.phone)} className="btn btn-red ml-auto hidden md:inline-flex">
-            {c("call")}
+          <a href={SITE.booking15} className="btn btn-red ml-auto hidden md:inline-flex" rel="noopener noreferrer">
+            {c("book15")}
           </a>
         </nav>
       </div>

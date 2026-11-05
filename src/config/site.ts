@@ -16,13 +16,10 @@ export const SITE = {
   booking30: "https://cal.com/matthieu-de-villele/30min",
   hostName: "Vercel Inc.",
   hostAddress: "TODO_VERCEL_ADDRESS",
-  /** Remplacer par "OK" quand les deux personnes ont donné leur accord. */
-  testimonialsConsent: "TODO_ACCORD_TEMOIGNAGES",
+  hostPhone: "TODO_VERCEL_PHONE",
   /** Texte libre : nouvelle durée si vous la changez. */
   retention: "TODO_DUREE_CONSERVATION",
 } as const;
 
 export const isPlaceholder = (value: string) => value.startsWith("TODO_");
 
-/** Numéro utilisable dans un lien tel: (chiffres et +). */
-export const telHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;

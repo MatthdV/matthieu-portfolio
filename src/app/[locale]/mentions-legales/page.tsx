@@ -32,7 +32,7 @@ export default function LegalPage({ params }: { params: { locale: string } }) {
       </section>
       <section className={block}>
         <h2 className="font-display text-2xl">{t("hostTitle")}</h2>
-        <p className="mt-3 text-lg">{t("hostBody", { hostName: SITE.hostName, hostAddress: SITE.hostAddress })}</p>
+        <p className="mt-3 text-lg">{t("hostBody", { hostName: SITE.hostName, hostAddress: SITE.hostAddress, hostPhone: SITE.hostPhone })}</p>
       </section>
       <section className={block}>
         <h2 className="font-display text-2xl">{t("ipTitle")}</h2>

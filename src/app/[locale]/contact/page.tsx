@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { SITE, telHref } from "@/config/site";
+import { SITE } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 import ContactForm from "@/components/ContactForm";
 
@@ -39,22 +39,12 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <a href={SITE.booking15} className="btn btn-red mt-8" rel="noopener noreferrer">
             {c("book15")}
           </a>
-          <a
-            href={telHref(SITE.phone)}
-            className="mt-8 block font-display text-[clamp(2rem,9vw,3.5rem)] leading-none underline decoration-4 underline-offset-8"
-          >
-            {SITE.phone}
-          </a>
         </div>
       </section>
 
       <section className="py-14 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr]">
           <dl className="space-y-6">
-            <div>
-              <dt className="label text-soft">{t("phoneLabel")}</dt>
-              <dd className="mt-1 text-xl font-bold"><a className="underline" href={telHref(SITE.phone)}>{SITE.phone}</a></dd>
-            </div>
             <div>
               <dt className="label text-soft">{t("emailLabel")}</dt>
               <dd className="mt-1 text-xl font-bold"><a className="underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>

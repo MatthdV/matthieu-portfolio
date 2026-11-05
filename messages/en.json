@@ -7,8 +7,8 @@
     "servicesDescription": "Website for local businesses at [[setup]], then [[monthly]] a month. Automation for small and mid-sized companies. AI agents for mid-sized companies.",
     "projetsTitle": "Business automation projects",
     "projetsDescription": "Three automation projects delivered at Groupon: performance reviews, n8n workflows and incident search.",
-    "contactTitle": "Contact: call or write to Matthieu de Villele",
-    "contactDescription": "Phone, e-mail and form. Tell me about your business and your website project.",
+    "contactTitle": "Contact: book 15 minutes or write to Matthieu de Villele",
+    "contactDescription": "Booking, e-mail and form. Tell me about your business and your website project.",
     "mentionsTitle": "Legal notice",
     "mentionsDescription": "Publisher, host and legal information for matthieudevillele.com.",
     "confidentialiteTitle": "Privacy policy",
@@ -16,8 +16,6 @@
   },
   "Common": {
     "skip": "Skip to content",
-    "call": "Call",
-    "callName": "Call Matthieu",
     "book15": "Book 15 minutes",
     "book30": "Book 30 minutes for a quote",
     "email": "E-mail",
@@ -62,7 +60,7 @@
         },
         {
           "title": "Your opinion",
-          "body": "You look at it and tell me what you would change. Reply to the email or call me."
+          "body": "You look at it and tell me what you would change. Reply to the email or book 15 minutes."
         },
         {
           "title": "The adjustments",
@@ -122,8 +120,6 @@
       "projectsTitle": "Three projects",
       "projectsLink": "See the projects",
       "servicesLink": "See the services",
-      "testimonialsTitle": "What they say",
-      "testimonialsNote": "Excerpts from LinkedIn recommendations.",
       "pricesNote": "Indicative prices, confirmed by quote."
     },
     "about": {
@@ -138,20 +134,6 @@
       "lead": "You can also write. I read every message.",
       "formLink": "Write a message"
     }
-  },
-  "Testimonials": {
-    "items": [
-      {
-        "quote": "He built our N8N automation pipelines end to end, including the RAG Incident Review Creator. Matthieu is sharp, autonomous, and has a real talent for turning complex operational problems into clean, scalable automations.",
-        "name": "Michal Hromek",
-        "role": "Interim Head of Incident Management & AI Transformation Lead, Groupon"
-      },
-      {
-        "quote": "Matthieu is a true force of innovation. He has a natural talent for bridging the gap with non-technical stakeholders.",
-        "name": "Aniket Sen",
-        "role": "Automation & AI Manager, Groupon"
-      }
-    ]
   },
   "Services": {
     "title": "Services",
@@ -195,8 +177,7 @@
         }
       ],
       "note": "Indicative prices, confirmed by quote."
-    },
-    "cta": "Call Matthieu"
+    }
   },
   "Projects": {
     "title": "Projects",
@@ -237,13 +218,11 @@
         ]
       }
     ],
-    "ctaText": "A repetitive task to remove?",
-    "cta": "Call Matthieu"
+    "ctaText": "A repetitive task to remove?"
   },
   "Contact": {
     "title": "Contact",
     "lead": "The simplest way: book 15 minutes. You can also write.",
-    "phoneLabel": "Phone",
     "emailLabel": "E-mail",
     "linkedinLabel": "LinkedIn",
     "formTitle": "Write a message",
@@ -259,7 +238,7 @@
       "sending": "Sending",
       "successTitle": "Message received.",
       "success": "I will reply as soon as I can.",
-      "error": "Sending failed. Call me or write to {email}.",
+      "error": "Sending failed. Write to {email}.",
       "invalid": "Check the marked fields and the consent box."
     }
   },
@@ -275,7 +254,7 @@
     "publisherTitle": "Publication director",
     "publisherBody": "Matthieu de Villele.",
     "hostTitle": "Site host",
-    "hostBody": "{hostName}, {hostAddress}.",
+    "hostBody": "{hostName}, {hostAddress}, phone: {hostPhone}.",
     "ipTitle": "Intellectual property",
     "ipBody": "The texts and graphic elements of this site belong to Matthieu de Villele. Any reproduction without written permission is forbidden. Cited brands belong to their owners.",
     "liabilityTitle": "Liability",

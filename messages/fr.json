@@ -7,8 +7,8 @@
     "servicesDescription": "Site web pour commerce à [[setup]] puis [[monthly]] par mois. Automatisation pour TPE et PME. Agents IA pour PME.",
     "projetsTitle": "Projets d’automatisation en entreprise",
     "projetsDescription": "Trois projets d’automatisation réalisés chez Groupon : revues de performance, workflows n8n et recherche d’incidents.",
-    "contactTitle": "Contact : appelez ou écrivez à Matthieu de Villele",
-    "contactDescription": "Téléphone, e-mail et formulaire. Parlez-moi de votre commerce et de votre projet de site.",
+    "contactTitle": "Contact : réservez 15 minutes ou écrivez à Matthieu de Villele",
+    "contactDescription": "Réservation, e-mail et formulaire. Parlez-moi de votre commerce et de votre projet de site.",
     "mentionsTitle": "Mentions légales",
     "mentionsDescription": "Éditeur, hébergeur et informations légales du site matthieudevillele.com.",
     "confidentialiteTitle": "Politique de confidentialité",
@@ -16,8 +16,6 @@
   },
   "Common": {
     "skip": "Aller au contenu",
-    "call": "Appeler",
-    "callName": "Appeler Matthieu",
     "book15": "Réserver 15 minutes",
     "book30": "Réserver 30 minutes pour un devis",
     "email": "E-mail",
@@ -62,7 +60,7 @@
         },
         {
           "title": "Votre avis",
-          "body": "Vous la regardez et vous me dites ce que vous changeriez. Répondez à l’e-mail ou appelez-moi."
+          "body": "Vous la regardez et vous me dites ce que vous changeriez. Répondez à l’e-mail ou réservez 15 minutes."
         },
         {
           "title": "Les ajustements",
@@ -122,8 +120,6 @@
       "projectsTitle": "Trois projets",
       "projectsLink": "Voir les projets",
       "servicesLink": "Voir les services",
-      "testimonialsTitle": "Ce qu’ils en disent",
-      "testimonialsNote": "Extraits de recommandations LinkedIn.",
       "pricesNote": "Prix indicatifs, confirmés sur devis."
     },
     "about": {
@@ -138,20 +134,6 @@
       "lead": "Vous pouvez aussi écrire. Je lis tous les messages.",
       "formLink": "Écrire un message"
     }
-  },
-  "Testimonials": {
-    "items": [
-      {
-        "quote": "Il a construit nos pipelines d’automatisation N8N de bout en bout, notamment le RAG Incident Review Creator. Matthieu est vif, autonome, et a un vrai talent pour transformer des problèmes opérationnels complexes en automations propres et scalables.",
-        "name": "Michal Hromek",
-        "role": "Interim Head of Incident Management & AI Transformation Lead, Groupon"
-      },
-      {
-        "quote": "Matthieu est une véritable force d’innovation. Il a un talent naturel pour faire le pont avec les parties prenantes non techniques.",
-        "name": "Aniket Sen",
-        "role": "Automation & AI Manager, Groupon"
-      }
-    ]
   },
   "Services": {
     "title": "Services",
@@ -195,8 +177,7 @@
         }
       ],
       "note": "Prix indicatifs, confirmés sur devis."
-    },
-    "cta": "Appeler Matthieu"
+    }
   },
   "Projects": {
     "title": "Projets",
@@ -237,13 +218,11 @@
         ]
       }
     ],
-    "ctaText": "Une tâche répétitive à supprimer ?",
-    "cta": "Appeler Matthieu"
+    "ctaText": "Une tâche répétitive à supprimer ?"
   },
   "Contact": {
     "title": "Contact",
     "lead": "Le plus simple : réserver 15 minutes. Vous pouvez aussi écrire.",
-    "phoneLabel": "Téléphone",
     "emailLabel": "E-mail",
     "linkedinLabel": "LinkedIn",
     "formTitle": "Écrire un message",
@@ -259,7 +238,7 @@
       "sending": "Envoi en cours",
       "successTitle": "Message reçu.",
       "success": "Je vous réponds dès que possible.",
-      "error": "L’envoi a échoué. Appelez-moi ou écrivez à {email}.",
+      "error": "L’envoi a échoué. Écrivez à {email}.",
       "invalid": "Vérifiez les champs marqués et la case de consentement."
     }
   },
@@ -275,7 +254,7 @@
     "publisherTitle": "Directeur de la publication",
     "publisherBody": "Matthieu de Villele.",
     "hostTitle": "Hébergeur du site",
-    "hostBody": "{hostName}, {hostAddress}.",
+    "hostBody": "{hostName}, {hostAddress}, téléphone : {hostPhone}.",
     "ipTitle": "Propriété intellectuelle",
     "ipBody": "Les textes et les éléments graphiques de ce site appartiennent à Matthieu de Villele. Toute reproduction sans accord écrit est interdite. Les marques citées appartiennent à leurs propriétaires.",
     "liabilityTitle": "Responsabilité",

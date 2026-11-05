@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { SITE, telHref } from "@/config/site";
+import { SITE } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 import PhoneDemo from "@/components/PhoneDemo";
 import ContactForm from "@/components/ContactForm";
@@ -16,7 +16,6 @@ const wrap = "mx-auto max-w-6xl px-4 sm:px-6";
 
 type Step = { title: string; body: string };
 type Row = { name: string; price: string };
-type Quote = { quote: string; name: string; role: string };
 type ProjectItem = { title: string; stack: string[] };
 
 export default function Home({ params }: { params: { locale: string } }) {
@@ -26,14 +25,12 @@ export default function Home({ params }: { params: { locale: string } }) {
   const c = useTranslations("Common");
   const meta = useTranslations("Meta");
   const proj = useTranslations("Projects");
-  const tt = useTranslations("Testimonials");
   const form = useTranslations("Contact.form");
 
   const steps = t.raw("how.steps") as Step[];
   const included = t.raw("price.included") as string[];
   const autoPrices = t.raw("auto.prices") as Row[];
   const projects = proj.raw("items") as ProjectItem[];
-  const quotes = tt.raw("items") as Quote[];
 
   const labels = {
     name: form("name"),
@@ -83,14 +80,10 @@ export default function Home({ params }: { params: { locale: string } }) {
               <a href={SITE.booking15} className="btn btn-red" rel="noopener noreferrer">
                 {c("book15")}
               </a>
-              <a href={telHref(SITE.phone)} className="btn btn-line hidden md:inline-flex">
-                {c("callName")}
-              </a>
               <a href="#comment" className="btn btn-line">
                 {t("hero.steps")}
               </a>
             </div>
-            <p className="mt-4 hidden font-bold md:block">{SITE.phone}</p>
           </div>
 
           <Image
@@ -208,7 +201,7 @@ export default function Home({ params }: { params: { locale: string } }) {
 
           <p className="mt-12 max-w-3xl font-display text-2xl leading-snug sm:text-3xl">{t("auto.proof")}</p>
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-2">
+          <div className="mt-12">
             <div>
               <h3 className="label text-soft">{t("auto.projectsTitle")}</h3>
               <ul className="mt-4">
@@ -222,20 +215,6 @@ export default function Home({ params }: { params: { locale: string } }) {
               <p className="mt-4">
                 <Link href="/projets" className="font-bold underline">{t("auto.projectsLink")}</Link>
               </p>
-            </div>
-            <div>
-              <h3 className="label text-soft">{t("auto.testimonialsTitle")}</h3>
-              <div className="mt-4 space-y-6">
-                {quotes.map((q) => (
-                  <figure key={q.name} className="border-l-4 border-tomato pl-5">
-                    <blockquote className="text-lg">{q.quote}</blockquote>
-                    <figcaption className="mt-3 text-sm">
-                      <span className="font-bold">{q.name}</span>, {q.role}
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-              <p className="mt-4 text-sm text-soft">{t("auto.testimonialsNote")}</p>
             </div>
           </div>
         </div>
@@ -265,11 +244,8 @@ export default function Home({ params }: { params: { locale: string } }) {
             <h2 id="contact-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">
               {t("contact.title")}
             </h2>
-            <a
-              href={telHref(SITE.phone)}
-              className="mt-8 block font-display text-[clamp(2rem,9vw,3.5rem)] leading-none underline decoration-4 underline-offset-8"
-            >
-              {SITE.phone}
+            <a href={SITE.booking15} className="btn btn-red mt-8" rel="noopener noreferrer">
+              {c("book15")}
             </a>
             <p className="mt-6 text-lg">{t("contact.lead")}</p>
             <a href={`mailto:${SITE.email}`} className="mt-2 inline-block py-2 text-lg font-bold underline">

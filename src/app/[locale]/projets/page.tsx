@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { SITE, telHref } from "@/config/site";
+import { SITE } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -12,6 +12,7 @@ type Item = { title: string; body: string; problem: string; stack: string[] };
 export default function ProjectsPage({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
   const t = useTranslations("Projects");
+  const c = useTranslations("Common");
   const items = t.raw("items") as Item[];
 
   return (
@@ -47,7 +48,7 @@ export default function ProjectsPage({ params }: { params: { locale: string } })
         </ol>
         <div className="mx-auto mt-12 max-w-6xl px-4 sm:px-6">
           <p className="font-display text-2xl">{t("ctaText")}</p>
-          <a href={telHref(SITE.phone)} className="btn btn-red mt-6">{t("cta")}</a>
+          <a href={SITE.booking15} className="btn btn-red mt-6" rel="noopener noreferrer">{c("book15")}</a>
         </div>
       </section>
     </main>

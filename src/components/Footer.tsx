@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SITE, isPlaceholder, telHref } from "@/config/site";
+import { SITE, isPlaceholder } from "@/config/site";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -24,7 +24,6 @@ export default function Footer() {
         </nav>
         <div>
           <ul className="space-y-1">
-            <li><a className="inline-block py-2 hover:underline" href={telHref(SITE.phone)}>{SITE.phone}</a></li>
             <li><a className="inline-block py-2 hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
             <li><Link className="inline-block py-2 hover:underline" href="/mentions-legales">{t("legal")}</Link></li>
             <li><Link className="inline-block py-2 hover:underline" href="/confidentialite">{t("privacy")}</Link></li>

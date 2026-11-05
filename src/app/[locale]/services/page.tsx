@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { SITE, telHref } from "@/config/site";
+import { SITE } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -78,10 +78,7 @@ export default function ServicesPage({ params }: { params: { locale: string } })
             ))}
           </ul>
           <p className="mt-4 text-sm text-soft">{t("auto.note")}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={SITE.booking30} className="btn btn-red" rel="noopener noreferrer">{c("book30")}</a>
-            <a href={telHref(SITE.phone)} className="btn btn-line">{t("cta")}</a>
-          </div>
+          <a href={SITE.booking30} className="btn btn-red mt-8" rel="noopener noreferrer">{c("book30")}</a>
         </div>
       </section>
     </main>
