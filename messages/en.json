@@ -280,7 +280,7 @@
     "recipientsTitle": "Who receives your data",
     "recipientsBody": "Only me, through these services: Notion (storing requests), Resend (sending e-mails) and Vercel (site host). These services may process data outside the European Union, with the safeguards provided by the GDPR.",
     "retentionTitle": "Retention period",
-    "retentionBody": "{retention}",
+    "retentionBody": "Your data is kept for 3 years after our last exchange, then deleted.",
     "rightsTitle": "Your rights",
     "rightsBody": "You can access your data, correct it, erase it, object to its use or take a copy. Write to {email}. You can also contact the CNIL, the French data protection authority (cnil.fr).",
     "cookiesTitle": "Cookies and trackers",

@@ -17,8 +17,6 @@ export const SITE = {
   hostName: "Vercel Inc.",
   hostAddress: "TODO_VERCEL_ADDRESS",
   hostPhone: "TODO_VERCEL_PHONE",
-  /** Texte libre : nouvelle durée si vous la changez. */
-  retention: "TODO_DUREE_CONSERVATION",
 } as const;
 
 export const isPlaceholder = (value: string) => value.startsWith("TODO_");

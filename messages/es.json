@@ -281,7 +281,7 @@
     "recipientsTitle": "Quién recibe sus datos",
     "recipientsBody": "Solo yo, a través de estos servicios: Notion (almacenamiento de solicitudes), Resend (envío de correos) y Vercel (proveedor del sitio). Estos servicios pueden tratar datos fuera de la Unión Europea, con las garantías previstas por el RGPD.",
     "retentionTitle": "Plazo de conservación",
-    "retentionBody": "{retention}",
+    "retentionBody": "Sus datos se conservan 3 años después de nuestro último intercambio y luego se eliminan.",
     "rightsTitle": "Sus derechos",
     "rightsBody": "Usted puede acceder a sus datos, corregirlos, suprimirlos, oponerse a su uso o recuperarlos, escribiendo a {email}. Si reside en Colombia, la Ley 1581 de 2012 también le permite conocerlos, actualizarlos y rectificarlos. En Francia, puede acudir a la CNIL (cnil.fr).",
     "cookiesTitle": "Cookies y rastreadores",

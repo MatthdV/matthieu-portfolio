@@ -280,7 +280,7 @@
     "recipientsTitle": "Qui reçoit vos données",
     "recipientsBody": "Moi seul, via les services suivants : Notion (stockage des demandes), Resend (envoi des e-mails) et Vercel (hébergeur du site). Ces services peuvent traiter des données hors de l’Union européenne, avec les garanties prévues par le RGPD.",
     "retentionTitle": "Durée de conservation",
-    "retentionBody": "{retention}",
+    "retentionBody": "Vos données sont conservées 3 ans après notre dernier échange, puis supprimées.",
     "rightsTitle": "Vos droits",
     "rightsBody": "Vous pouvez accéder à vos données, les corriger, les effacer, vous opposer à leur usage ou les récupérer. Écrivez à {email}. Vous pouvez aussi saisir la CNIL (cnil.fr).",
     "cookiesTitle": "Cookies et traceurs",
