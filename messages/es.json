@@ -135,7 +135,7 @@
     },
     "contact": {
       "label": "Contacto",
-      "title": "Lo más simple: llámeme.",
+      "title": "Lo más simple: reserve 15 minutos.",
       "lead": "También puede escribirme. Leo todos los mensajes.",
       "formLink": "Escribir un mensaje"
     }
@@ -243,7 +243,7 @@
   },
   "Contact": {
     "title": "Contacto",
-    "lead": "Lo más simple: llámeme. También puede escribirme.",
+    "lead": "Lo más simple: reserve 15 minutos. También puede escribirme.",
     "phoneLabel": "Teléfono",
     "emailLabel": "Correo",
     "linkedinLabel": "LinkedIn",

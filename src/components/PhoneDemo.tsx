@@ -28,7 +28,7 @@ export default function PhoneDemo({ demo }: { demo: Demo }) {
           <div className="border-b-2 border-ink bg-paper px-3 py-2 text-sm text-soft">
             chez-exemple.example
           </div>
-          <div className="bg-green px-4 pb-4 pt-5 text-paper sm:px-5">
+          <div className="on-green bg-green px-4 pb-4 pt-5 text-paper sm:px-5">
             <p className="font-display text-2xl leading-none sm:text-3xl">{demo.name}</p>
             <p className="mt-1 text-softOnGreen">{demo.tagline}</p>
           </div>
@@ -51,7 +51,7 @@ export default function PhoneDemo({ demo }: { demo: Demo }) {
 
         {/* Téléphone */}
         <div className="absolute bottom-0 right-3 w-40 border-2 border-ink bg-card shadow-[4px_4px_0_rgb(var(--c-ink))]">
-          <div className="bg-green px-3 pb-3 pt-4 text-paper">
+          <div className="on-green bg-green px-3 pb-3 pt-4 text-paper">
             <p className="font-display text-lg leading-none">{demo.name}</p>
           </div>
           <div className="space-y-3 p-3 text-sm">

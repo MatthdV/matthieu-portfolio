@@ -134,7 +134,7 @@
     },
     "contact": {
       "label": "Contact",
-      "title": "Le plus simple : m’appeler.",
+      "title": "Le plus simple : réserver 15 minutes.",
       "lead": "Vous pouvez aussi écrire. Je lis tous les messages.",
       "formLink": "Écrire un message"
     }
@@ -242,7 +242,7 @@
   },
   "Contact": {
     "title": "Contact",
-    "lead": "Le plus simple : m’appeler. Vous pouvez aussi écrire.",
+    "lead": "Le plus simple : réserver 15 minutes. Vous pouvez aussi écrire.",
     "phoneLabel": "Téléphone",
     "emailLabel": "E-mail",
     "linkedinLabel": "LinkedIn",

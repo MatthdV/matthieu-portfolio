@@ -134,7 +134,7 @@
     },
     "contact": {
       "label": "Contact",
-      "title": "The simplest way: call me.",
+      "title": "The simplest way: book 15 minutes.",
       "lead": "You can also write. I read every message.",
       "formLink": "Write a message"
     }
@@ -242,7 +242,7 @@
   },
   "Contact": {
     "title": "Contact",
-    "lead": "The simplest way: call me. You can also write.",
+    "lead": "The simplest way: book 15 minutes. You can also write.",
     "phoneLabel": "Phone",
     "emailLabel": "E-mail",
     "linkedinLabel": "LinkedIn",
