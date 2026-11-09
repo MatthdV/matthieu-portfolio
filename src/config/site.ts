@@ -15,8 +15,10 @@ export const SITE = {
   booking15: "https://cal.com/matthieu-de-villele/15min",
   booking30: "https://cal.com/matthieu-de-villele/30min",
   hostName: "Vercel Inc.",
-  hostAddress: "TODO_VERCEL_ADDRESS",
-  hostPhone: "TODO_VERCEL_PHONE",
+  /** Adresse publiée par Vercel (politique de confidentialité). Le pays est dans messages/. */
+  hostAddress: "440 N Barranca Avenue #4133, Covina, CA 91723",
+  /** Vercel ne publie aucun numéro : null affiche le texte `Legal.hostPhoneNone`. */
+  hostPhone: null as string | null,
 } as const;
 
 export const isPlaceholder = (value: string) => value.startsWith("TODO_");
