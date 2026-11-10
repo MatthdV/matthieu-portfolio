@@ -247,6 +247,7 @@
     "editorTitle": "Éditeur du site",
     "editorBody": "Matthieu de Villele, entrepreneur individuel (micro-entreprise).",
     "siret": "SIRET : {siret}",
+    "apeLine": "Code APE : {ape}",
     "address": "Adresse : {address}",
     "emailLine": "E-mail : {email}",
     "phoneLine": "Téléphone : {phone}",

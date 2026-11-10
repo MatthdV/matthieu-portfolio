@@ -248,6 +248,7 @@
     "editorTitle": "Editor del sitio",
     "editorBody": "Matthieu de Villele, empresario individual (microempresa, Francia).",
     "siret": "SIRET: {siret}",
+    "apeLine": "Código de actividad (APE): {ape}",
     "address": "Dirección: {address}",
     "emailLine": "Correo: {email}",
     "phoneLine": "Teléfono: {phone}",

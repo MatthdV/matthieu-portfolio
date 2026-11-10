@@ -20,6 +20,7 @@ export default function LegalPage({ params }: { params: { locale: string } }) {
         <ul className="mt-3 space-y-1 text-lg">
           <li>{t("editorBody")}</li>
           <li>{t("siret", { siret: SITE.siret })}</li>
+          <li>{t("apeLine", { ape: SITE.ape })}</li>
           <li>{t("address", { address: SITE.address })}</li>
           <li>{t("emailLine", { email: SITE.email })}</li>
           <li>{t("phoneLine", { phone: SITE.phone })}</li>

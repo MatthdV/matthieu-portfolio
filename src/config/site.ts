@@ -8,8 +8,10 @@ export const SITE = {
   url: "https://www.matthieudevillele.com",
   email: "TODO_EMAIL",
   phone: "TODO_PHONE",
-  siret: "TODO_SIRET",
-  address: "TODO_ADDRESS",
+  siret: "913 194 999 00029",
+  /** Code APE / NAF de l'activité (SIREN 913 194 999). */
+  ape: "62.01Z",
+  address: "1 rue de Trefois, 22170 Plouvara",
   linkedin: "https://linkedin.com/in/matthieudevillele",
   /** Prise de rendez-vous Cal.com, liens sortants sans intégration. */
   booking15: "https://cal.com/matthieu-de-villele/15min",

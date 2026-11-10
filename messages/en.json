@@ -247,6 +247,7 @@
     "editorTitle": "Site publisher",
     "editorBody": "Matthieu de Villele, sole trader (micro-business, France).",
     "siret": "SIRET: {siret}",
+    "apeLine": "Activity code (APE): {ape}",
     "address": "Address: {address}",
     "emailLine": "E-mail: {email}",
     "phoneLine": "Phone: {phone}",
