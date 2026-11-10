@@ -23,7 +23,6 @@ export default function LegalPage({ params }: { params: { locale: string } }) {
           <li>{t("apeLine", { ape: SITE.ape })}</li>
           <li>{t("address", { address: SITE.address })}</li>
           <li>{t("emailLine", { email: SITE.email })}</li>
-          <li>{t("phoneLine", { phone: SITE.phone })}</li>
           <li>{t("vatLine")}</li>
         </ul>
       </section>

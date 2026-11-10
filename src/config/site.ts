@@ -6,8 +6,8 @@
 export const SITE = {
   name: "Matthieu de Villele",
   url: "https://www.matthieudevillele.com",
-  email: "TODO_EMAIL",
-  phone: "TODO_PHONE",
+  /** Provisoire : remplacer par contact@matthieudevillele.com quand Workspace sera prêt. */
+  email: "matthieu.devillele@gmail.com",
   siret: "913 194 999 00029",
   /** Code APE / NAF de l'activité (SIREN 913 194 999). */
   ape: "62.01Z",

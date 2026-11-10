@@ -250,7 +250,6 @@
     "apeLine": "Code APE : {ape}",
     "address": "Adresse : {address}",
     "emailLine": "E-mail : {email}",
-    "phoneLine": "Téléphone : {phone}",
     "vatLine": "[[vat]]",
     "publisherTitle": "Directeur de la publication",
     "publisherBody": "Matthieu de Villele.",

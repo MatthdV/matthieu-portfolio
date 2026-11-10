@@ -251,7 +251,6 @@
     "apeLine": "Código de actividad (APE): {ape}",
     "address": "Dirección: {address}",
     "emailLine": "Correo: {email}",
-    "phoneLine": "Teléfono: {phone}",
     "vatLine": "[[vat]]",
     "publisherTitle": "Director de la publicación",
     "publisherBody": "Matthieu de Villele.",
