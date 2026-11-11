@@ -125,8 +125,10 @@
     "about": {
       "label": "Who I am",
       "title": "Matthieu de Villele",
-      "p1": "I work independently, and my micro-business registration is in progress. Before that, I worked at Groupon.",
-      "p2": "There, I automated the operations of more than 1,500 people across 3 continents. Today I build websites for shops and craftspeople, restaurants first."
+      "p1": "I’m Matthieu de Villele, self-employed through a micro-business. I build websites for shops and craftspeople, restaurants first.",
+      "p2": "Before that, I spent more than ten years on business tools and automation. At Plezi, I managed more than 50 integrations with Salesforce, HubSpot and Pipedrive. At Brevo, I synced more than 5,000 data records a day between Brevo and Salesforce, with 99.9% reliability.",
+      "p3": "At Groupon, I automated the operations of more than 1,500 people across 3 continents. For your site, I keep the same standard.",
+      "p4": "I design it to fit your business, and I handle putting it online, the domain name and small changes. You keep your time for your business."
     },
     "contact": {
       "label": "Contact",

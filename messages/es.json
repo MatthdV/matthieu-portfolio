@@ -126,8 +126,10 @@
     "about": {
       "label": "Quién soy",
       "title": "Matthieu de Villele",
-      "p1": "Trabajo de forma independiente y mi microempresa en Francia está en proceso de creación. Antes trabajé en Groupon.",
-      "p2": "Allí automaticé las operaciones de más de 1.500 personas en 3 continentes. Hoy construyo sitios web para negocios y artesanos, empezando por los restaurantes."
+      "p1": "Soy Matthieu de Villele, trabajador independiente con una microempresa en Francia. Construyo sitios web para negocios y artesanos, empezando por los restaurantes.",
+      "p2": "Antes tuve más de diez años de experiencia en herramientas y automatización para empresas. En Plezi gestioné más de 50 integraciones con Salesforce, HubSpot y Pipedrive. En Brevo sincronicé más de 5.000 datos al día entre Brevo y Salesforce, con 99,9 % de fiabilidad.",
+      "p3": "En Groupon automaticé las operaciones de más de 1.500 personas en 3 continentes. Para su sitio, mantengo la misma exigencia.",
+      "p4": "Lo diseño a la medida, me encargo de ponerlo en línea, del nombre de dominio y de los cambios pequeños. Usted conserva su tiempo para su negocio."
     },
     "contact": {
       "label": "Contacto",
