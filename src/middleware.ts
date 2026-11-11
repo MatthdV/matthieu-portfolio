@@ -18,8 +18,33 @@ function visitorCountry(request: NextRequest): string | null {
   return request.headers.get('x-vercel-ip-country');
 }
 
+const LOCALES = ['fr', 'en', 'es'];
+
+/**
+ * Anciennes URL : /projects devient /projets, /newsletter n'a plus de page
+ * (renvoi vers l'accueil de la même langue). Avec préfixe de langue, la cible
+ * est fixe : redirection permanente. Sans préfixe, la langue vient du cookie
+ * NEXT_LOCALE (sinon fr) : redirection temporaire.
+ */
+function legacyRedirect(request: NextRequest): NextResponse | null {
+  const parts = request.nextUrl.pathname.split('/').filter(Boolean);
+  const prefixed = LOCALES.includes(parts[0]);
+  const locale = prefixed
+    ? parts[0]
+    : LOCALES.find((l) => l === request.cookies.get(LOCALE_COOKIE)?.value) ?? routing.defaultLocale;
+  const rest = (prefixed ? parts.slice(1) : parts).join('/');
+  const target = rest === 'projects' ? `/${locale}/projets` : rest === 'newsletter' ? `/${locale}` : null;
+  if (!target) return null;
+  const url = request.nextUrl.clone();
+  url.pathname = target;
+  return NextResponse.redirect(url, prefixed ? 308 : 307);
+}
+
 export default function middleware(request: NextRequest) {
   const {pathname} = request.nextUrl;
+
+  const legacy = legacyRedirect(request);
+  if (legacy) return legacy;
 
   // Seule la racine nue est redirigée, et seulement sans choix de langue déjà mémorisé.
   if (
