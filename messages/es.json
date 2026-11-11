@@ -283,9 +283,29 @@
     "ipTitle": "Dirección IP",
     "ipBody": "Su dirección IP se lee al enviar el formulario para limitar el número de envíos. Permanece en la memoria del servidor 10 minutos como máximo y este sitio no la guarda.",
     "recipientsTitle": "Quién recibe sus datos",
-    "recipientsBody": "Solo yo, a través de estos servicios: Notion (almacenamiento de solicitudes), Resend (envío de correos) y Vercel (proveedor del sitio). Estos servicios pueden tratar datos fuera de la Unión Europea.",
+    "recipientsBody": "Solo yo. Mis encargados reciben los datos del formulario: Notion (almacenamiento), Resend (correos) y Vercel (proveedor del sitio).",
     "transfersTitle": "Transferencias fuera de la Unión Europea",
-    "transfersBody": "Vercel indica que trata información en Estados Unidos y en otras jurisdicciones donde opera. Indica que cumple el EU-U.S. Data Privacy Framework, con las extensiones del Reino Unido y de Suiza. Indica también que, cuando la ley lo exige, usa cláusulas contractuales tipo u otros mecanismos jurídicos adecuados.",
+    "transfersIntro": "Cada encargado describe sus transferencias en sus propios documentos. Esto es lo que indican, con el enlace a la fuente.",
+    "transfersItems": [
+      {
+        "name": "Vercel",
+        "body": "Vercel indica que trata información en Estados Unidos y en otras jurisdicciones donde opera. Indica que cumple el EU-U.S. Data Privacy Framework, con las extensiones del Reino Unido y de Suiza. Indica también que, cuando la ley lo exige, usa cláusulas contractuales tipo u otros mecanismos jurídicos adecuados."
+      },
+      {
+        "name": "Notion",
+        "body": "Notion indica que la información puede transferirse, tratarse y almacenarse en cualquier parte del mundo, incluido Estados Unidos. Indica que procura protegerla conforme a las leyes aplicables. Su página sobre el RGPD indica que recurre a cláusulas contractuales tipo para las transferencias desde la UE."
+      },
+      {
+        "name": "Resend",
+        "body": "Resend indica que sus operaciones de tratamiento principales se realizan en Estados Unidos. Su adenda (DPA) indica que las transferencias fuera del EEE, Reino Unido y Suiza se basan en cláusulas contractuales tipo. Resend indica también que cumple el EU-U.S. Data Privacy Framework."
+      }
+    ],
+    "sourceLabels": {
+      "policy": "Política de privacidad",
+      "gdpr": "Página sobre el RGPD",
+      "dpa": "Adenda de tratamiento de datos (DPA)"
+    },
+    "sourcesNote": "Fuentes consultadas el 11 de noviembre de 2026. Estos servicios pueden cambiar sus políticas.",
     "retentionTitle": "Plazo de conservación",
     "retentionBody": "Sus datos se conservan 3 años después de nuestro último intercambio y luego se eliminan.",
     "rightsTitle": "Sus derechos",

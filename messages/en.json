@@ -282,9 +282,29 @@
     "ipTitle": "IP address",
     "ipBody": "Your IP address is read when you send the form, to limit the number of submissions. It stays in server memory for 10 minutes at most and is not stored by this site.",
     "recipientsTitle": "Who receives your data",
-    "recipientsBody": "Only me, through these services: Notion (storing requests), Resend (sending e-mails) and Vercel (site host). These services may process data outside the European Union.",
+    "recipientsBody": "Only me. My processors receive the form data: Notion (storing requests), Resend (sending e-mails) and Vercel (site host).",
     "transfersTitle": "Transfers outside the European Union",
-    "transfersBody": "Vercel states that it processes information in the United States and other jurisdictions where it operates. It states that it complies with the EU-U.S. Data Privacy Framework, with the UK and Swiss extensions. It also states that, where the law requires it, it uses standard contractual clauses or other appropriate legal mechanisms.",
+    "transfersIntro": "Each processor describes its transfers in its own documents. Here is what they state, with a link to the source.",
+    "transfersItems": [
+      {
+        "name": "Vercel",
+        "body": "Vercel states that it processes information in the United States and other jurisdictions where it operates. It states that it complies with the EU-U.S. Data Privacy Framework, with the UK and Swiss extensions. It also states that, where the law requires it, it uses standard contractual clauses or other appropriate legal mechanisms."
+      },
+      {
+        "name": "Notion",
+        "body": "Notion states that information may be transferred, processed and stored anywhere in the world, including the United States. It states that it endeavors to protect it in line with applicable laws. Its GDPR page states that it relies on standard contractual clauses for transfers from the EU."
+      },
+      {
+        "name": "Resend",
+        "body": "Resend states that its primary processing operations take place in the United States. Its Data Processing Addendum (DPA) states that transfers outside the EEA, the UK and Switzerland rely on standard contractual clauses. Resend also states that it complies with the EU-U.S. Data Privacy Framework."
+      }
+    ],
+    "sourceLabels": {
+      "policy": "Privacy policy",
+      "gdpr": "GDPR page",
+      "dpa": "Data Processing Addendum (DPA)"
+    },
+    "sourcesNote": "Sources read on 11 November 2026. These services may change their policies.",
     "retentionTitle": "Retention period",
     "retentionBody": "Your data is kept for 3 years after our last exchange, then deleted.",
     "rightsTitle": "Your rights",
