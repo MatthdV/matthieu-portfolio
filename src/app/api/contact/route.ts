@@ -9,6 +9,7 @@ const EMAIL_RE = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
 const MIN_FILL_MS = 3000;
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_PER_WINDOW = 5;
+const MAX_BODY_BYTES = 10_000;
 
 // Limite de débit en mémoire : freine les rafales, pas un dispositif distribué.
 const hits = new Map<string, number[]>();
@@ -85,12 +86,24 @@ async function notifyOwner(lead: Lead): Promise<boolean> {
 type Lead = { name: string; email: string; phone: string; message: string };
 
 export async function POST(req: NextRequest) {
+  // Sur Vercel, x-forwarded-for est écrasé par la plateforme : il porte l'IP du client.
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   if (rateLimited(ip)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
 
+  // Corps borné avant analyse, puis forme vérifiée : un `null`, un tableau ou un scalaire est refusé.
+  const declared = Number(req.headers.get("content-length"));
+  if (Number.isFinite(declared) && declared > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "too_large" }, { status: 413 });
+  }
   let body: Record<string, unknown>;
   try {
-    body = await req.json();
+    const raw = await req.text();
+    if (raw.length > MAX_BODY_BYTES) return NextResponse.json({ error: "too_large" }, { status: 413 });
+    const parsed: unknown = JSON.parse(raw);
+    if (typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) {
+      return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+    }
+    body = parsed as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }

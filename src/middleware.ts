@@ -29,7 +29,10 @@ export default function middleware(request: NextRequest) {
   ) {
     const url = request.nextUrl.clone();
     url.pathname = '/es';
-    return NextResponse.redirect(url); // 307, jamais mis en cache
+    const res = NextResponse.redirect(url); // 307
+    // La réponse dépend du pays : aucun cache partagé ne doit la conserver.
+    res.headers.set('Cache-Control', 'private, no-store');
+    return res;
   }
 
   return handleI18nRouting(request);

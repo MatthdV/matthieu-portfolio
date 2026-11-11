@@ -250,6 +250,7 @@
     "apeLine": "Code APE : {ape}",
     "address": "Adresse : {address}",
     "emailLine": "E-mail : {email}",
+    "phoneLine": "Téléphone : {phone}",
     "vatLine": "[[vat]]",
     "publisherTitle": "Directeur de la publication",
     "publisherBody": "Matthieu de Villele.",
@@ -265,7 +266,7 @@
   },
   "Privacy": {
     "title": "Politique de confidentialité",
-    "intro": "Ce site collecte uniquement les données que vous saisissez dans le formulaire de contact. Il n’utilise aucun traceur ni cookie de mesure d’audience.",
+    "intro": "Ce site collecte les données que vous saisissez dans le formulaire de contact, et votre adresse IP pour limiter les envois. Il n’utilise aucun traceur ni cookie de mesure d’audience.",
     "controllerTitle": "Responsable du traitement",
     "controllerBody": "Matthieu de Villele, joignable à {email}.",
     "dataTitle": "Données collectées",
@@ -278,14 +279,18 @@
     "purposeBody": "Ces données servent à répondre à votre demande et à vous proposer un site. Elles ne servent ni à de la publicité ni à de la revente.",
     "basisTitle": "Base légale",
     "basisBody": "Votre consentement, donné en cochant la case du formulaire.",
+    "ipTitle": "Adresse IP",
+    "ipBody": "Votre adresse IP est lue à l’envoi du formulaire pour limiter le nombre d’envois. Elle reste en mémoire du serveur 10 minutes au plus et n’est pas enregistrée par ce site.",
     "recipientsTitle": "Qui reçoit vos données",
-    "recipientsBody": "Moi seul, via les services suivants : Notion (stockage des demandes), Resend (envoi des e-mails) et Vercel (hébergeur du site). Ces services peuvent traiter des données hors de l’Union européenne, avec les garanties prévues par le RGPD.",
+    "recipientsBody": "Moi seul, via les services suivants : Notion (stockage des demandes), Resend (envoi des e-mails) et Vercel (hébergeur du site). Ces services peuvent traiter des données hors de l’Union européenne.",
+    "transfersTitle": "Transferts hors de l’Union européenne",
+    "transfersBody": "Vercel indique traiter des informations aux États-Unis et dans d’autres juridictions où elle opère. Elle indique adhérer à l’EU-U.S. Data Privacy Framework, avec les extensions britannique et suisse. Elle indique aussi recourir, lorsque la loi l’exige, à des clauses contractuelles types ou à d’autres mécanismes juridiques appropriés.",
     "retentionTitle": "Durée de conservation",
     "retentionBody": "Vos données sont conservées 3 ans après notre dernier échange, puis supprimées.",
     "rightsTitle": "Vos droits",
     "rightsBody": "Vous pouvez accéder à vos données, les corriger, les effacer, vous opposer à leur usage ou les récupérer. Écrivez à {email}. Vous pouvez aussi saisir la CNIL (cnil.fr).",
     "cookiesTitle": "Cookies et traceurs",
-    "cookiesBody": "Aucun cookie de mesure d’audience, aucun pixel publicitaire. Les polices sont servies par ce site, sans appel à un service tiers depuis votre navigateur."
+    "cookiesBody": "Aucun cookie de mesure d’audience, aucun pixel publicitaire. Un cookie fonctionnel, NEXT_LOCALE, mémorise votre langue. Les polices sont servies par ce site, sans appel à un service tiers depuis votre navigateur."
   },
   "NotFound": {
     "title": "Page introuvable",

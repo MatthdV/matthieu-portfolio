@@ -251,6 +251,7 @@
     "apeLine": "Código de actividad (APE): {ape}",
     "address": "Dirección: {address}",
     "emailLine": "Correo: {email}",
+    "phoneLine": "Teléfono: {phone}",
     "vatLine": "[[vat]]",
     "publisherTitle": "Director de la publicación",
     "publisherBody": "Matthieu de Villele.",
@@ -266,7 +267,7 @@
   },
   "Privacy": {
     "title": "Política de privacidad",
-    "intro": "Este sitio solo recoge los datos que usted escribe en el formulario de contacto. No usa rastreadores ni cookies de medición de audiencia.",
+    "intro": "Este sitio recoge los datos que usted escribe en el formulario de contacto y su dirección IP para limitar los envíos. No usa rastreadores ni cookies de medición de audiencia.",
     "controllerTitle": "Responsable del tratamiento",
     "controllerBody": "Matthieu de Villele, contacto: {email}.",
     "dataTitle": "Datos recogidos",
@@ -279,14 +280,18 @@
     "purposeBody": "Estos datos sirven para responder a su solicitud y proponerle un sitio web. No se usan para publicidad ni se venden.",
     "basisTitle": "Base legal",
     "basisBody": "Su consentimiento, dado al marcar la casilla del formulario.",
+    "ipTitle": "Dirección IP",
+    "ipBody": "Su dirección IP se lee al enviar el formulario para limitar el número de envíos. Permanece en la memoria del servidor 10 minutos como máximo y este sitio no la guarda.",
     "recipientsTitle": "Quién recibe sus datos",
-    "recipientsBody": "Solo yo, a través de estos servicios: Notion (almacenamiento de solicitudes), Resend (envío de correos) y Vercel (proveedor del sitio). Estos servicios pueden tratar datos fuera de la Unión Europea, con las garantías previstas por el RGPD.",
+    "recipientsBody": "Solo yo, a través de estos servicios: Notion (almacenamiento de solicitudes), Resend (envío de correos) y Vercel (proveedor del sitio). Estos servicios pueden tratar datos fuera de la Unión Europea.",
+    "transfersTitle": "Transferencias fuera de la Unión Europea",
+    "transfersBody": "Vercel indica que trata información en Estados Unidos y en otras jurisdicciones donde opera. Indica que cumple el EU-U.S. Data Privacy Framework, con las extensiones del Reino Unido y de Suiza. Indica también que, cuando la ley lo exige, usa cláusulas contractuales tipo u otros mecanismos jurídicos adecuados.",
     "retentionTitle": "Plazo de conservación",
     "retentionBody": "Sus datos se conservan 3 años después de nuestro último intercambio y luego se eliminan.",
     "rightsTitle": "Sus derechos",
     "rightsBody": "Usted puede acceder a sus datos, corregirlos, suprimirlos, oponerse a su uso o recuperarlos, escribiendo a {email}. Si reside en Colombia, la Ley 1581 de 2012 también le permite conocerlos, actualizarlos y rectificarlos. En Francia, puede acudir a la CNIL (cnil.fr).",
     "cookiesTitle": "Cookies y rastreadores",
-    "cookiesBody": "Ninguna cookie de medición de audiencia, ningún píxel publicitario. Las fuentes las sirve este sitio, sin llamar a un servicio externo desde su navegador."
+    "cookiesBody": "Ninguna cookie de medición de audiencia, ningún píxel publicitario. Una cookie funcional, NEXT_LOCALE, recuerda su idioma. Las fuentes las sirve este sitio, sin llamar a un servicio externo desde su navegador."
   },
   "NotFound": {
     "title": "Página no encontrada",

@@ -250,6 +250,7 @@
     "apeLine": "Activity code (APE): {ape}",
     "address": "Address: {address}",
     "emailLine": "E-mail: {email}",
+    "phoneLine": "Phone: {phone}",
     "vatLine": "[[vat]]",
     "publisherTitle": "Publication director",
     "publisherBody": "Matthieu de Villele.",
@@ -265,7 +266,7 @@
   },
   "Privacy": {
     "title": "Privacy policy",
-    "intro": "This site only collects the data you enter in the contact form. It uses no tracker and no audience-measurement cookie.",
+    "intro": "This site collects the data you enter in the contact form, and your IP address to limit submissions. It uses no tracker and no audience-measurement cookie.",
     "controllerTitle": "Data controller",
     "controllerBody": "Matthieu de Villele, reachable at {email}.",
     "dataTitle": "Data collected",
@@ -278,14 +279,18 @@
     "purposeBody": "This data is used to answer your request and to offer you a website. It is not used for advertising or resold.",
     "basisTitle": "Legal basis",
     "basisBody": "Your consent, given by ticking the box in the form.",
+    "ipTitle": "IP address",
+    "ipBody": "Your IP address is read when you send the form, to limit the number of submissions. It stays in server memory for 10 minutes at most and is not stored by this site.",
     "recipientsTitle": "Who receives your data",
-    "recipientsBody": "Only me, through these services: Notion (storing requests), Resend (sending e-mails) and Vercel (site host). These services may process data outside the European Union, with the safeguards provided by the GDPR.",
+    "recipientsBody": "Only me, through these services: Notion (storing requests), Resend (sending e-mails) and Vercel (site host). These services may process data outside the European Union.",
+    "transfersTitle": "Transfers outside the European Union",
+    "transfersBody": "Vercel states that it processes information in the United States and other jurisdictions where it operates. It states that it complies with the EU-U.S. Data Privacy Framework, with the UK and Swiss extensions. It also states that, where the law requires it, it uses standard contractual clauses or other appropriate legal mechanisms.",
     "retentionTitle": "Retention period",
     "retentionBody": "Your data is kept for 3 years after our last exchange, then deleted.",
     "rightsTitle": "Your rights",
     "rightsBody": "You can access your data, correct it, erase it, object to its use or take a copy. Write to {email}. You can also contact the CNIL, the French data protection authority (cnil.fr).",
     "cookiesTitle": "Cookies and trackers",
-    "cookiesBody": "No audience-measurement cookie, no advertising pixel. Fonts are served by this site, with no call to a third-party service from your browser."
+    "cookiesBody": "No audience-measurement cookie, no advertising pixel. One functional cookie, NEXT_LOCALE, remembers your language. Fonts are served by this site, with no call to a third-party service from your browser."
   },
   "NotFound": {
     "title": "Page not found",

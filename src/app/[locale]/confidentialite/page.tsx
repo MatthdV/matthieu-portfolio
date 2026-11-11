@@ -24,7 +24,9 @@ export default function PrivacyPage({ params }: { params: { locale: string } }) 
       </section>
       <section className="mt-10"><h2 className={h2}>{t("purposeTitle")}</h2><p className="mt-3 text-lg">{t("purposeBody")}</p></section>
       <section className="mt-10"><h2 className={h2}>{t("basisTitle")}</h2><p className="mt-3 text-lg">{t("basisBody")}</p></section>
+      <section className="mt-10"><h2 className={h2}>{t("ipTitle")}</h2><p className="mt-3 text-lg">{t("ipBody")}</p></section>
       <section className="mt-10"><h2 className={h2}>{t("recipientsTitle")}</h2><p className="mt-3 text-lg">{t("recipientsBody")}</p></section>
+      <section className="mt-10"><h2 className={h2}>{t("transfersTitle")}</h2><p className="mt-3 text-lg">{t("transfersBody")}</p></section>
       <section className="mt-10"><h2 className={h2}>{t("retentionTitle")}</h2><p className="mt-3 text-lg">{t("retentionBody")}</p></section>
       <section className="mt-10"><h2 className={h2}>{t("rightsTitle")}</h2><p className="mt-3 text-lg">{t("rightsBody", { email: SITE.email })}</p></section>
       <section className="mt-10"><h2 className={h2}>{t("cookiesTitle")}</h2><p className="mt-3 text-lg">{t("cookiesBody")}</p></section>
