@@ -1,6 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { SITE } from "@/config/site";
 import { pageMetadata } from "@/lib/seo";
 import PhoneDemo from "@/components/PhoneDemo";
@@ -14,8 +13,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 const wrap = "mx-auto max-w-6xl px-4 sm:px-6";
 
 type Step = { title: string; body: string };
-type Row = { name: string; price: string };
-type ProjectItem = { title: string; stack: string[] };
 
 export default function Home({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
@@ -23,13 +20,10 @@ export default function Home({ params }: { params: { locale: string } }) {
   const t = useTranslations("Home");
   const c = useTranslations("Common");
   const meta = useTranslations("Meta");
-  const proj = useTranslations("Projects");
   const form = useTranslations("Contact.form");
 
   const steps = t.raw("how.steps") as Step[];
   const included = t.raw("price.included") as string[];
-  const autoPrices = t.raw("auto.prices") as Row[];
-  const projects = proj.raw("items") as ProjectItem[];
 
   const labels = {
     name: form("name"),
@@ -168,50 +162,7 @@ export default function Home({ params }: { params: { locale: string } }) {
         </div>
       </section>
 
-      {/* 4. Automatisation et agents IA */}
-      <section aria-labelledby="auto-title" className="py-14 sm:py-20">
-        <div className={wrap}>
-          <p className="label text-ink">{t("auto.label")}</p>
-          <h2 id="auto-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">
-            {t("auto.title")}
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg">{t("auto.lead")}</p>
-
-          <dl className="mt-8 max-w-2xl space-y-4 text-lg">
-            {autoPrices.map((r) => (
-              <div key={r.name} className="leader">
-                <dt>{r.name}</dt>
-                <dd className="font-bold">{r.price}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-4 text-sm text-soft">{t("auto.pricesNote")}</p>
-          <p className="mt-4">
-            <Link href="/services" className="font-bold underline">{t("auto.servicesLink")}</Link>
-          </p>
-
-          <p className="mt-12 max-w-3xl font-display text-2xl leading-snug sm:text-3xl">{t("auto.proof")}</p>
-
-          <div className="mt-12">
-            <div>
-              <h3 className="label text-soft">{t("auto.projectsTitle")}</h3>
-              <ul className="mt-4">
-                {projects.map((p) => (
-                  <li key={p.title} className="border-t-2 border-ink py-4 last:border-b-2">
-                    <p className="font-display text-lg">{p.title}</p>
-                    <p className="mt-1 text-soft">{p.stack.join(", ")}</p>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4">
-                <Link href="/projets" className="font-bold underline">{t("auto.projectsLink")}</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Qui je suis */}
+      {/* 4. Qui je suis (l'automatisation vit sur /services) */}
       <section aria-labelledby="about-title" className="border-t-2 border-ink py-14 sm:py-20">
         <div className={`${wrap} grid gap-6 lg:grid-cols-[1fr_1.6fr]`}>
           <div>
