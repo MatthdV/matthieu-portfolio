@@ -69,9 +69,9 @@ export default function Home({ params }: { params: { locale: string } }) {
 
       {/* 1. Ce que je fais, avec le prix */}
       <section>
-        <div className={`${wrap} grid gap-10 py-10 sm:py-14 lg:grid-cols-[1.15fr_1fr] lg:min-h-[calc(100svh-3.5rem)] lg:items-center lg:py-12`}>
+        <div className={`${wrap} grid gap-10 py-10 sm:py-14 lg:grid-cols-[1.3fr_1fr] lg:min-h-[calc(100svh-3.5rem)] lg:items-center lg:py-12`}>
           <div>
-            <h1 className="font-display text-[clamp(2.25rem,5.4vw,3.75rem)] leading-[1.04] tracking-tight [text-wrap:balance]">
+            <h1 className="font-display text-[clamp(2rem,3.7vw,3.25rem)] leading-[1.04] tracking-tight [text-wrap:balance]">
               {t("hero.title")}
             </h1>
             <p className="mt-5 max-w-xl text-lg">{t("hero.lead")}</p>
