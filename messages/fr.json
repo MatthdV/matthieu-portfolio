@@ -133,7 +133,7 @@
     "contact": {
       "label": "Contact",
       "title": "Le plus simple : réserver 15 minutes.",
-      "lead": "Vous pouvez aussi écrire. Je lis tous les messages.",
+      "lead": "Vous pouvez aussi écrire. Je réponds sous 24 h ouvrées.",
       "formLink": "Écrire un message"
     }
   },
@@ -239,7 +239,7 @@
       "submit": "Envoyer le message",
       "sending": "Envoi en cours",
       "successTitle": "Message reçu.",
-      "success": "Je vous réponds dès que possible.",
+      "success": "Je vous réponds sous 24 h ouvrées.",
       "error": "L’envoi a échoué. Écrivez à {email}.",
       "invalid": "Vérifiez les champs marqués et la case de consentement.",
       "errors": {

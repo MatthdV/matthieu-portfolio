@@ -133,7 +133,7 @@
     "contact": {
       "label": "Contact",
       "title": "The simplest way: book 15 minutes.",
-      "lead": "You can also write. I read every message.",
+      "lead": "You can also write. I reply within one business day.",
       "formLink": "Write a message"
     }
   },
@@ -239,7 +239,7 @@
       "submit": "Send the message",
       "sending": "Sending",
       "successTitle": "Message received.",
-      "success": "I will reply as soon as I can.",
+      "success": "I will reply within one business day.",
       "error": "Sending failed. Write to {email}.",
       "invalid": "Check the marked fields and the consent box.",
       "errors": {
