@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -48,16 +47,31 @@ export default function Home({ params }: { params: { locale: string } }) {
     invalid: form("invalid"),
   };
 
+  const demo = (
+    <PhoneDemo
+      demo={{
+        label: t("demo.label"),
+        caption: t("demo.caption"),
+        name: t("demo.name"),
+        tagline: t("demo.tagline"),
+        hoursTitle: t("demo.hoursTitle"),
+        hours: t("demo.hours"),
+        dish: t("demo.dish"),
+        dishPrice: t("demo.dishPrice"),
+        book: t("demo.book"),
+      }}
+    />
+  );
+
   return (
     <main>
       <JsonLd locale={locale} description={meta("homeDescription")} />
 
       {/* 1. Ce que je fais, avec le prix */}
       <section>
-        <div className={`${wrap} grid gap-10 py-10 sm:py-14 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:py-20`}>
+        <div className={`${wrap} grid gap-10 py-10 sm:py-14 lg:grid-cols-[1.15fr_1fr] lg:min-h-[calc(100svh-3.5rem)] lg:items-center lg:py-12`}>
           <div>
-            <p className="label text-soft">{t("hero.kicker")}</p>
-            <h1 className="mt-4 font-display text-[clamp(2.25rem,7vw,4.25rem)] leading-[1.02] tracking-tight">
+            <h1 className="font-display text-[clamp(2.25rem,5.4vw,3.75rem)] leading-[1.04] tracking-tight [text-wrap:balance]">
               {t("hero.title")}
             </h1>
             <p className="mt-5 max-w-xl text-lg">{t("hero.lead")}</p>
@@ -86,22 +100,14 @@ export default function Home({ params }: { params: { locale: string } }) {
             </div>
           </div>
 
-          <Image
-            src="/images/hero-illustration.jpg"
-            alt={t("hero.imageAlt")}
-            width={1600}
-            height={893}
-            priority
-            sizes="(min-width: 1024px) 55vw, 100vw"
-            className="h-auto w-full border-2 border-ink"
-          />
+          <div className="hero-enter">{demo}</div>
         </div>
       </section>
 
       {/* 2. Comment ça se passe */}
       <section id="comment" aria-labelledby="how-title" className="py-14 sm:py-20">
-        <div className={`${wrap} grid gap-12 lg:grid-cols-[1.4fr_1fr]`}>
-          <div>
+        <div className={wrap}>
+          <div className="max-w-3xl">
             <p className="label text-ink">{t("how.label")}</p>
             <h2 id="how-title" className="mt-3 font-display text-3xl leading-tight sm:text-5xl">
               {t("how.title")}
@@ -123,21 +129,6 @@ export default function Home({ params }: { params: { locale: string } }) {
                 </li>
               ))}
             </ol>
-          </div>
-          <div className="lg:pt-10">
-            <PhoneDemo
-              demo={{
-                label: t("demo.label"),
-                caption: t("demo.caption"),
-                name: t("demo.name"),
-                tagline: t("demo.tagline"),
-                hoursTitle: t("demo.hoursTitle"),
-                hours: t("demo.hours"),
-                dish: t("demo.dish"),
-                dishPrice: t("demo.dishPrice"),
-                book: t("demo.book"),
-              }}
-            />
           </div>
         </div>
       </section>
