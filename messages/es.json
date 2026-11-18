@@ -134,7 +134,7 @@
     "contact": {
       "label": "Contacto",
       "title": "Lo más simple: reserve 15 minutos.",
-      "lead": "También puede escribirme. Leo todos los mensajes.",
+      "lead": "También puede escribirme. Respondo en un día hábil.",
       "formLink": "Escribir un mensaje"
     }
   },
@@ -240,7 +240,7 @@
       "submit": "Enviar el mensaje",
       "sending": "Enviando",
       "successTitle": "Mensaje recibido.",
-      "success": "Le respondo apenas pueda.",
+      "success": "Le respondo en un día hábil.",
       "error": "El envío falló. Escriba a {email}.",
       "invalid": "Revise los campos marcados y la casilla de consentimiento.",
       "errors": {
