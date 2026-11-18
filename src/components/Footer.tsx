@@ -17,16 +17,16 @@ export default function Footer() {
         </div>
         <nav aria-label="Pied de page">
           <ul className="space-y-1">
-            <li><Link className="inline-block py-2 hover:underline" href="/services">{n("services")}</Link></li>
-            <li><Link className="inline-block py-2 hover:underline" href="/projets">{n("projects")}</Link></li>
-            <li><Link className="inline-block py-2 hover:underline" href="/contact">{n("contact")}</Link></li>
+            <li><Link className="inline-flex min-h-[44px] items-center hover:underline" href="/services">{n("services")}</Link></li>
+            <li><Link className="inline-flex min-h-[44px] items-center hover:underline" href="/projets">{n("projects")}</Link></li>
+            <li><Link className="inline-flex min-h-[44px] items-center hover:underline" href="/contact">{n("contact")}</Link></li>
           </ul>
         </nav>
         <div>
           <ul className="space-y-1">
-            <li><a className="inline-block py-2 hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-            <li><Link className="inline-block py-2 hover:underline" href="/mentions-legales">{t("legal")}</Link></li>
-            <li><Link className="inline-block py-2 hover:underline" href="/confidentialite">{t("privacy")}</Link></li>
+            <li><a className="inline-flex min-h-[44px] items-center hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><Link className="inline-flex min-h-[44px] items-center hover:underline" href="/mentions-legales">{t("legal")}</Link></li>
+            <li><Link className="inline-flex min-h-[44px] items-center hover:underline" href="/confidentialite">{t("privacy")}</Link></li>
           </ul>
         </div>
       </div>

@@ -242,7 +242,13 @@
       "successTitle": "Mensaje recibido.",
       "success": "Le respondo apenas pueda.",
       "error": "El envío falló. Escriba a {email}.",
-      "invalid": "Revise los campos marcados y la casilla de consentimiento."
+      "invalid": "Revise los campos marcados y la casilla de consentimiento.",
+      "errors": {
+        "name": "Indique su nombre.",
+        "email": "Indique un correo válido.",
+        "message": "Escriba su mensaje.",
+        "consent": "Marque la casilla para continuar."
+      }
     }
   },
   "Legal": {

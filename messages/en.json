@@ -241,7 +241,13 @@
       "successTitle": "Message received.",
       "success": "I will reply as soon as I can.",
       "error": "Sending failed. Write to {email}.",
-      "invalid": "Check the marked fields and the consent box."
+      "invalid": "Check the marked fields and the consent box.",
+      "errors": {
+        "name": "Enter your name.",
+        "email": "Enter a valid e-mail address.",
+        "message": "Write your message.",
+        "consent": "Tick the box to continue."
+      }
     }
   },
   "Legal": {

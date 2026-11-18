@@ -28,6 +28,12 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
     success: f("success"),
     error: f("error", { email: SITE.email }),
     invalid: f("invalid"),
+    errors: {
+      name: f("errors.name"),
+      email: f("errors.email"),
+      message: f("errors.message"),
+      consent: f("errors.consent"),
+    },
   };
 
   return (
@@ -47,11 +53,11 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
           <dl className="space-y-6">
             <div>
               <dt className="label text-soft">{t("emailLabel")}</dt>
-              <dd className="mt-1 text-xl font-bold"><a className="underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
+              <dd className="mt-1 text-xl font-bold"><a className="inline-flex min-h-[44px] items-center underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
             </div>
             <div>
               <dt className="label text-soft">{t("linkedinLabel")}</dt>
-              <dd className="mt-1 text-xl font-bold"><a className="underline" href={SITE.linkedin} rel="noopener noreferrer">linkedin.com/in/matthieudevillele</a></dd>
+              <dd className="mt-1 text-xl font-bold"><a className="inline-flex min-h-[44px] items-center underline" href={SITE.linkedin} rel="noopener noreferrer">linkedin.com/in/matthieudevillele</a></dd>
             </div>
           </dl>
           <div className="border-2 border-ink bg-card p-5 sm:p-6">
