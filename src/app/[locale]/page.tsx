@@ -39,6 +39,12 @@ export default function Home({ params }: { params: { locale: string } }) {
     success: form("success"),
     error: form("error", { email: SITE.email }),
     invalid: form("invalid"),
+    errors: {
+      name: form("errors.name"),
+      email: form("errors.email"),
+      message: form("errors.message"),
+      consent: form("errors.consent"),
+    },
   };
 
   const demo = (
@@ -85,7 +91,7 @@ export default function Home({ params }: { params: { locale: string } }) {
             <p className="mt-3 text-sm text-soft">{t("hero.vatNote")}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={SITE.booking15} className="btn btn-red" rel="noopener noreferrer">
+              <a href={SITE.booking15} className="btn btn-red" rel="noopener noreferrer" data-hero-cta>
                 {c("book15")}
               </a>
               <a href="#comment" className="btn btn-line">

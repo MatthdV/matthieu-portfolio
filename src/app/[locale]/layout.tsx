@@ -67,7 +67,7 @@ export default async function LocaleLayout({
           <Header />
           <div id="contenu">{children}</div>
           <Footer />
-          <CallBar />
+          <CallBar href={SITE.booking15} label={t("book15")} />
         </NextIntlClientProvider>
       </body>
     </html>

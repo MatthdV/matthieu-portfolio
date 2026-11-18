@@ -18,7 +18,7 @@ export default function Header() {
         <Link
           href="/"
           aria-label={`${SITE.name}, ${c("home")}`}
-          className="py-3 font-display text-lg leading-none tracking-tight sm:text-xl"
+          className="inline-flex min-h-[44px] items-center font-display text-lg leading-none tracking-tight sm:text-xl"
         >
           {SITE.name}
         </Link>

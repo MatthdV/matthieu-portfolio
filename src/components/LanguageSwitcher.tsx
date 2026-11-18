@@ -13,7 +13,7 @@ export default function LanguageSwitcher({ label }: { label: string }) {
   const pathname = usePathname();
   const current = useLocale();
   return (
-    <nav aria-label={label} className="flex items-center gap-1 text-sm font-bold">
+    <nav aria-label={label} className="flex items-center text-sm font-bold">
       {LOCALES.map(({ code, name }) => (
         <Link
           key={code}
@@ -23,7 +23,7 @@ export default function LanguageSwitcher({ label }: { label: string }) {
           lang={code}
           aria-label={`${name} (${code})`}
           aria-current={current === code ? "true" : undefined}
-          className={`px-2 py-2 uppercase ${
+          className={`flex min-h-[44px] min-w-[44px] items-center justify-center px-2 uppercase ${
             current === code ? "border-b-[3px] border-tomato text-ink" : "text-soft hover:text-ink"
           }`}
         >

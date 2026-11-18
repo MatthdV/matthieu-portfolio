@@ -42,6 +42,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  /* La barre de réservation mobile ne doit pas cacher le champ qui prend le focus. */
+  scroll-padding-bottom: 5rem;
 }
 
 body {
